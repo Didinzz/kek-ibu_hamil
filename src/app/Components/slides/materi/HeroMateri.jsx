@@ -69,13 +69,13 @@ export default function HeroMateri() {
                     <motion.div variants={itemFadeUp} className="flex flex-wrap gap-4">
                         <button
                             onClick={() => document.getElementById('apa').scrollIntoView({ behavior: 'smooth' })}
-                            className="bg-[#2A5C43] hover:bg-[#347656] text-white px-7 py-3.5 rounded-xl font-semibold text-sm transition-all shadow-lg hover:shadow-[#2A5C43]/30 flex items-center gap-2"
+                            className="bg-[#2A5C43] hover:bg-[#347656] text-white px-7 py-3.5 rounded-xl font-semibold text-sm transition-all shadow-lg hover:shadow-[#2A5C43]/30 flex items-center gap-2 cursor-pointer"
                         >
                             Pelajari Sekarang
                         </button>
                         <button
                             onClick={() => document.getElementById('perbedaan').scrollIntoView({ behavior: 'smooth' })}
-                            className="bg-transparent border border-white/20 hover:bg-white/10 text-white/90 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 group"
+                            className="bg-transparent border border-white/20 hover:bg-white/10 text-white/90 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 group cursor-pointer"
                         >
                             Bedanya KEK & Risiko KEK
                             <ArrowRight className="w-4 h-4 text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all" />

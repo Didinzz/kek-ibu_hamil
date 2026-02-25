@@ -38,7 +38,7 @@ export default function MenuMingguan() {
                     >
                         {/* Header Info Trimester */}
                         <div className={`border rounded-2xl p-5 mb-10 text-[14px] font-medium flex items-center gap-3 ${activeData.color}`}>
-                            <HeartPulse size={20} className="shrink-0 text-[#D4AF37]" strokeWidth={2.5} />
+                            <HeartPulse size={20} className="shrink-0 text-[#2A5C43]" strokeWidth={2.5} />
                             {activeData.title}
                         </div>
 

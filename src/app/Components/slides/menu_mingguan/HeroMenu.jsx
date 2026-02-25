@@ -63,17 +63,17 @@ export default function HeroMenu() {
 
                 {/* Wadah 3 Kartu Statistik */}
                 <div className="flex flex-wrap justify-center gap-4">
-                    <motion.div variants={cardPopUp} className="bg-white/5 border border-white/5 rounded-2xl px-6 py-4 backdrop-blur-md">
+                    <motion.div variants={cardPopUp} className="bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl px-6 py-4 backdrop-blur-md">
                         <div className="font-serif text-4xl text-[#D4AF37] mb-1">7</div>
                         <div className="text-[11px] text-white/50 font-bold uppercase tracking-widest">Hari Menu</div>
                     </motion.div>
 
-                    <motion.div variants={cardPopUp} className="bg-white/5 border border-white/5 rounded-2xl px-6 py-4 backdrop-blur-md">
+                    <motion.div variants={cardPopUp} className="bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl px-6 py-4 backdrop-blur-md">
                         <div className="font-serif text-4xl text-[#D4AF37] mb-1">3</div>
                         <div className="text-[11px] text-white/50 font-bold uppercase tracking-widest">Trimester</div>
                     </motion.div>
 
-                    <motion.div variants={cardPopUp} className="bg-white/5 border border-white/5 rounded-2xl px-6 py-4 backdrop-blur-md">
+                    <motion.div variants={cardPopUp} className="bg-white/5 hover:bg-white/10 border border-white/5 rounded-2xl px-6 py-4 backdrop-blur-md">
                         <div className="font-serif text-4xl text-[#D4AF37] mb-1">5x</div>
                         <div className="text-[11px] text-white/50 font-bold uppercase tracking-widest">Makan/Hari</div>
                     </motion.div>

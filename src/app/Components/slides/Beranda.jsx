@@ -39,10 +39,6 @@ export default function Beranda({ setActiveSlide }) {
             className="h-full w-full overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden max-w-7xl mx-auto px-6 lg:px-12 pt-8 pb-32 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-y-10 lg:gap-x-20 items-center content-center"
         >
 
-            {/* =========================================
-                BAGIAN 1: HERO TITLE 
-                (Urutan 1 di HP, Kiri Atas di Laptop)
-            ============================================= */}
             <motion.div
                 variants={textReveal}
                 className="order-1 lg:col-start-1 lg:row-start-1 flex flex-col gap-5 self-end"
@@ -119,7 +115,7 @@ export default function Beranda({ setActiveSlide }) {
                 <div>
                     <button
                         onClick={() => setActiveSlide("menu_mingguan")}
-                        className="group inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg shadow-emerald-200"
+                        className="cursor-pointer hover:scale-105 group inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl text-sm font-bold tracking-wide transition-all shadow-lg shadow-emerald-200"
                     >
                         Lihat Menu Mingguan
                         <svg

@@ -22,7 +22,7 @@ export default function TabNavMenu({ activeTab, setActiveTab }) {
                         <button
                             key={tri}
                             onClick={() => setActiveTab(tri)}
-                            className={`flex-1 py-3.5 md:py-4 text-[12px] md:text-[13px] font-bold tracking-widest uppercase transition-colors relative z-10 rounded-full ${isActive
+                            className={`flex-1 py-3.5 md:py-4 text-[12px] md:text-[13px] font-bold tracking-widest uppercase transition-colors relative z-10 rounded-full cursor-pointer ${isActive
                                     ? "text-white" // Teks menjadi putih saat aktif (karena ditimpa kapsul hijau)
                                     : "text-slate-400 hover:text-[#2A5C43]" // Teks abu-abu saat tidak aktif
                                 }`}

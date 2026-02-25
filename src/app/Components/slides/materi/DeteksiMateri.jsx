@@ -62,7 +62,7 @@ export default function DeteksiMateri() {
                             whileInView="visible"
                             viewport={{ once: true, margin: "-50px" }}
                             // Ubah border atas jadi Hijau, hover jadi Emas
-                            className="bg-[#FAFAFA] rounded-[20px] p-7 pb-5 text-center border-t-4 border-[#2A5C43]/30 hover:border-[#D4AF37] hover:-translate-y-1 shadow-sm transition-all group"
+                            className="bg-[#FAFAFA] rounded-[20px] p-7 pb-5 text-center border-t-4 border-[#2A5C43]/30 hover:border-[#2A5C43] hover:-translate-y-1 shadow-sm transition-all group"
                         >
                             <div className="w-10 h-10 rounded-full bg-[#2A5C43] text-white font-serif text-[20px] flex items-center justify-center mx-auto mb-5 shadow-lg shadow-[#2A5C43]/20">
                                 {step.num}

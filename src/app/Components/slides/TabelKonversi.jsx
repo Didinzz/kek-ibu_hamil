@@ -164,7 +164,7 @@ export default function TabelKonversi() {
 
                     {/* Info Cards / Fitur Hero (Grid dengan Animasi Staggered Pop-up) */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-                        <motion.div variants={heroCard} className="bg-white/60 backdrop-blur-sm border border-[#2A5C43]/10 rounded-2xl p-5 flex flex-col items-center hover:bg-white transition-colors shadow-sm cursor-default">
+                        <motion.div variants={heroCard} whileHover={{ y: -5, transition: { duration: 0.2 } }}  className="bg-white/60 border-2 hover:border-[#2A5C43] backdrop-blur-sm border-[#2A5C43]/10 rounded-2xl p-5 flex flex-col items-center hover:bg-white transition-colors shadow-sm cursor-default">
                             <div className="bg-[#2A5C43]/10 p-3 rounded-full mb-3 text-[#2A5C43]">
                                 <RefreshCcw size={24} />
                             </div>
@@ -172,7 +172,7 @@ export default function TabelKonversi() {
                             <p className="text-xs text-slate-500 text-center">Tukar ayam dengan ikan atau telur dengan nutrisi setara.</p>
                         </motion.div>
 
-                        <motion.div variants={heroCard} className="bg-white/60 backdrop-blur-sm border border-[#2A5C43]/10 rounded-2xl p-5 flex flex-col items-center hover:bg-white transition-colors shadow-sm cursor-default">
+                        <motion.div variants={heroCard} whileHover={{ y: -5, transition: { duration: 0.2 } }} className="bg-white/60 border-2 hover:border-[#2A5C43] backdrop-blur-sm border-[#2A5C43]/10 rounded-2xl p-5 flex flex-col items-center hover:bg-white transition-colors shadow-sm cursor-default">
                             <div className="bg-[#2A5C43]/10 p-3 rounded-full mb-3 text-[#2A5C43]">
                                 <ShieldCheck size={24} />
                             </div>
@@ -180,7 +180,7 @@ export default function TabelKonversi() {
                             <p className="text-xs text-slate-500 text-center">Disertai highlight khusus untuk Protein dan Zat Besi.</p>
                         </motion.div>
 
-                        <motion.div variants={heroCard} className="bg-white/60 backdrop-blur-sm border border-[#2A5C43]/10 rounded-2xl p-5 flex flex-col items-center hover:bg-white transition-colors shadow-sm cursor-default">
+                        <motion.div variants={heroCard} whileHover={{ y: -5, transition: { duration: 0.2 } }} className="bg-white/60 border-2 hover:border-[#2A5C43] backdrop-blur-sm border-[#2A5C43]/10 rounded-2xl p-5 flex flex-col items-center hover:bg-white transition-colors shadow-sm cursor-default">
                             <div className="bg-[#2A5C43]/10 p-3 rounded-full mb-3 text-[#2A5C43]">
                                 <BookOpen size={24} />
                             </div>
