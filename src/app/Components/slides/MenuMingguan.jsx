@@ -5,6 +5,7 @@ import { dataMenu } from "./menu_mingguan/dataMenu";
 import { HeartPulse } from "lucide-react";
 
 import HeroMenu from "./menu_mingguan/HeroMenu";
+import AkgMenu from "./menu_mingguan/AkgMenu"; // <--- IMPORT BARU
 import TabNavMenu from "./menu_mingguan/TabNavMenu";
 import DayCardMenu from "./menu_mingguan/DayCardMenu";
 import TipsMenu from "./menu_mingguan/TipsMenu";
@@ -21,6 +22,9 @@ export default function MenuMingguan() {
             className="h-full w-full overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-[#FAFAFA] font-sans"
         >
             <HeroMenu />
+
+            <AkgMenu /> {/* <--- TAMPILKAN DI SINI */}
+
             <TabNavMenu activeTab={activeTab} setActiveTab={setActiveTab} />
 
             <section className="py-12 px-6 lg:px-12 max-w-7xl mx-auto min-h-screen">
@@ -32,13 +36,13 @@ export default function MenuMingguan() {
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
                     >
-                        {/* Header Info Trimester - Tema Hijau, Ikon Emas */}
+                        {/* Header Info Trimester */}
                         <div className={`border rounded-2xl p-5 mb-10 text-[14px] font-medium flex items-center gap-3 ${activeData.color}`}>
                             <HeartPulse size={20} className="shrink-0 text-[#D4AF37]" strokeWidth={2.5} />
                             {activeData.title}
                         </div>
 
-                        {/* List Hari (Senin - Minggu) */}
+                        {/* List Hari */}
                         <div className="space-y-8">
                             {activeData.days.map((day, idx) => (
                                 <DayCardMenu key={idx} day={day} activeData={activeData} />

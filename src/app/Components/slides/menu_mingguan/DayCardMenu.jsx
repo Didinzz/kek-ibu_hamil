@@ -5,7 +5,7 @@ import {
     Carrot, Flame, Scale
 } from "lucide-react";
 
-// Semua Ikon sekarang menggunakan warna Primer (Hijau Gelap)
+// Semua Ikon menggunakan warna Primer (Hijau Gelap)
 const getMealIcon = (type) => {
     const iconClass = "text-[#2A5C43]";
     switch (type) {
@@ -25,7 +25,7 @@ const getMealIcon = (type) => {
 };
 
 export default function DayCardMenu({ day, activeData }) {
-    // 1. Variasi Induk untuk Card (Agar memicu animasi anaknya saat discroll)
+    // 1. Variasi Induk untuk Card (Memicu animasi anak saat di-scroll)
     const cardVariants = {
         hidden: { opacity: 0, y: 40 },
         visible: {
@@ -34,7 +34,7 @@ export default function DayCardMenu({ day, activeData }) {
             transition: {
                 duration: 0.6,
                 ease: "easeOut",
-                staggerChildren: 0.1 // Jeda waktu munculnya tiap menu (pagi, selingan, siang, dll)
+                staggerChildren: 0.1 // Jeda waktu munculnya tiap menu
             }
         }
     };
@@ -55,13 +55,14 @@ export default function DayCardMenu({ day, activeData }) {
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }} // Animasi baru jalan saat kartu masuk layar sejauh 100px
+            viewport={{ once: true, margin: "-100px" }}
             className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition-shadow"
         >
 
             {/* Header Hari (Warna Hijau Gradasi dari dataMenu) */}
             <div className={`${activeData.headerGrad} p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4`}>
-                <h3 className="font-serif text-[28px] text-[#D4AF37] leading-none">{day.name}</h3>
+                {/* TEKS HARI DIUBAH MENJADI PUTIH (text-white) */}
+                <h3 className="font-serif text-[28px] text-white leading-none">{day.name}</h3>
                 <div className="flex gap-3 flex-wrap">
                     <div className="bg-white/10 text-white px-4 py-2 rounded-xl text-center backdrop-blur-sm border border-white/10">
                         <div className="font-bold text-[18px] leading-none mb-1">{day.kkal}</div>
@@ -83,11 +84,11 @@ export default function DayCardMenu({ day, activeData }) {
                 {day.meals.map((meal, mIdx) => (
                     <motion.div
                         key={mIdx}
-                        variants={mealVariants} // <-- Terapkan animasi per item di sini
+                        variants={mealVariants}
                         className="p-5 flex flex-col h-full hover:bg-slate-50 transition-colors"
                     >
-                        {/* Waktu Makanan (Aksen Emas) */}
-                        <div className="flex items-center gap-1.5 text-[10px] font-bold text-white uppercase tracking-widest mb-3">
+                        {/* TEKS WAKTU MAKAN DIUBAH KE HIJAU AGAR TERBACA */}
+                        <div className="flex items-center gap-1.5 text-[10px] font-bold text-[#2A5C43] uppercase tracking-widest mb-3">
                             <Clock size={12} strokeWidth={2.5} /> {meal.time}
                         </div>
 
