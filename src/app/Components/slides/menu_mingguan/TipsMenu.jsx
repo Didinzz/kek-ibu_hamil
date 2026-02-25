@@ -79,7 +79,7 @@ export default function TipsMenu() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-100px" }}
-                        className="bg-white/5 border border-white/10 rounded-[2rem] p-8 backdrop-blur-sm"
+                        className="bg-white/5 border border-white/10 rounded-4xl p-8 backdrop-blur-sm"
                     >
                         <h4 className="inline-flex items-center gap-2 bg-[#4CAF79]/25 text-[#86EFAC] text-[13px] font-extrabold uppercase tracking-widest px-5 py-2.5 rounded-xl mb-8 shadow-sm shadow-[#4CAF79]/10">
                             <CheckCircle2 size={18} strokeWidth={2.5} /> Yang Dianjurkan
@@ -107,7 +107,7 @@ export default function TipsMenu() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-100px" }}
-                        className="bg-rose-950/30 border border-rose-900/40 rounded-[2rem] p-8 backdrop-blur-sm"
+                        className="bg-rose-950/30 border border-rose-900/40 rounded-4xl p-8 backdrop-blur-sm"
                     >
                         <h4 className="inline-flex items-center gap-2 bg-[#EF4444]/25 text-[#FCA5A5] text-[13px] font-extrabold uppercase tracking-widest px-5 py-2.5 rounded-xl mb-8 shadow-sm shadow-[#EF4444]/10">
                             <XCircle size={18} strokeWidth={2.5} /> Yang Dihindari

@@ -6,6 +6,10 @@ import Navbar from "./Components/Navbar";
 import Beranda from "./Components/slides/Beranda";
 import MateriKEK from "./Components/slides/MateriKEK";
 import MenuMingguan from "./Components/slides/MenuMingguan";
+import MenuHemat from "./Components/slides/MenuHemat";
+import TabelKonversi from "./Components/slides/TabelKonversi";
+import TabelKebutuhanGizi from "./Components/slides/TabelKebutuhanGizi";
+import TipsBumil from "./Components/slides/TipsBumil";
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState("beranda");
@@ -18,6 +22,14 @@ export default function Home() {
         return <MateriKEK key="materi" />
       case "menu_mingguan":
         return <MenuMingguan key="menu" />;
+      case "menu_antiboncos":
+        return <MenuHemat key="menu_antiboncos" />;
+      case "tabel_gizi":
+        return <TabelKonversi key="tabel_gizi" />;
+      case "kebutuhan_gizi":
+        return <TabelKebutuhanGizi key="kebutuhan_gizi" />;
+        case "tips_bumil": 
+        return <TipsBumil key="tips_bumil" />;
       default:
         return (
           <div key="other" className="flex min-h-screen items-center justify-center text-3xl font-light text-slate-400">

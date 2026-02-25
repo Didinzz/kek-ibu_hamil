@@ -7,11 +7,11 @@ export const dataMenu = {
             {
                 name: "Senin", kkal: "2.030", prot: "61g", fe: "26mg",
                 meals: [
-                    { time: "07.00 Sarapan", type: "egg", menu: "Nasi 150g + Telur rebus + Tumis bayam + Jeruk", chips: [{ v: "450 kkal", c: "e" }, { v: "15g P", c: "p" }, { v: "4mg Fe", c: "f" }] },
+                    { time: "07.00 Sarapan", type: "egg", menu: "Nasi 150g + Telur rebus 1btr + Tumis bayam + Jeruk 1 buah", chips: [{ v: "450 kkal", c: "e" }, { v: "15g P", c: "p" }, { v: "4mg Fe", c: "f" }] },
                     { time: "10.00 Selingan Pagi", type: "milk", menu: "Biskuit gandum 3 keping + Susu bumil 1 gelas", chips: [{ v: "280 kkal", c: "e" }, { v: "10g P", c: "p" }] },
-                    { time: "12.00 Makan Siang", type: "bento", menu: "Nasi 150g + Tempe goreng + Sayur sop + Pepaya", chips: [{ v: "550 kkal", c: "e" }, { v: "18g P", c: "p" }, { v: "3mg Fe", c: "f" }] },
+                    { time: "12.00 Makan Siang", type: "bento", menu: "Nasi 150g + Tempe goreng 2 potong + Sayur sop + Pepaya 1 potong", chips: [{ v: "550 kkal", c: "e" }, { v: "18g P", c: "p" }, { v: "3mg Fe", c: "f" }] },
                     { time: "15.00 Selingan Sore", type: "fruit", menu: "Pisang 1 buah + Air putih", chips: [{ v: "100 kkal", c: "e" }] },
-                    { time: "18.00 Makan Malam", type: "fish", menu: "Nasi 150g + Ikan kukus + Tumis kangkung", chips: [{ v: "480 kkal", c: "e" }, { v: "22g P", c: "p" }, { v: "3mg Fe", c: "f" }] }
+                    { time: "18.00 Makan Malam", type: "fish", menu: "Nasi 150g + Ikan kukus 1 ekor + Tumis kangkung", chips: [{ v: "480 kkal", c: "e" }, { v: "22g P", c: "p" }, { v: "3mg Fe", c: "f" }] }
                 ]
             },
             {
@@ -84,9 +84,9 @@ export const dataMenu = {
             {
                 name: "Senin", kkal: "2.350", prot: "80g", fe: "29mg",
                 meals: [
-                    { time: "07.00 Sarapan", type: "meat", menu: "Nasi 200g + Ayam rebus + Tumis brokoli + Susu bumil", chips: [{ v: "580 kkal", c: "e" }, { v: "28g P", c: "p" }] },
-                    { time: "10.00 Selingan Pagi", type: "bread", menu: "Roti gandum 2 lembar + Keju 1 potong", chips: [{ v: "278 kkal", c: "e" }, { v: "13g P", c: "p" }] },
-                    { time: "12.00 Makan Siang", type: "bean", menu: "Nasi 200g + Tahu bacem + Sayur bening bayam + Semangka", chips: [{ v: "560 kkal", c: "e" }, { v: "20g P", c: "p" }, { v: "4mg Fe", c: "f" }] },
+                    { time: "07.00 Sarapan", type: "egg", menu: "Nasi 200g + Telur dadar + Tumis brokoli + Susu bumil 1 gls", chips: [{ v: "580 kkal", c: "e" }, { v: "28g P", c: "p" }] },
+                    { time: "10.00 Selingan Pagi", type: "bread", menu: "Roti gandum 2 lbr + Keju 1 ptg", chips: [{ v: "278 kkal", c: "e" }, { v: "13g P", c: "p" }] },
+                    { time: "12.00 Makan Siang", type: "meat", menu: "Nasi 200g + Ayam rebus + Sayur bening bayam + Semangka", chips: [{ v: "560 kkal", c: "e" }, { v: "20g P", c: "p" }, { v: "4mg Fe", c: "f" }] },
                     { time: "15.00 Selingan Sore", type: "milk", menu: "Yogurt 1 cup + Buah potong", chips: [{ v: "160 kkal", c: "e" }, { v: "5g P", c: "p" }] },
                     { time: "18.00 Makan Malam", type: "fish", menu: "Nasi 200g + Ikan lele + Tumis tauge + Tahu", chips: [{ v: "590 kkal", c: "e" }, { v: "25g P", c: "p" }, { v: "3mg Fe", c: "f" }] }
                 ]
@@ -161,8 +161,8 @@ export const dataMenu = {
             {
                 name: "Senin", kkal: "2.350", prot: "90g", fe: "35mg",
                 meals: [
-                    { time: "07.00 Sarapan", type: "meat", menu: "Nasi 200g + Hati ayam + Tumis wortel + Jeruk", chips: [{ v: "550 kkal", c: "e" }, { v: "25g P", c: "p" }, { v: "5mg Fe", c: "f" }] },
-                    { time: "10.00 Selingan Pagi", type: "snack", menu: "Kacang rebus segenggam + Susu bumil 1 gelas", chips: [{ v: "303 kkal", c: "e" }, { v: "13g P", c: "p" }] },
+                    { time: "07.00 Sarapan", type: "meat", menu: "Nasi 200g + Hati ayam + Tumis wortel + Jeruk 1 buah", chips: [{ v: "550 kkal", c: "e" }, { v: "25g P", c: "p" }, { v: "5mg Fe", c: "f" }] },
+                    { time: "10.00 Selingan Pagi", type: "snack", menu: "Kacang rebus + Susu bumil 1 gelas", chips: [{ v: "303 kkal", c: "e" }, { v: "13g P", c: "p" }] },
                     { time: "12.00 Makan Siang", type: "fish", menu: "Nasi 200g + Ikan kembung + Sayur asem + Pepaya", chips: [{ v: "560 kkal", c: "e" }, { v: "24g P", c: "p" }, { v: "2mg Fe", c: "f" }] },
                     { time: "15.00 Selingan Sore", type: "bread", menu: "Roti 2 lembar + Susu bumil 1 gelas", chips: [{ v: "348 kkal", c: "e" }, { v: "14g P", c: "p" }] },
                     { time: "18.00 Makan Malam", type: "soup", menu: "Nasi 200g + Tempe + Tahu + Sup sayuran", chips: [{ v: "490 kkal", c: "e" }, { v: "20g P", c: "p" }, { v: "4mg Fe", c: "f" }] }
@@ -209,7 +209,7 @@ export const dataMenu = {
                 ]
             },
             {
-                name: "Sabtu", kkal: "2.350", prot: "91g", fe: "36mg",
+                name: "Sabtu", kkal: "2.350", prot: "82g", fe: "30mg",
                 meals: [
                     { time: "07.00 Sarapan", type: "meat", menu: "Nasi 200g + Hati sapi + Tumis wortel + Susu bumil", chips: [{ v: "580 kkal", c: "e" }, { v: "28g P", c: "p" }, { v: "5mg Fe", c: "f" }] },
                     { time: "10.00 Selingan Pagi", type: "snack", menu: "Kacang rebus + Buah potong", chips: [{ v: "190 kkal", c: "e" }, { v: "6g P", c: "p" }] },

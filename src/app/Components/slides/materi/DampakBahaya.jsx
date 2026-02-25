@@ -115,9 +115,6 @@ export default function DampakBahaya({ type }) {
         );
     }
 
-    // ==========================================
-    // RENDER: BAGIAN TANDA BAHAYA (Maroon Merah)
-    // ==========================================
     return (
         <section id="bahaya" className="py-24 px-6 lg:px-12 bg-linear-to-br from-[#7F1D1D] to-[#450a0a]">
             <div className="max-w-7xl mx-auto">
