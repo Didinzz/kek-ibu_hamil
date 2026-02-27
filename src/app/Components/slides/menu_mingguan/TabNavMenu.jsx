@@ -26,7 +26,7 @@ export default function TabNavMenu({ activeTab, setActiveTab, activeTier }) {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`relative flex items-center gap-2 px-6 lg:px-8 py-4 lg:py-5 font-bold text-[13px] tracking-[0.3px] transition-colors duration-300 ${isActive
+                            className={`relative flex items-center gap-2 px-6 lg:px-8 py-4 lg:py-5 font-bold text-[13px] tracking-[0.3px] transition-colors duration-300 cursor-pointer ${isActive
                                 ? (isPremium ? "text-[#e71d89]" : "text-[#FFD1E8]")
                                 : (isPremium ? "text-slate-400 hover:text-slate-800" : "text-white/45 hover:text-white/80")
                                 }`}
@@ -42,7 +42,7 @@ export default function TabNavMenu({ activeTab, setActiveTab, activeTier }) {
                             {isActive && (
                                 <motion.div
                                     layoutId="activeTabIndicator"
-                                    className={`absolute bottom-[-1px] left-0 right-0 h-[3px] ${isPremium ? "bg-[#e71d89]" : "bg-[#FFD1E8]"}`}
+                                    className={`absolute -bottom-px left-0 right-0 h-0.75 ${isPremium ? "bg-[#e71d89]" : "bg-[#FFD1E8]"}`}
                                     initial={false}
                                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                                 />

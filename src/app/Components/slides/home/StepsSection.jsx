@@ -71,7 +71,7 @@ export default function StepsSection() {
                     </div>
                     <h2 className="font-serif text-4xl lg:text-5xl font-bold text-[#1E293B] leading-tight">
                         Cara Mudah <br />
-                        Mulai Hidup <em className="italic text-[#e71d89]">Sehat & Hemat</em>
+                        Mulai Hidup <em className="italic font-serif text-[#e71d89]">Sehat & Hemat</em>
                     </h2>
                 </motion.div>
 
@@ -133,7 +133,7 @@ export default function StepsSection() {
                             </AnimatePresence>
                         </div>
 
-                        <div className="p-6 lg:p-8 bg-[#FAFAFA] grow min-h-[320px]">
+                        <div className="p-6 lg:p-8 bg-[#FAFAFA] grow min-h-80">
                             <AnimatePresence mode="wait">
                                 <motion.div key={selectedDay} variants={contentVariants} initial="hidden" animate="visible" exit="exit" className="space-y-1 divide-y divide-slate-200">
                                     {todayMenu?.meals.map((meal, index) => (

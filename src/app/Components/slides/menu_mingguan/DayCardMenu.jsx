@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Utensils, Milk, Sandwich, Apple, Fish, Beef, Coffee, Egg, Carrot, Soup, Croissant } from "lucide-react";
 
-// Helper Ikon (Pink untuk Premium, Soft Pink untuk Mewah)
+// Helper Ikon
 const renderIcon = (iconName, isPremium) => {
     const color = isPremium ? "text-[#c21470]" : "text-[#FFD1E8]";
     const props = { size: 28, strokeWidth: 1.5, className: color };
@@ -22,15 +22,15 @@ const renderIcon = (iconName, isPremium) => {
     }
 };
 
-// Helper Tag Gizi (Diselaraskan agar tidak menabrak tema)
+// Helper Tag Gizi
 const getTagColor = (cls, isPremium) => {
     if (isPremium) {
         switch (cls) {
-            case 'tag-e': return "bg-[#FFF5F9] text-[#c21470] border border-[#e71d89]/20"; // Energi (Pink)
-            case 'tag-p': return "bg-[#F0FDF4] text-[#166534] border border-[#166534]/20"; // Protein (Hijau Soft)
-            case 'tag-fe': return "bg-[#FEF2F2] text-[#991B1B] border border-[#991B1B]/20"; // Zat Besi (Merah Soft)
-            case 'tag-om': return "bg-[#FAF5FF] text-[#5B21B6] border border-[#5B21B6]/20"; // Omega (Ungu Soft)
-            case 'tag-ca': return "bg-[#EFF6FF] text-[#1E40AF] border border-[#1E40AF]/20"; // Kalsium (Biru Soft)
+            case 'tag-e': return "bg-[#FFF5F9] text-[#c21470] border border-[#e71d89]/20";
+            case 'tag-p': return "bg-[#F0FDF4] text-[#166534] border border-[#166534]/20";
+            case 'tag-fe': return "bg-[#FEF2F2] text-[#991B1B] border border-[#991B1B]/20";
+            case 'tag-om': return "bg-[#FAF5FF] text-[#5B21B6] border border-[#5B21B6]/20";
+            case 'tag-ca': return "bg-[#EFF6FF] text-[#1E40AF] border border-[#1E40AF]/20";
             default: return "bg-gray-100 text-gray-700";
         }
     } else {
@@ -48,17 +48,36 @@ const getTagColor = (cls, isPremium) => {
 export default function DayCardMenu({ day, activeTier, activeTab }) {
     const isPremium = activeTier === 'premium';
 
-    // Header Gradient disesuaikan dengan tema Pink/Magenta dan Navy
     const getHeaderGradient = () => {
         if (!isPremium) return "bg-gradient-to-br from-[#1E293B] to-[#0f172a] border-b border-[#e71d89]/20";
-        if (activeTab === "t1") return "bg-gradient-to-br from-[#FFD1E8] to-[#FBCFE8]"; // TM 1 sangat soft pink
-        if (activeTab === "t2") return "bg-gradient-to-br from-[#F9A8D4] to-[#F472B6]"; // TM 2 pink medium
-        return "bg-gradient-to-br from-[#e71d89] to-[#c21470]"; // TM 3 magenta solid
+        if (activeTab === "t1") return "bg-gradient-to-br from-[#FFD1E8] to-[#FBCFE8]";
+        if (activeTab === "t2") return "bg-gradient-to-br from-[#F9A8D4] to-[#F472B6]";
+        return "bg-gradient-to-br from-[#e71d89] to-[#c21470]";
     };
 
+    // --- KONFIGURASI ANIMASI ---
     const cardVariants = {
         hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut",
+                staggerChildren: 0.1, // Memicu anak (meals) muncul bergantian
+                delayChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
+        visible: {
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            transition: { duration: 0.5, ease: "easeOut" }
+        }
     };
 
     return (
@@ -101,11 +120,12 @@ export default function DayCardMenu({ day, activeTier, activeTab }) {
                 </div>
             </div>
 
-            {/* ================= GRID MENU (5 Kolom) ================= */}
+            {/* ================= GRID MENU (5 Kolom dengan Animasi Smooth) ================= */}
             <div className="grid grid-cols-2 lg:grid-cols-5">
                 {day.meals.map((meal, idx) => (
-                    <div
+                    <motion.div
                         key={idx}
+                        variants={itemVariants} // Menggunakan varian untuk memunculkan item satu per satu
                         className={`p-[16px_14px] flex flex-col transition-colors duration-300 group ${isPremium
                                 ? "border-b lg:border-b-0 lg:border-r border-slate-100 hover:bg-[#FFF5F9]"
                                 : "border-b lg:border-b-0 lg:border-r border-white/5 hover:bg-white/5"
@@ -125,7 +145,7 @@ export default function DayCardMenu({ day, activeTier, activeTab }) {
                         </div>
 
                         {/* Nama Makanan */}
-                        <div className={`text-[11px] font-bold leading-normal min-h-[12px] mb-2 ${isPremium ? "text-[#1E293B]" : "text-slate-200"
+                        <div className={`text-[11px] font-bold leading-normal min-h-3 mb-2 ${isPremium ? "text-[#1E293B]" : "text-slate-200"
                             }`}>
                             {meal.name}
                         </div>
@@ -148,7 +168,7 @@ export default function DayCardMenu({ day, activeTier, activeTab }) {
                             </div>
                         </div>
 
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 

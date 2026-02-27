@@ -142,7 +142,7 @@ export default function HeroMenu({ activeTier, setActiveTier, setActiveTab }) {
                         {/* Tombol Premium */}
                         <button
                             onClick={() => handleTierChange('premium')}
-                            className={`flex items-center justify-between gap-6 px-6 py-4 rounded-2xl text-sm font-bold transition-all duration-500 w-full ${isPremium
+                            className={`flex items-center justify-between gap-6 px-6 py-4 rounded-2xl text-sm font-bold transition-all duration-500 w-full cursor-pointer ${isPremium
                                 ? "bg-[#FFF5F9] text-[#e71d89] shadow-sm"
                                 : "text-white/40 hover:text-white/70"
                                 }`}
@@ -156,7 +156,7 @@ export default function HeroMenu({ activeTier, setActiveTier, setActiveTab }) {
                         {/* Tombol Mewah */}
                         <button
                             onClick={() => handleTierChange('luxury')}
-                            className={`flex items-center justify-between gap-6 px-6 py-4 rounded-2xl text-sm font-bold transition-all duration-500 w-full ${!isPremium
+                            className={`flex items-center justify-between gap-6 px-6 py-4 rounded-2xl text-sm font-bold transition-all duration-500 w-full cursor-pointer ${!isPremium
                                 ? "bg-[#e71d89] text-white shadow-lg"
                                 : "text-slate-400 hover:text-slate-600"
                                 }`}
