@@ -81,7 +81,7 @@ export default function LayananSection({ setActiveSlide }) {
 
                         <button
                             onClick={() => setActiveSlide("menu_mingguan")}
-                            className="inline-flex items-center gap-2 text-sm font-bold text-[#B7E4C7] hover:text-white transition-colors group/btn"
+                            className="inline-flex items-center gap-2 text-sm font-bold text-[#B7E4C7] hover:text-white transition-colors group/btn cursor-pointer"
                         >
                             Lihat menu lengkap <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
                         </button>
@@ -115,8 +115,8 @@ export default function LayananSection({ setActiveSlide }) {
                         </div>
 
                         <button
-                            onClick={() => setActiveSlide("kebutuhan_gizi")}
-                            className="inline-flex items-center gap-2 text-sm font-bold text-[#40916C] hover:text-[#2D6A4F] transition-colors group/btn"
+                            onClick={() => setActiveSlide("materi_kek")}
+                            className="inline-flex items-center gap-2 text-sm font-bold text-[#40916C] hover:text-[#2D6A4F] transition-colors group/btn cursor-pointer"
                         >
                             Pelajari selengkapnya <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
                         </button>
@@ -151,7 +151,7 @@ export default function LayananSection({ setActiveSlide }) {
 
                         <button
                             onClick={() => setActiveSlide("menu_antiboncos")}
-                            className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-white/80 transition-colors group/btn"
+                            className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-white/80 transition-colors group/btn cursor-pointer"
                         >
                             Tips hemat belanja <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
                         </button>

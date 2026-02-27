@@ -87,7 +87,7 @@ export default function CtaFooterSection({ setActiveSlide }) {
                         <motion.button
                             variants={buttonPop}
                             onClick={() => setActiveSlide("menu_mingguan")}
-                            className="bg-[#2D6A4F] hover:bg-[#40916C] text-white px-8 py-4 rounded-full text-sm font-bold flex items-center gap-2 shadow-xl shadow-[#2D6A4F]/30 hover:shadow-2xl hover:shadow-[#2D6A4F]/40 hover:-translate-y-1 transition-all duration-300 group"
+                            className="bg-[#2D6A4F] hover:bg-[#40916C] text-white px-8 py-4 rounded-full text-sm font-bold flex items-center gap-2 shadow-xl shadow-[#2D6A4F]/30 hover:shadow-2xl hover:shadow-[#2D6A4F]/40 hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
                         >
                             <Utensils size={18} className="group-hover:-rotate-12 group-hover:scale-110 transition-transform duration-300" />
                             Eksplorasi Menu Sehat
@@ -96,7 +96,7 @@ export default function CtaFooterSection({ setActiveSlide }) {
                         <motion.button
                             variants={buttonPop}
                             onClick={() => setActiveSlide("materi_kek")}
-                            className="bg-white hover:bg-[#F0F7F2] text-[#2D6A4F] border-2 border-[#2D6A4F]/20 hover:border-[#2D6A4F] px-8 py-4 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg shadow-black/5 hover:-translate-y-1 transition-all duration-300 group"
+                            className="bg-white hover:bg-[#F0F7F2] text-[#2D6A4F] border-2 border-[#2D6A4F]/20 hover:border-[#2D6A4F] px-8 py-4 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg shadow-black/5 hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
                         >
                             <BookOpen size={18} className="group-hover:scale-110 transition-transform duration-300" />
                             Pelajari Risiko KEK

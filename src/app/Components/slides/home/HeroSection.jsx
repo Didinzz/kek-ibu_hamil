@@ -103,13 +103,13 @@ export default function HeroSection({ setActiveSlide }) {
                     <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-12">
                         <button
                             onClick={() => setActiveSlide("menu_mingguan")}
-                            className="bg-[#2D6A4F] hover:bg-[#40916C] text-white px-8 py-4 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg shadow-[#2D6A4F]/30 hover:shadow-xl hover:shadow-[#2D6A4F]/40 hover:-translate-y-1 transition-all duration-300 group"
+                            className="bg-[#2D6A4F] hover:bg-[#40916C] text-white px-8 py-4 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg shadow-[#2D6A4F]/30 hover:shadow-xl hover:shadow-[#2D6A4F]/40 hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
                         >
                             <Utensils size={18} className="group-hover:rotate-12 transition-transform" /> Lihat Menu 7 Hari
                         </button>
                         <button
                             onClick={() => setActiveSlide("materi_kek")}
-                            className="bg-transparent border-2 border-[#2D6A4F] hover:bg-[#F0F7F2] text-[#2D6A4F] px-8 py-4 rounded-full text-sm font-bold flex items-center gap-2 hover:-translate-y-1 transition-all duration-300"
+                            className="bg-transparent border-2 border-[#2D6A4F] hover:bg-[#F0F7F2] text-[#2D6A4F] px-8 py-4 rounded-full text-sm font-bold flex items-center gap-2 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                         >
                             <BookOpen size={18} /> Kenali Risiko KEK
                         </button>
