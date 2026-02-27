@@ -110,7 +110,7 @@ export default function DrSarahIllustration({ className }) {
                 <rect x="0" y="0" width="14" height="26" rx="5" fill="#2d6a4f" />
                 <circle cx="7" cy="13" r="4.5" fill="white" opacity="0.2" />
                 <text x="33" y="11" textAnchor="middle" fontFamily="sans-serif" fontSize="6" fontWeight="800" fill="#1a2e22">dr. SARAH</text>
-                <text x="33" y="19" textAnchor="middle" fontFamily="sans-serif" fontSize="4.5" fontWeight="600" fill="#5a7065">Dokter Gizi</text>
+                <text x="33" y="19" textAnchor="middle" fontFamily="sans-serif" fontSize="4.5" fontWeight="600" fill="#5a7065">Dokter Internship</text>
             </g>
 
         </svg>
