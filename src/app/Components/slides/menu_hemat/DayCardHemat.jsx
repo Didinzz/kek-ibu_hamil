@@ -12,7 +12,7 @@ const getMealIcon = (type) => {
     switch (type) {
         case "egg": return <Egg size={24} strokeWidth={2} className={cls} />;
         case "fruit": return <Apple size={24} strokeWidth={2} className={cls} />;
-        case "bean": return <Scale size={24} strokeWidth={2} className={cls} />; // Tempe/Tahu
+        case "bean": return <Bean size={24} strokeWidth={2} className={cls} />; // Tempe/Tahu
         case "fish": return <Fish size={24} strokeWidth={2} className={cls} />;
         case "snack": return <Candy size={24} strokeWidth={2} className={cls} />;
         case "soup": return <Flame size={24} strokeWidth={2} className={cls} />;

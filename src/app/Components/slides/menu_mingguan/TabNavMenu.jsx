@@ -1,53 +1,56 @@
 "use client";
 import { motion } from "framer-motion";
+import { Sparkles, Leaf } from "lucide-react";
 
-export default function TabNavMenu({ activeTab, setActiveTab }) {
-    const tabs = ["t1", "t2", "t3"];
+export default function TabNavMenu({ activeTab, setActiveTab, activeTier }) {
+    const isPremium = activeTier === 'premium';
+
+    const tabs = [
+        { id: "t1", label: "Trimester 1" },
+        { id: "t2", label: "Trimester 2" },
+        { id: "t3", label: "Trimester 3" }
+    ];
 
     return (
-        // Membuang 'sticky top-0 z-40' dan latar belakang gelap
-        // Menggantinya dengan latar yang membaur dengan bagian menu (FAFAFA)
-        <div className="bg-[#FAFAFA] flex justify-center pt-12 pb-4 px-6">
+        <div
+            className={`sticky top-0 z-40 px-6 lg:px-14 flex overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] transition-colors duration-500 shadow-md ${isPremium ? "bg-[#1E5C3A]" : "bg-[#111A0E] border-b border-[#D4A420]/15"
+                }`}
+            style={{ fontFamily: "'Outfit', sans-serif" }}
+        >
+            <div className="flex w-full md:w-auto">
+                {tabs.map((tab) => {
+                    const isActive = activeTab === tab.id;
 
-            {/* Wadah Kapsul (Pill Container) */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-white shadow-sm border border-slate-200 p-1.5 rounded-full flex relative w-full max-w-2xl"
-            >
-                {tabs.map((tri) => {
-                    const isActive = activeTab === tri;
                     return (
                         <button
-                            key={tri}
-                            onClick={() => setActiveTab(tri)}
-                            className={`flex-1 py-3.5 md:py-4 text-[12px] md:text-[13px] font-bold tracking-widest uppercase transition-colors relative z-10 rounded-full cursor-pointer ${isActive
-                                    ? "text-white" // Teks menjadi putih saat aktif (karena ditimpa kapsul hijau)
-                                    : "text-slate-400 hover:text-[#2A5C43]" // Teks abu-abu saat tidak aktif
+                            key={tab.id}
+                            onClick={() => setActiveTab(tab.id)}
+                            className={`relative flex items-center gap-2 px-6 lg:px-8 py-4 lg:py-5 font-bold text-[13px] tracking-[0.3px] transition-colors duration-300 ${isActive
+                                    ? (isPremium ? "text-[#A8DBB8]" : "text-[#F0C840]")
+                                    : "text-white/45 hover:text-white/80"
                                 }`}
                         >
-                            <span className="relative z-20">
-                                Trimester {tri.replace('t', '')}
-                            </span>
+                            {/* Ikon Dinamis */}
+                            {isActive && isPremium && <Leaf size={14} className="text-[#A8DBB8]" />}
+                            {isActive && !isPremium && <Sparkles size={14} className="text-[#F0C840]" />}
+                            {!isActive && <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>}
 
-                            {/* INDIKATOR KAPSUL MELUNCUR (The "Anjay" Animation) */}
+                            {tab.label}
+
+                            {/* Animasi Garis Bawah (Persis seperti CSS border-bottom) */}
                             {isActive && (
                                 <motion.div
-                                    layoutId="activeTabPill"
-                                    className="absolute inset-0 bg-[#2A5C43] rounded-full z-0 shadow-lg shadow-[#2A5C43]/30"
-                                    transition={{
-                                        type: "spring",
-                                        stiffness: 400,
-                                        damping: 30
-                                    }}
+                                    layoutId="activeTabIndicator"
+                                    className={`absolute bottom-0 left-0 right-0 h-[3px] ${isPremium ? "bg-[#A8DBB8]" : "bg-[#F0C840]"
+                                        }`}
+                                    initial={false}
+                                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
                                 />
                             )}
                         </button>
                     );
                 })}
-            </motion.div>
-
+            </div>
         </div>
     );
 }

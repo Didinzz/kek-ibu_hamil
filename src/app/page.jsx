@@ -10,6 +10,7 @@ import MenuHemat from "./Components/slides/MenuHemat";
 import TabelKonversi from "./Components/slides/TabelKonversi";
 import TabelKebutuhanGizi from "./Components/slides/TabelKebutuhanGizi";
 import TipsBumil from "./Components/slides/TipsBumil";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState("beranda");
@@ -51,6 +52,7 @@ export default function Home() {
           {renderSlide()}
         </AnimatePresence>
       </div>
+      <Footer />
     </main>
   );
 }

@@ -40,13 +40,6 @@ export default function MenuHemat() {
             <WeeklySummary />
             <TipsHemat tips={dataHemat.tips} />
 
-            {/* Footer Sederhana Tanpa Emoji */}
-            <footer className="bg-[#1A202C] py-8 text-center border-t-4 border-[#D4AF37]">
-                <p className="text-slate-400 text-xs leading-relaxed">
-                    <strong className="text-[#D4AF37]">Program CERMAT</strong> — Edisi Hemat<br />
-                    Harga dapat berbeda di setiap wilayah.
-                </p>
-            </footer>
         </motion.div>
     );
 }
