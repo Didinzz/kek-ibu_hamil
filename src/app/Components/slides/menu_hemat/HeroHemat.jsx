@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Wallet, CalendarRange, Utensils, Zap } from "lucide-react";
+import { Wallet, CalendarRange, Utensils, Zap, Sparkles, Sprout } from "lucide-react";
 
 export default function HeroHemat({ stats }) {
     // 1. Variasi Induk: Mengatur urutan waktu (Stagger)
@@ -37,10 +37,12 @@ export default function HeroHemat({ stats }) {
     };
 
     return (
-        <section className="relative bg-[#F0FAF5] pt-24 pb-16 px-6 lg:px-12 text-center overflow-hidden border-b border-[#2A5C43]/10">
-            {/* Background Blobs */}
-            <div className="absolute top-[-20%] left-[-10%] w-96 h-96 bg-[#2A5C43]/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute bottom-[-20%] right-[-10%] w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
+        // Background diganti menjadi Soft Pink (#FFF5F9) dengan border transparan Magenta
+        <section className="relative bg-[#FFF5F9] pt-24 pb-16 px-6 lg:px-12 text-center overflow-hidden border-b border-[#e71d89]/10">
+
+            {/* Background Blobs (Magenta Soft Glow) */}
+            <div className="absolute top-[-20%] left-[-10%] w-96 h-96 bg-[#e71d89]/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute bottom-[-20%] right-[-10%] w-96 h-96 bg-[#FFD1E8]/40 rounded-full blur-3xl pointer-events-none"></div>
 
             <motion.div
                 initial="hidden"
@@ -50,20 +52,20 @@ export default function HeroHemat({ stats }) {
             >
                 {/* 1. Badge Program */}
                 <motion.div variants={textVariants}>
-                    <div className="inline-block bg-[#2A5C43] text-white font-bold text-[11px] tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 shadow-lg shadow-[#2A5C43]/20">
-                        💰 Program CERMAT — Edisi Hemat
+                    <div className="inline-flex items-center gap-2 bg-white text-[#e71d89] font-bold text-[11px] tracking-widest uppercase px-4 py-2 rounded-full mb-6 border border-[#e71d89]/20 shadow-sm">
+                        <Wallet size={14} /> Program CERMAT — Edisi Hemat
                     </div>
                 </motion.div>
 
-                {/* 2. Judul Utama */}
-                <motion.h1 variants={textVariants} className="font-black text-4xl md:text-6xl text-[#1A202C] leading-tight mb-4">
-                    Menu Bumil <span className="text-[#2A5C43]">Bergizi</span><br />
-                    <span className="text-[#D4AF37] font-serif italic font-normal">Tanpa Kantong Bolong</span>
+                {/* 2. Judul Utama (Navy & Magenta) */}
+                <motion.h1 variants={textVariants} className="font-black text-4xl md:text-6xl text-[#1E293B] leading-tight mb-4">
+                    Menu Bumil <span className="text-[#e71d89]">Bergizi</span><br />
+                    <span className="text-[#c21470] font-serif italic font-normal">Tanpa Kantong Bolong</span>
                 </motion.h1>
 
                 {/* 3. Deskripsi */}
-                <motion.p variants={textVariants} className="text-slate-500 text-[15px] max-w-lg mx-auto mb-10 leading-relaxed">
-                    Panduan menu makan ibu hamil selama 7 hari dengan bahan-bahan lokal murah bergizi — tetap sehat, tetap semangat! 🌿
+                <motion.p variants={textVariants} className="text-slate-500 text-[15px] max-w-lg mx-auto mb-10 leading-relaxed flex items-center justify-center gap-1 flex-wrap">
+                    Panduan menu makan ibu hamil selama 7 hari dengan bahan-bahan lokal murah bergizi — tetap sehat, tetap semangat!
                 </motion.p>
 
                 {/* 4. Stats Grid (Isinya juga akan muncul berurutan karena ada di dalam containerVariants) */}
@@ -76,13 +78,17 @@ export default function HeroHemat({ stats }) {
                     ].map((item, idx) => (
                         <motion.div
                             key={idx}
-                            variants={cardVariants} // Gunakan variasi khusus kartu
-                            whileHover={{ y: -5, transition: { duration: 0.2 } }} // Efek hover tambahan
-                            className="bg-white border-2 border-[#2A5C43]/10 rounded-2xl p-4 flex flex-col items-center hover:border-[#2A5C43] transition-colors shadow-sm"
+                            variants={cardVariants}
+                            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                            // Kartu putih bersih dengan hover outline Magenta
+                            className="bg-white border border-[#e71d89]/10 rounded-2xl p-4 flex flex-col items-center hover:border-[#e71d89]/40 hover:shadow-md transition-all shadow-sm group"
                         >
-                            <div className="text-[#2A5C43] mb-2 bg-[#2A5C43]/10 p-2 rounded-full">{item.icon}</div>
-                            <div className="font-black text-xl text-[#1A202C]">{item.val}</div>
-                            <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{item.lbl}</div>
+                            {/* Ikon dengan background soft pink */}
+                            <div className="text-[#e71d89] mb-2 bg-[#FFF5F9] p-2.5 rounded-xl group-hover:bg-[#e71d89] group-hover:text-white transition-colors">
+                                {item.icon}
+                            </div>
+                            <div className="font-black text-xl text-[#1E293B]">{item.val}</div>
+                            <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">{item.lbl}</div>
                         </motion.div>
                     ))}
                 </div>

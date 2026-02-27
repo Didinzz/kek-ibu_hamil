@@ -25,61 +25,61 @@ export default function PenyebabMateri() {
         })
     };
 
-    // Data Faktor Penyebab dengan 100% Teks Asli HTML
+    // Data Faktor Penyebab dengan palet warna Pink/Ungu yang di-soft-kan
     const causes = [
         {
             icon: <Utensils size={24} strokeWidth={1.5} />,
             title: "Asupan Energi & Protein Tidak Adekuat",
             desc: "Konsumsi makanan sehari-hari tidak mencukupi kebutuhan energi dan protein, terutama saat kehamilan yang kebutuhannya meningkat signifikan dibanding kondisi tidak hamil.",
             src: "Sumber: Pedoman Gizi Seimbang, Kemenkes RI 2014",
-            iconBg: "bg-[#E8F5EE]",
-            iconColor: "text-[#2D6A4F]",
-            hoverBorder: "group-hover:border-[#40916C]/40"
+            iconBg: "bg-[#FFF5F9]", // Soft Pink
+            iconColor: "text-[#e71d89]", // Magenta
+            hoverBorder: "group-hover:border-[#e71d89]/40"
         },
         {
             icon: <Wallet size={24} strokeWidth={1.5} />,
             title: "Keterbatasan Ekonomi & Akses Pangan",
             desc: "Kemiskinan atau keterbatasan akses terhadap bahan pangan bergizi mengakibatkan kualitas dan kuantitas makanan yang dikonsumsi tidak terpenuhi dalam jangka panjang.",
             src: "Sumber: Riskesdas 2018, Kemenkes RI",
-            iconBg: "bg-[#FFF9E6]",
-            iconColor: "text-[#D4A420]",
-            hoverBorder: "group-hover:border-[#F4A830]/40"
+            iconBg: "bg-slate-50", // Soft Gray
+            iconColor: "text-slate-600", // Dark Gray
+            hoverBorder: "group-hover:border-slate-300"
         },
         {
             icon: <HeartPulse size={24} strokeWidth={1.5} />,
             title: "Mual Muntah Berlebih (Hiperemesis)",
             desc: "Mual dan muntah pada trimester pertama yang berat (hiperemesis gravidarum) menyebabkan asupan makanan menurun drastis dan bila berlanjut dapat memperparah kondisi KEK.",
             src: "Sumber: Pedoman Pelayanan Gizi Bumil KEK, Kemenkes 2018",
-            iconBg: "bg-[#FFF5ED]",
-            iconColor: "text-[#C84C31]",
-            hoverBorder: "group-hover:border-[#C84C31]/40"
+            iconBg: "bg-[#FDF2F8]", // Soft Pink Red
+            iconColor: "text-[#c21470]", // Deep Magenta
+            hoverBorder: "group-hover:border-[#c21470]/40"
         },
         {
             icon: <ShieldAlert size={24} strokeWidth={1.5} />,
             title: "Penyakit Infeksi Berulang",
             desc: "Infeksi kronis seperti TBC, diare berulang, atau cacingan meningkatkan kebutuhan energi sekaligus menurunkan penyerapan nutrisi, menciptakan lingkaran setan kekurangan gizi.",
             src: "Sumber: UNICEF Conceptual Framework; WHO Nutrition 2020",
-            iconBg: "bg-[#FAFAFA]",
-            iconColor: "text-[#1A2E22]",
-            hoverBorder: "group-hover:border-[#1A2E22]/30"
+            iconBg: "bg-[#F8FAFC]", // Very light slate
+            iconColor: "text-[#1E293B]", // Navy
+            hoverBorder: "group-hover:border-[#1E293B]/30"
         },
         {
             icon: <GraduationCap size={24} strokeWidth={1.5} />,
             title: "Pengetahuan Gizi Rendah",
             desc: "Kurangnya pengetahuan tentang makanan bergizi untuk ibu hamil menyebabkan pola makan tidak seimbang, meskipun secara ekonomi sebenarnya mampu memenuhi kebutuhan gizi.",
             src: "Sumber: Riskesdas 2018; Riskesdas 2013, Kemenkes RI",
-            iconBg: "bg-[#E8F5EE]",
-            iconColor: "text-[#40916C]",
-            hoverBorder: "group-hover:border-[#40916C]/40"
+            iconBg: "bg-[#F5F3FF]", // Soft Lavender/Purple
+            iconColor: "text-[#8B5CF6]", // Soft Purple
+            hoverBorder: "group-hover:border-[#8B5CF6]/40"
         },
         {
             icon: <CalendarRange size={24} strokeWidth={1.5} />,
             title: "Kehamilan Usia Muda / Jarak Pendek",
             desc: "Ibu hamil di usia < 20 tahun masih dalam masa tumbuh kembang, sehingga bersaing memperebutkan nutrisi dengan janinnya. Jarak kehamilan < 2 tahun juga meningkatkan risiko KEK.",
             src: "Sumber: Pedoman Pelayanan Gizi Bumil KEK, Kemenkes 2018",
-            iconBg: "bg-[#FFF5ED]",
-            iconColor: "text-[#C84C31]",
-            hoverBorder: "group-hover:border-[#C84C31]/40"
+            iconBg: "bg-[#FFF1F2]", // Blush Pink
+            iconColor: "text-[#E11D48]", // Rose Pink
+            hoverBorder: "group-hover:border-[#E11D48]/40"
         }
     ];
 
@@ -96,11 +96,11 @@ export default function PenyebabMateri() {
                     viewport={{ once: true, margin: "-50px" }}
                     className="mb-10"
                 >
-                    <div className="flex items-center gap-3 text-[11px] font-bold tracking-widest uppercase text-[#C84C31] mb-3">
+                    <div className="flex items-center gap-3 text-[11px] font-bold tracking-widest uppercase text-[#e71d89] mb-3">
                         03 — Faktor Penyebab
-                        <div className="flex-1 h-px bg-[#C84C31]/20"></div>
+                        <div className="flex-1 h-px bg-[#e71d89]/20"></div>
                     </div>
-                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1A2E22] mb-3 tracking-tight">
+                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E293B] mb-3 tracking-tight">
                         Mengapa KEK Terjadi?
                     </h2>
                     <p className="text-[14px] text-slate-500 max-w-2xl leading-relaxed">
@@ -124,7 +124,7 @@ export default function PenyebabMateri() {
                                 <div className={`w-12 h-12 ${item.iconBg} ${item.iconColor} rounded-xl flex items-center justify-center shrink-0 border border-black/5`}>
                                     {item.icon}
                                 </div>
-                                <h4 className="text-[14.5px] font-bold text-[#1A2E22] leading-tight">
+                                <h4 className="text-[14.5px] font-bold text-[#1E293B] leading-tight">
                                     {item.title}
                                 </h4>
                             </div>
@@ -133,7 +133,8 @@ export default function PenyebabMateri() {
                                 {item.desc}
                             </p>
 
-                            <div className="text-[10px] font-bold text-[#40916C] mt-auto pt-4 border-t border-slate-100">
+                            {/* Warna Teks Sumber disesuaikan menjadi Netral agar tidak terlalu ramai */}
+                            <div className="text-[10px] font-bold text-slate-400 mt-auto pt-4 border-t border-slate-100">
                                 {item.src}
                             </div>
                         </motion.div>

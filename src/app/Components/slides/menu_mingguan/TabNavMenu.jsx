@@ -13,7 +13,8 @@ export default function TabNavMenu({ activeTab, setActiveTab, activeTier }) {
 
     return (
         <div
-            className={`sticky top-0 z-40 px-6 lg:px-14 flex overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] transition-colors duration-500 shadow-md ${isPremium ? "bg-[#1E5C3A]" : "bg-[#111A0E] border-b border-[#D4A420]/15"
+            // Premium: Putih border bawah | Mewah: Navy gelap border bawah magenta
+            className={`sticky top-0 z-40 px-6 lg:px-14 flex overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] transition-colors duration-500 shadow-sm ${isPremium ? "bg-white border-b border-slate-200" : "bg-[#0b1221] border-b border-[#e71d89]/15"
                 }`}
             style={{ fontFamily: "'Outfit', sans-serif" }}
         >
@@ -26,23 +27,22 @@ export default function TabNavMenu({ activeTab, setActiveTab, activeTier }) {
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
                             className={`relative flex items-center gap-2 px-6 lg:px-8 py-4 lg:py-5 font-bold text-[13px] tracking-[0.3px] transition-colors duration-300 ${isActive
-                                    ? (isPremium ? "text-[#A8DBB8]" : "text-[#F0C840]")
-                                    : "text-white/45 hover:text-white/80"
+                                ? (isPremium ? "text-[#e71d89]" : "text-[#FFD1E8]")
+                                : (isPremium ? "text-slate-400 hover:text-slate-800" : "text-white/45 hover:text-white/80")
                                 }`}
                         >
                             {/* Ikon Dinamis */}
-                            {isActive && isPremium && <Leaf size={14} className="text-[#A8DBB8]" />}
-                            {isActive && !isPremium && <Sparkles size={14} className="text-[#F0C840]" />}
-                            {!isActive && <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>}
+                            {isActive && isPremium && <Leaf size={14} className="text-[#e71d89]" />}
+                            {isActive && !isPremium && <Sparkles size={14} className="text-[#FFD1E8]" />}
+                            {!isActive && <span className={`w-1.5 h-1.5 rounded-full ${isPremium ? "bg-slate-200" : "bg-white/20"}`}></span>}
 
                             {tab.label}
 
-                            {/* Animasi Garis Bawah (Persis seperti CSS border-bottom) */}
+                            {/* Animasi Garis Bawah (Garis aktif) */}
                             {isActive && (
                                 <motion.div
                                     layoutId="activeTabIndicator"
-                                    className={`absolute bottom-0 left-0 right-0 h-[3px] ${isPremium ? "bg-[#A8DBB8]" : "bg-[#F0C840]"
-                                        }`}
+                                    className={`absolute bottom-[-1px] left-0 right-0 h-[3px] ${isPremium ? "bg-[#e71d89]" : "bg-[#FFD1E8]"}`}
                                     initial={false}
                                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                                 />

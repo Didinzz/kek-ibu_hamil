@@ -7,12 +7,12 @@ import {
 
 // Mapping Icon berdasarkan tipe makanan
 const getMealIcon = (type) => {
-    // Kita gunakan warna Emas untuk Ikon agar kontras dengan background hijau muda
-    const cls = "text-[#D4AF37]";
+    // Kita gunakan warna Magenta Pink untuk Ikon
+    const cls = "text-[#e71d89]";
     switch (type) {
         case "egg": return <Egg size={24} strokeWidth={2} className={cls} />;
         case "fruit": return <Apple size={24} strokeWidth={2} className={cls} />;
-        case "bean": return <Bean size={24} strokeWidth={2} className={cls} />; // Tempe/Tahu
+        case "bean": return <Bean size={24} strokeWidth={2} className={cls} />;
         case "fish": return <Fish size={24} strokeWidth={2} className={cls} />;
         case "snack": return <Candy size={24} strokeWidth={2} className={cls} />;
         case "soup": return <Flame size={24} strokeWidth={2} className={cls} />;
@@ -31,7 +31,7 @@ export default function DayCardHemat({ data, index }) {
             transition: {
                 duration: 0.6,
                 ease: "easeOut",
-                staggerChildren: 0.1 // Memicu anak-anaknya muncul berurutan
+                staggerChildren: 0.1
             }
         }
     };
@@ -53,26 +53,26 @@ export default function DayCardHemat({ data, index }) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="bg-white rounded-4xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-lg transition-all"
+            className="bg-white rounded-4xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-[0_8px_30px_rgba(231,29,137,0.08)] hover:border-[#e71d89]/30 transition-all"
         >
 
-            {/* --- HEADER KARTU (Hijau) --- */}
-            <div className="bg-linear-to-r from-[#1A4A2E] to-[#2A5C43] p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-white">
+            {/* --- HEADER KARTU (Magenta Gradient) --- */}
+            <div className="bg-linear-to-r from-[#c21470] to-[#e71d89] p-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-white">
                 <div className="flex items-center gap-4">
                     {/* Nomor Hari */}
-                    <div className="bg-white/10 w-10 h-10 rounded-xl flex items-center justify-center font-serif text-xl border border-white/10">
+                    <div className="bg-white/20 w-10 h-10 rounded-xl flex items-center justify-center font-serif text-xl border border-white/20 backdrop-blur-sm">
                         {index + 1}
                     </div>
                     <div>
                         <h3 className="font-serif text-2xl leading-none mb-1 text-white">{data.day}</h3>
-                        <p className="text-[11px] text-[#D4AF37] font-bold uppercase tracking-widest">{data.title}</p>
+                        <p className="text-[11px] text-[#FFD1E8] font-bold uppercase tracking-widest">{data.title}</p>
                     </div>
                 </div>
 
                 {/* Badge Total Budget */}
-                <div className="bg-white text-[#2A5C43] px-4 py-2 rounded-xl text-center shadow-lg">
+                <div className="bg-white text-[#c21470] px-4 py-2 rounded-xl text-center shadow-md">
                     <div className="font-black text-lg leading-none mb-0.5">{data.budget}</div>
-                    <div className="text-[9px] text-[#2A5C43]/70 font-bold uppercase tracking-widest">Total Hari Ini</div>
+                    <div className="text-[9px] text-slate-500 font-bold uppercase tracking-widest">Total Hari Ini</div>
                 </div>
             </div>
 
@@ -81,23 +81,23 @@ export default function DayCardHemat({ data, index }) {
                 {data.meals.map((meal, mIdx) => (
                     <motion.div
                         key={mIdx}
-                        variants={itemVariants} // Animasi per item
-                        className="p-5 flex flex-col h-full hover:bg-[#F0FAF5]/50 transition-colors group"
+                        variants={itemVariants}
+                        className="p-5 flex flex-col h-full hover:bg-[#FFF5F9] transition-colors group"
                     >
                         {/* Waktu */}
-                        <div className="flex items-center gap-1.5 text-[10px] font-bold text-[#2A5C43] uppercase tracking-widest mb-3">
+                        <div className="flex items-center gap-1.5 text-[10px] font-bold text-[#e71d89] uppercase tracking-widest mb-3">
                             <Clock size={12} strokeWidth={2.5} /> {meal.time.split(" ")[0]}
                             <span className="text-slate-400">{meal.time.split(" ")[1]}</span>
                         </div>
 
-                        {/* Ikon */}
-                        <div className="bg-[#2A5C43]/10 w-12 h-12 rounded-[14px] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        {/* Ikon (Soft Pink Box) */}
+                        <div className="bg-[#FFF5F9] border border-[#e71d89]/10 w-12 h-12 rounded-[14px] flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[#e71d89] [&>svg]:group-hover:text-white transition-all duration-300">
                             {getMealIcon(meal.type)}
                         </div>
 
                         {/* Nama Menu & Detail */}
                         <div className="mb-4 grow">
-                            <div className="text-[13px] font-bold text-[#1A202C] leading-tight mb-1.5">
+                            <div className="text-[13px] font-bold text-[#1E293B] leading-tight mb-1.5 group-hover:text-[#c21470] transition-colors">
                                 {meal.menu}
                             </div>
                             <div className="text-[11px] text-slate-500 leading-relaxed font-light">
@@ -107,10 +107,10 @@ export default function DayCardHemat({ data, index }) {
 
                         {/* Footer Item: Harga & Kalori */}
                         <div className="flex items-center justify-between mt-auto border-t border-slate-100 pt-3">
-                            <span className="text-[13px] font-black text-[#2A5C43]">
+                            <span className="text-[13px] font-black text-[#c21470]">
                                 {meal.price}
                             </span>
-                            <span className="text-[10px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
+                            <span className="text-[10px] font-bold text-slate-400 bg-slate-50 px-2 py-0.5 rounded-full">
                                 {meal.meta}
                             </span>
                         </div>

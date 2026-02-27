@@ -69,7 +69,7 @@ export default function CtaFooterSection({ setActiveSlide }) {
                     <motion.h2 variants={cinematicReveal} className="font-serif text-4xl md:text-5xl lg:text-6xl font-black text-[#1E293B] leading-[1.1] mb-6 tracking-tight">
                         Jaga Gizi Bunda,<br />
                         <em className="italic text-[#e71d89] font-normal">Jaga Masa Depan</em>{" "}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e71d89] to-[#c21470]">Si Kecil</span>
+                        <span className="text-transparent bg-clip-text bg-linear-to-r from-[#e71d89] to-[#c21470]">Si Kecil</span>
                     </motion.h2>
 
                     {/* Deskripsi */}

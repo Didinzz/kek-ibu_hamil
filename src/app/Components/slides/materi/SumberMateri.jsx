@@ -85,12 +85,12 @@ export default function SumberMateri() {
                     viewport={{ once: true, margin: "-50px" }}
                     className="mb-10 text-center max-w-2xl mx-auto"
                 >
-                    <div className="flex items-center justify-center gap-3 text-[11px] font-bold tracking-widest uppercase text-[#40916C] mb-4">
-                        <div className="w-8 h-px bg-[#40916C]/30"></div>
+                    <div className="flex items-center justify-center gap-3 text-[11px] font-bold tracking-widest uppercase text-[#e71d89] mb-4">
+                        <div className="w-8 h-px bg-[#e71d89]/30"></div>
                         07 — Daftar Pustaka
-                        <div className="w-8 h-px bg-[#40916C]/30"></div>
+                        <div className="w-8 h-px bg-[#e71d89]/30"></div>
                     </div>
-                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1A2E22] mb-4 tracking-tight">
+                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#e71d89] mb-4 tracking-tight">
                         Sumber & Referensi
                     </h2>
                     <p className="text-[14px] text-slate-500 leading-relaxed">
@@ -108,41 +108,41 @@ export default function SumberMateri() {
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, margin: "-50px" }}
-                            className="bg-white border border-slate-200 rounded-2xl p-5 lg:p-6 shadow-sm hover:shadow-md hover:border-[#40916C]/30 transition-all duration-300 flex items-start gap-4 group"
+                            className="bg-white border border-slate-200 rounded-2xl p-5 lg:p-6 shadow-sm hover:shadow-md hover:border-[#e71d89]/40 transition-all duration-300 flex items-start gap-4 group"
                         >
-                            <div className="text-[12px] font-black text-[#40916C]/40 group-hover:text-[#40916C] transition-colors pt-1">
+                            <div className="text-[12px] font-black text-slate-300 group-hover:text-[#e71d89] transition-colors pt-1">
                                 [{item.id}]
                             </div>
                             <div>
-                                <h4 className="text-[13px] font-bold text-[#1A2E22] leading-[1.6] mb-3">
+                                <h4 className="text-[13px] font-bold text-[#1E293B] leading-[1.6] mb-3 group-hover:text-[#c21470] transition-colors">
                                     {item.title}
                                 </h4>
-                                <div className="flex items-center gap-2 text-[11px] font-semibold text-slate-500 bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-lg inline-flex">
-                                    <span className="text-slate-400">{item.icon}</span> {item.pub}
+                                <div className="flex items-center gap-2 text-[11px] font-semibold text-slate-500 bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-lg inline-flex group-hover:bg-[#FFF5F9] group-hover:border-[#e71d89]/10 transition-colors">
+                                    <span className="text-slate-400 group-hover:text-[#e71d89] transition-colors">{item.icon}</span> {item.pub}
                                 </div>
                             </div>
                         </motion.div>
                     ))}
                 </div>
 
-                {/* === DISCLAIMER BOX (Warna Soft Cream/Warning) === */}
+                {/* === DISCLAIMER BOX (Magenta Navy Warning) === */}
                 <motion.div
                     custom={0.9} // Muncul paling akhir setelah semua kartu sumber
                     variants={itemVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
-                    className="relative bg-[#FFF9E6] border border-[#F4A830]/20 rounded-3xl p-6 lg:p-8 flex flex-col md:flex-row gap-5 items-start shadow-sm"
+                    className="relative bg-[#FFF5F9] border border-[#e71d89]/20 rounded-3xl p-6 lg:p-8 flex flex-col md:flex-row gap-5 items-start shadow-sm"
                 >
-                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shrink-0 border border-[#F4A830]/20 shadow-sm">
-                        <ShieldAlert size={24} className="text-[#D4A420]" strokeWidth={2} />
+                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shrink-0 border border-[#e71d89]/20 shadow-sm">
+                        <ShieldAlert size={24} className="text-[#c21470]" strokeWidth={2} />
                     </div>
                     <div>
-                        <div className="text-[11px] font-bold tracking-widest uppercase text-[#D4A420] mb-2">
+                        <div className="text-[11px] font-bold tracking-widest uppercase text-[#c21470] mb-2">
                             Catatan Penting
                         </div>
                         <p className="text-[13.5px] text-slate-700 leading-[1.7]">
-                            Materi ini disusun sebagai bahan edukasi dalam Program CERMAT dan tidak menggantikan diagnosis atau konsultasi medis profesional. Untuk penanganan kasus KEK secara individual, ibu hamil wajib berkonsultasi langsung dengan bidan, dokter, atau ahli gizi di fasilitas kesehatan terdekat. <strong className="text-[#1A2E22]">Seluruh informasi mengacu pada pedoman resmi Kementerian Kesehatan Republik Indonesia yang berlaku.</strong>
+                            Materi ini disusun sebagai bahan edukasi dalam Program CERMAT dan tidak menggantikan diagnosis atau konsultasi medis profesional. Untuk penanganan kasus KEK secara individual, ibu hamil wajib berkonsultasi langsung dengan bidan, dokter, atau ahli gizi di fasilitas kesehatan terdekat. <strong className="text-[#1E293B]">Seluruh informasi mengacu pada pedoman resmi Kementerian Kesehatan Republik Indonesia yang berlaku.</strong>
                         </p>
                     </div>
                 </motion.div>
