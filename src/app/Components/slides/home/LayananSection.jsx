@@ -34,12 +34,12 @@ export default function LayananSection({ setActiveSlide }) {
                     transition={{ duration: 0.7, ease: "easeOut" }}
                     className="mb-14 lg:mb-16"
                 >
-                    <div className="text-xs font-bold tracking-widest uppercase text-[#74C69D] mb-3">
+                    <div className="text-xs font-bold tracking-widest uppercase text-[#e71d89] mb-3">
                         ✦ Apa yang Ada di Sini
                     </div>
-                    <h2 className="font-serif itali text-4xl lg:text-5xl font-bold text-[#1A2E22] leading-tight max-w-2xl">
+                    <h2 className="font-serif text-4xl lg:text-5xl font-bold text-[#1E293B] leading-tight max-w-2xl">
                         Panduan Lengkap <br />
-                        untuk Bumil <em className="italic text-[#D4830A] font-serif">Sehat</em>
+                        untuk Bumil <em className="italic text-[#e71d89] font-serif">Sehat</em>
                     </h2>
                 </motion.div>
 
@@ -52,13 +52,13 @@ export default function LayananSection({ setActiveSlide }) {
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
                 >
 
-                    {/* CARD 1: Menu Harian (Forest / Hijau Tua) */}
+                    {/* CARD 1: Menu Harian (Solid Pink) */}
                     <motion.div
                         variants={itemVariants}
-                        className="group relative bg-[#2D6A4F] text-white rounded-3xl p-8 lg:p-10 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between"
+                        className="group relative bg-[#e71d89] text-white rounded-3xl p-8 lg:p-10 overflow-hidden shadow-lg shadow-[#e71d89]/20 hover:shadow-2xl hover:shadow-[#e71d89]/30 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between"
                     >
                         {/* Ornamen Lingkaran Sudut */}
-                        <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-white/5 group-hover:scale-110 transition-transform duration-500"></div>
+                        <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-white/10 group-hover:scale-110 transition-transform duration-500"></div>
 
                         <div className="absolute top-6 right-8 font-serif text-6xl font-black opacity-10 pointer-events-none">
                             01
@@ -68,65 +68,67 @@ export default function LayananSection({ setActiveSlide }) {
                             <div className="mb-5">
                                 <Utensils size={36} strokeWidth={1.5} className="text-white" />
                             </div>
-                            <div className="text-[10px] font-bold tracking-widest uppercase mb-2 opacity-70">
+                            <div className="text-[10px] font-bold tracking-widest uppercase mb-2 opacity-80">
                                 Menu Harian
                             </div>
                             <h3 className="font-serif text-2xl font-bold leading-snug mb-3">
                                 7 Hari Menu Bergizi per Trimester
                             </h3>
-                            <p className="text-sm leading-relaxed text-white/80 mb-8">
+                            <p className="text-sm leading-relaxed text-white/90 mb-8">
                                 21 variasi menu lezat dan terjangkau — dirancang sesuai kebutuhan energi, protein, dan zat besi tiap trimester berdasarkan AKG 2019. Harga disesuaikan pasar Tuban.
                             </p>
                         </div>
 
                         <button
                             onClick={() => setActiveSlide("menu_mingguan")}
-                            className="inline-flex items-center gap-2 text-sm font-bold text-[#B7E4C7] hover:text-white transition-colors group/btn cursor-pointer"
+                            className="inline-flex items-center gap-2 text-sm font-bold text-[#FFD1E8] hover:text-white transition-colors group/btn cursor-pointer"
                         >
                             Lihat menu lengkap <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
                         </button>
                     </motion.div>
 
 
-                    {/* CARD 2: Edukasi KEK (Sand / Cream) */}
+                    {/* CARD 2: Edukasi KEK (Clean White + Pink Accent) */}
                     <motion.div
                         variants={itemVariants}
-                        className="group relative bg-[#F5EAD6] border-2 border-[#2D6A4F]/10 text-[#1A2E22] rounded-3xl p-8 lg:p-10 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between"
+                        className="group relative bg-white border border-[#e71d89]/15 text-[#1E293B] rounded-3xl p-8 lg:p-10 overflow-hidden shadow-lg hover:shadow-xl hover:border-[#e71d89]/40 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between"
                     >
-                        <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-white/30 group-hover:scale-110 transition-transform duration-500"></div>
+                        <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-[#FFF5F9] group-hover:scale-110 transition-transform duration-500"></div>
 
-                        <div className="absolute top-6 right-8 font-serif text-6xl font-black text-[#2D6A4F] opacity-10 pointer-events-none">
+                        <div className="absolute top-6 right-8 font-serif text-6xl font-black text-[#e71d89] opacity-5 pointer-events-none">
                             02
                         </div>
 
-                        <div>
+                        <div className="relative z-10">
                             <div className="mb-5">
-                                <Ruler size={36} strokeWidth={1.5} className="text-[#2D6A4F]" />
+                                <div className="w-14 h-14 bg-[#FFF5F9] rounded-2xl flex items-center justify-center">
+                                    <Ruler size={30} strokeWidth={2} className="text-[#e71d89]" />
+                                </div>
                             </div>
-                            <div className="text-[10px] font-bold tracking-widest uppercase mb-2 text-[#2D6A4F] opacity-70">
+                            <div className="text-[10px] font-bold tracking-widest uppercase mb-2 text-[#e71d89]">
                                 Edukasi KEK
                             </div>
-                            <h3 className="font-serif text-2xl font-bold leading-snug mb-3 text-[#1A2E22]">
+                            <h3 className="font-serif text-2xl font-bold leading-snug mb-3 text-[#1E293B]">
                                 Kenali Risiko KEK Lebih Awal
                             </h3>
-                            <p className="text-sm leading-relaxed text-[#5A7065] mb-8">
+                            <p className="text-sm leading-relaxed text-slate-500 mb-8">
                                 Pahami cara baca hasil ukur LILA, perbedaan Risiko KEK dan KEK definitif, penyebab, serta langkah pencegahan yang tepat agar Bunda dan janin tetap sehat.
                             </p>
                         </div>
 
                         <button
                             onClick={() => setActiveSlide("materi_kek")}
-                            className="inline-flex items-center gap-2 text-sm font-bold text-[#40916C] hover:text-[#2D6A4F] transition-colors group/btn cursor-pointer"
+                            className="inline-flex items-center gap-2 text-sm font-bold text-[#e71d89] hover:text-[#c21470] transition-colors group/btn cursor-pointer relative z-10"
                         >
                             Pelajari selengkapnya <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
                         </button>
                     </motion.div>
 
 
-                    {/* CARD 3: Antiboncos (Amber / Oranye) */}
+                    {/* CARD 3: Antiboncos (Magenta Gradient) */}
                     <motion.div
                         variants={itemVariants}
-                        className="group relative bg-linear-to-br from-[#D4830A] to-[#F4A830] text-white rounded-3xl p-8 lg:p-10 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between"
+                        className="group relative bg-linear-to-br from-[#c21470] to-[#e71d89] text-white rounded-3xl p-8 lg:p-10 overflow-hidden shadow-lg shadow-[#c21470]/20 hover:shadow-2xl hover:shadow-[#e71d89]/30 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between"
                     >
                         <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-white/10 group-hover:scale-110 transition-transform duration-500"></div>
 

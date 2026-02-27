@@ -58,7 +58,7 @@ export default function StepsSection() {
         visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
     };
 
-    // Animasi pergantian trimester (Kembali menggunakan versi normal tanpa absolute)
+    // Animasi pergantian trimester
     const contentChangeVariants = {
         hidden: { opacity: 0, y: 15 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
@@ -66,6 +66,7 @@ export default function StepsSection() {
     };
 
     return (
+        // Background putih bersih
         <section className="py-20 lg:py-32 px-6 lg:px-16 bg-white overflow-hidden relative">
             <div className="max-w-7xl mx-auto">
 
@@ -76,12 +77,12 @@ export default function StepsSection() {
                     viewport={{ once: true, margin: "-50px" }}
                     className="mb-14 lg:mb-16"
                 >
-                    <div className="text-xs font-bold tracking-widest uppercase text-[#74C69D] mb-3 flex items-center gap-2">
+                    <div className="text-xs font-bold tracking-widest uppercase text-[#e71d89] mb-3 flex items-center gap-2">
                         <Sparkles size={14} /> Cara Pakai
                     </div>
-                    <h2 className="font-serif text-4xl lg:text-5xl font-bold text-[#1A2E22] leading-tight">
+                    <h2 className="font-serif text-4xl lg:text-5xl font-bold text-[#1E293B] leading-tight">
                         4 Langkah Mudah <br />
-                        bersama <em className="italic text-[#D4830A]">dr. Sarah</em>
+                        bersama <em className="italic text-[#e71d89]">dr. Sarah</em>
                     </h2>
                 </motion.div>
 
@@ -97,54 +98,54 @@ export default function StepsSection() {
                         className="flex flex-col gap-4"
                     >
                         {/* Step 1 */}
-                        <motion.div variants={stepVariants} className="flex gap-5 p-5 rounded-2xl border-2 border-transparent hover:border-[#F4A830]/30 hover:bg-[#FFF8E6] transition-colors duration-300 group">
-                            <div className="w-12 h-12 shrink-0 rounded-xl bg-[#FFF8E6] group-hover:bg-[#F4A830] text-[#F4A830] group-hover:text-white flex items-center justify-center font-serif text-2xl font-bold transition-colors">
+                        <motion.div variants={stepVariants} className="flex gap-5 p-5 rounded-2xl border border-transparent hover:border-[#e71d89]/20 hover:bg-[#FFF5F9] transition-all duration-300 group">
+                            <div className="w-12 h-12 shrink-0 rounded-xl bg-[#FFF5F9] group-hover:bg-[#e71d89] text-[#e71d89] group-hover:text-white flex items-center justify-center font-serif text-2xl font-bold transition-colors">
                                 1
                             </div>
                             <div>
-                                <h3 className="text-base font-bold text-[#1A2E22] mb-1.5 flex items-center gap-2">
-                                    Kenali Trimester Bunda <Search size={16} className="text-[#F4A830]" />
+                                <h3 className="text-base font-bold text-[#1E293B] mb-1.5 flex items-center gap-2">
+                                    Kenali Trimester Bunda <Search size={16} className="text-[#e71d89]" />
                                 </h3>
-                                <p className="text-sm text-[#5A7065] leading-relaxed">Pilih trimester kehamilan agar rekomendasi menu dan kebutuhan gizi yang muncul benar-benar sesuai kondisi Bunda.</p>
+                                <p className="text-sm text-slate-500 leading-relaxed">Pilih trimester kehamilan agar rekomendasi menu dan kebutuhan gizi yang muncul benar-benar sesuai kondisi Bunda.</p>
                             </div>
                         </motion.div>
 
                         {/* Step 2 */}
-                        <motion.div variants={stepVariants} className="flex gap-5 p-5 rounded-2xl border-2 border-transparent hover:border-[#2D6A4F]/20 hover:bg-[#F0F7F2] transition-colors duration-300 group">
-                            <div className="w-12 h-12 shrink-0 rounded-xl bg-[#F0F7F2] group-hover:bg-[#2D6A4F] text-[#2D6A4F] group-hover:text-white flex items-center justify-center font-serif text-2xl font-bold transition-colors">
+                        <motion.div variants={stepVariants} className="flex gap-5 p-5 rounded-2xl border border-transparent hover:border-[#e71d89]/20 hover:bg-[#FFF5F9] transition-all duration-300 group">
+                            <div className="w-12 h-12 shrink-0 rounded-xl bg-[#FFF5F9] group-hover:bg-[#e71d89] text-[#e71d89] group-hover:text-white flex items-center justify-center font-serif text-2xl font-bold transition-colors">
                                 2
                             </div>
                             <div>
-                                <h3 className="text-base font-bold text-[#1A2E22] mb-1.5 flex items-center gap-2">
-                                    Pelajari Materi KEK <HeartPulse size={16} className="text-[#2D6A4F]" />
+                                <h3 className="text-base font-bold text-[#1E293B] mb-1.5 flex items-center gap-2">
+                                    Pelajari Materi KEK <HeartPulse size={16} className="text-[#e71d89]" />
                                 </h3>
-                                <p className="text-sm text-[#5A7065] leading-relaxed">Pahami apa itu Risiko KEK, cara baca ukuran LILA, penyebab, dan dampaknya — agar Bunda bisa mencegah sejak dini.</p>
+                                <p className="text-sm text-slate-500 leading-relaxed">Pahami apa itu Risiko KEK, cara baca ukuran LILA, penyebab, dan dampaknya — agar Bunda bisa mencegah sejak dini.</p>
                             </div>
                         </motion.div>
 
                         {/* Step 3 */}
-                        <motion.div variants={stepVariants} className="flex gap-5 p-5 rounded-2xl border-2 border-transparent hover:border-[#40916C]/20 hover:bg-[#F5EAD6] transition-colors duration-300 group">
-                            <div className="w-12 h-12 shrink-0 rounded-xl bg-[#F5EAD6] group-hover:bg-[#40916C] text-[#40916C] group-hover:text-white flex items-center justify-center font-serif text-2xl font-bold transition-colors">
+                        <motion.div variants={stepVariants} className="flex gap-5 p-5 rounded-2xl border border-transparent hover:border-[#e71d89]/20 hover:bg-[#FFF5F9] transition-all duration-300 group">
+                            <div className="w-12 h-12 shrink-0 rounded-xl bg-[#FFF5F9] group-hover:bg-[#e71d89] text-[#e71d89] group-hover:text-white flex items-center justify-center font-serif text-2xl font-bold transition-colors">
                                 3
                             </div>
                             <div>
-                                <h3 className="text-base font-bold text-[#1A2E22] mb-1.5 flex items-center gap-2">
-                                    Ikuti Menu 7 Hari <Utensils size={16} className="text-[#40916C]" />
+                                <h3 className="text-base font-bold text-[#1E293B] mb-1.5 flex items-center gap-2">
+                                    Ikuti Menu 7 Hari <Utensils size={16} className="text-[#e71d89]" />
                                 </h3>
-                                <p className="text-sm text-[#5A7065] leading-relaxed">Terapkan menu harian bergizi yang sudah disesuaikan dengan harga pasar Tuban — mulai dari Rp 33.000/hari saja!</p>
+                                <p className="text-sm text-slate-500 leading-relaxed">Terapkan menu harian bergizi yang sudah disesuaikan dengan harga pasar Tuban — mulai dari Rp 33.000/hari saja!</p>
                             </div>
                         </motion.div>
 
-                        {/* Step 4 */}
-                        <motion.div variants={stepVariants} className="flex gap-5 p-5 rounded-2xl border-2 border-transparent hover:border-[#2D6A4F]/30 hover:bg-[#2D6A4F] hover:text-white transition-colors duration-300 group">
-                            <div className="w-12 h-12 shrink-0 rounded-xl bg-[#2D6A4F] group-hover:bg-white text-white group-hover:text-[#2D6A4F] flex items-center justify-center font-serif text-2xl font-bold transition-colors shadow-md">
+                        {/* Step 4 (Highlight Step) */}
+                        <motion.div variants={stepVariants} className="flex gap-5 p-5 rounded-2xl border border-transparent hover:border-[#e71d89]/30 hover:bg-[#e71d89] hover:text-white transition-all duration-300 group">
+                            <div className="w-12 h-12 shrink-0 rounded-xl bg-[#e71d89] group-hover:bg-white text-white group-hover:text-[#e71d89] flex items-center justify-center font-serif text-2xl font-bold transition-colors shadow-sm">
                                 4
                             </div>
                             <div>
-                                <h3 className="text-base font-bold text-[#1A2E22] group-hover:text-white mb-1.5 flex items-center gap-2 transition-colors">
-                                    Pantau & Kontrol Rutin <Scale size={16} className="text-[#2D6A4F] group-hover:text-[#B7E4C7] transition-colors" />
+                                <h3 className="text-base font-bold text-[#1E293B] group-hover:text-white mb-1.5 flex items-center gap-2 transition-colors">
+                                    Pantau & Kontrol Rutin <Scale size={16} className="text-[#e71d89] group-hover:text-[#FFD1E8] transition-colors" />
                                 </h3>
-                                <p className="text-sm text-[#5A7065] group-hover:text-white/80 leading-relaxed transition-colors">Ukur LILA di Posyandu tiap bulan, rutin minum tablet Fe malam hari + air jeruk, dan konsultasi dengan bidan berkala.</p>
+                                <p className="text-sm text-slate-500 group-hover:text-white/90 leading-relaxed transition-colors">Ukur LILA di Posyandu tiap bulan, rutin minum tablet Fe malam hari + air jeruk, dan konsultasi dengan bidan berkala.</p>
                             </div>
                         </motion.div>
                     </motion.div>
@@ -156,10 +157,10 @@ export default function StepsSection() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-100px" }}
-                        className="bg-[#FDF8F0] rounded-4xl border border-[#2D6A4F]/10 shadow-2xl shadow-[#2D6A4F]/5 overflow-hidden flex flex-col"
+                        className="bg-white rounded-4xl border border-slate-200 shadow-2xl shadow-[#e71d89]/10 overflow-hidden flex flex-col"
                     >
-                        {/* Card Header */}
-                        <div className="bg-[#2D6A4F] p-6 lg:p-8 relative shrink-0">
+                        {/* Card Header (Solid Pink) */}
+                        <div className="bg-[#e71d89] p-6 lg:p-8 relative shrink-0">
 
                             {/* Trimester Dropdown Toggle */}
                             <div className="absolute top-6 right-6 z-20">
@@ -186,7 +187,7 @@ export default function StepsSection() {
                                                             setSelectedTrimester(t);
                                                             setIsDropdownOpen(false);
                                                         }}
-                                                        className={`w-full text-left px-4 py-3 text-sm font-bold flex items-center justify-between hover:bg-[#F0F7F2] transition-colors cursor-pointer ${selectedTrimester === t ? 'text-[#2D6A4F] bg-[#F0F7F2]' : 'text-slate-600'}`}
+                                                        className={`w-full text-left px-4 py-3 text-sm font-bold flex items-center justify-between hover:bg-[#FFF5F9] transition-colors cursor-pointer ${selectedTrimester === t ? 'text-[#e71d89] bg-[#FFF5F9]' : 'text-slate-600'}`}
                                                     >
                                                         Trimester {t.replace('t', '')}
                                                         {selectedTrimester === t && <CheckCircle size={14} />}
@@ -209,15 +210,15 @@ export default function StepsSection() {
                                     initial="hidden"
                                     animate="visible"
                                     exit="exit"
-                                    className="text-[#B7E4C7] text-sm font-medium flex items-center gap-2"
+                                    className="text-[#FFD1E8] text-sm font-medium flex items-center gap-2"
                                 >
                                     {todayMenu?.name || "Memuat..."} • Target {todayMenu?.kkal} kkal
                                 </motion.p>
                             </AnimatePresence>
                         </div>
 
-                        {/* Card Body (Layout ASLI, tidak ditumpuk dengan absolute) */}
-                        <div className="p-6 lg:p-8 bg-white/50 grow">
+                        {/* Card Body */}
+                        <div className="p-6 lg:p-8 bg-[#FAFAFA] grow">
                             <AnimatePresence mode="wait">
                                 {todayMenu ? (
                                     <motion.div
@@ -226,24 +227,24 @@ export default function StepsSection() {
                                         initial="hidden"
                                         animate="visible"
                                         exit="exit"
-                                        className="space-y-1 divide-y divide-[#2D6A4F]/10"
+                                        className="space-y-1 divide-y divide-slate-200"
                                     >
                                         {todayMenu.meals.map((meal, index) => (
                                             <div key={index} className="py-4 first:pt-0 last:pb-0 flex gap-4 items-center group">
-                                                {/* Ikon Makanan */}
-                                                <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-[#2D6A4F] shrink-0 group-hover:scale-110 group-hover:bg-[#2D6A4F] group-hover:text-white transition-all duration-300">
+                                                {/* Ikon Makanan (Pink Theme) */}
+                                                <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-[#e71d89] shrink-0 group-hover:scale-110 group-hover:bg-[#e71d89] group-hover:text-white transition-all duration-300">
                                                     {getMealIcon(meal.type)}
                                                 </div>
 
                                                 {/* Detail Makanan */}
                                                 <div className="flex-1">
-                                                    <div className="text-xs font-bold text-[#D4830A] mb-0.5">{meal.time}</div>
-                                                    <div className="text-sm font-bold text-[#1A2E22] leading-snug">{meal.menu}</div>
+                                                    <div className="text-xs font-bold text-[#c21470] mb-0.5">{meal.time}</div>
+                                                    <div className="text-sm font-bold text-[#1E293B] leading-snug">{meal.menu}</div>
                                                 </div>
 
-                                                {/* HARGA PER MENU (Menggantikan data kalori/chips) */}
+                                                {/* HARGA PER MENU */}
                                                 {meal.price && (
-                                                    <div className="hidden sm:block text-xs font-bold text-[#40916C] bg-[#F0F7F2] px-3 py-1.5 rounded-lg shrink-0">
+                                                    <div className="hidden sm:block text-xs font-bold text-[#e71d89] bg-[#FFF5F9] border border-[#e71d89]/10 px-3 py-1.5 rounded-lg shrink-0">
                                                         {meal.price}
                                                     </div>
                                                 )}
@@ -251,17 +252,17 @@ export default function StepsSection() {
                                         ))}
                                     </motion.div>
                                 ) : (
-                                    <div className="py-10 text-center text-slate-500 font-medium animate-pulse">
+                                    <div className="py-10 text-center text-slate-400 font-medium animate-pulse">
                                         Menyiapkan menu hari ini...
                                     </div>
                                 )}
                             </AnimatePresence>
                         </div>
 
-                        {/* Card Footer (Total Harga & Zat Besi) */}
-                        <div className="bg-[#1A2E22] p-6 flex justify-between items-center shrink-0">
+                        {/* Card Footer (Menggunakan Biru Dongker Elegan agar kontras dengan Pink) */}
+                        <div className="bg-[#1E293B] p-6 flex justify-between items-center shrink-0">
                             <div>
-                                <div className="text-xs text-white/60 font-semibold mb-1 uppercase tracking-wider">Total Hari Ini</div>
+                                <div className="text-xs text-slate-400 font-semibold mb-1 uppercase tracking-wider">Total Hari Ini</div>
                                 <AnimatePresence mode="wait">
                                     <motion.div
                                         key={selectedTrimester + "-totalprice"}
@@ -269,7 +270,7 @@ export default function StepsSection() {
                                         initial="hidden"
                                         animate="visible"
                                         exit="exit"
-                                        className="text-[#F4A830] font-serif text-[22px] lg:text-2xl font-bold"
+                                        className="text-[#FFD1E8] font-serif text-[22px] lg:text-2xl font-bold"
                                     >
                                         {todayMenu?.totalPrice || "-"}
                                     </motion.div>
@@ -279,7 +280,7 @@ export default function StepsSection() {
                             {/* Menampilkan Protein & Zat Besi di kanan */}
                             <div className="flex gap-4 text-right">
                                 <div>
-                                    <div className="text-[10px] text-white/50 font-semibold mb-1 uppercase tracking-wider">Protein</div>
+                                    <div className="text-[10px] text-slate-400 font-semibold mb-1 uppercase tracking-wider">Protein</div>
                                     <AnimatePresence mode="wait">
                                         <motion.div
                                             key={selectedTrimester + "-prot"}
@@ -292,9 +293,9 @@ export default function StepsSection() {
                                         </motion.div>
                                     </AnimatePresence>
                                 </div>
-                                <div className="w-px bg-white/10 my-1"></div>
+                                <div className="w-px bg-slate-600 my-1"></div>
                                 <div>
-                                    <div className="text-[10px] text-white/50 font-semibold mb-1 uppercase tracking-wider">Zat Besi</div>
+                                    <div className="text-[10px] text-slate-400 font-semibold mb-1 uppercase tracking-wider">Zat Besi</div>
                                     <AnimatePresence mode="wait">
                                         <motion.div
                                             key={selectedTrimester + "-fe"}

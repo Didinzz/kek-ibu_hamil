@@ -36,8 +36,8 @@ export default function Navbar({ activeSlide, setActiveSlide }) {
                                     onClick={() => setActiveSlide(item.id)}
                                     // Padding tombol sedikit disesuaikan agar pas dengan ruang jari Android
                                     className={`relative cursor-pointer z-10 px-5 py-2.5 text-sm font-semibold transition-colors duration-300 rounded-full ${isActive
-                                            ? "text-[#2A5C43]" // Menggunakan warna hijau premium sebelumnya
-                                            : "text-slate-500 hover:text-slate-800"
+                                        ? "text-[#e71d89]" // Warna primary merah muda baru
+                                        : "text-slate-500 hover:text-[#e71d89]/80" // Efek hover merah muda lembut
                                         }`}
                                 >
                                     {item.label}
@@ -47,8 +47,8 @@ export default function Navbar({ activeSlide, setActiveSlide }) {
                                 {isActive && (
                                     <motion.div
                                         layoutId="floating-nav-indicator"
-                                        // Menggunakan hijau muda transparan agar menyatu dengan background putih
-                                        className="absolute inset-0 bg-emerald-50 rounded-full border border-emerald-100/50"
+                                        // Background merah muda transparan (10%) dan border merah muda tipis (20%)
+                                        className="absolute inset-0 bg-[#e71d89]/10 rounded-full border border-[#e71d89]/20"
                                         transition={{
                                             type: "spring",
                                             stiffness: 400,

@@ -174,7 +174,7 @@ export default function DampakMateri() {
                 >
                     <h3 className="font-serif text-lg lg:text-xl font-bold text-[#1A2E22] mb-8 flex items-center gap-2">
                         <TrendingUp size={22} className="text-[#D4A420]" strokeWidth={2.5} />
-                        Gambaran Prevalensi KEK/Risiko KEK — Wilayah Sasaran Program CERMAT, Tuban 2025
+                        Gambaran Prevalensi KEK/Risiko KEK — Wilayah Kerja Puskesmas Soko, Tuban 2025
                     </h3>
 
                     {/* Stats Cards */}
@@ -203,7 +203,7 @@ export default function DampakMateri() {
                             {[
                                 { label: "Nasional", val: "17,3%", percent: 17.3, color: "bg-slate-300", textColor: "text-slate-500" },
                                 { label: "Jawa Timur", val: "24,2%", percent: 24.2, color: "bg-[#A8DBB8]", textColor: "text-[#2D6A4F]" },
-                                { label: "Tuban (CERMAT)", val: "32,97%", percent: 32.97, color: "bg-gradient-to-r from-[#D4A420] to-[#F4A830]", textColor: "text-[#D4A420]" }
+                                { label: "Puskesmas Soko, Tuban", val: "32,97%", percent: 32.97, color: "bg-gradient-to-r from-[#D4A420] to-[#F4A830]", textColor: "text-[#D4A420]" }
                             ].map((bar, i) => (
                                 <div key={i} className="flex items-center gap-4">
                                     <div className={`text-[12px] font-bold w-28 shrink-0 ${i === 2 ? 'text-[#1A2E22]' : 'text-slate-500'}`}>
@@ -226,10 +226,10 @@ export default function DampakMateri() {
 
                     <div className="text-[14px] text-slate-600 leading-relaxed border-t border-slate-100 pt-5">
                         <p className="mb-3">
-                            Dari 549 ibu hamil yang diskrining dalam wilayah sasaran Program CERMAT, sebanyak <strong className="text-[#1A2E22]">181 orang (32,97%) teridentifikasi mengalami KEK/Risiko KEK</strong> berdasarkan pengukuran LILA (&lt; 23,5 cm). Angka ini <strong className="text-[#1A2E22]">hampir dua kali lipat prevalensi nasional</strong> (Riskesdas 2018: 17,3%) dan melampaui rata-rata Provinsi Jawa Timur (24,2%), menunjukkan urgensi intervensi gizi terstruktur di wilayah ini.
+                            Dari 549 ibu hamil yang melakukan ANC di 2025, sebanyak <strong className="text-[#1A2E22]">181 orang (32,97%) teridentifikasi mengalami KEK/Risiko KEK</strong> berdasarkan pengukuran LILA (&lt; 23,5 cm). Angka ini <strong className="text-[#1A2E22]">hampir dua kali lipat prevalensi nasional</strong> (Riskesdas 2018: 17,3%) dan melampaui rata-rata Provinsi Jawa Timur (24,2%), menunjukkan urgensi intervensi gizi terstruktur di wilayah ini.
                         </p>
                         <div className="text-[11px] font-bold text-slate-400">
-                            Sumber data lokal: Hasil skrining Program CERMAT, Tuban 2025 | Data pembanding: Riskesdas 2018, Kemenkes RI
+                            Sumber data lokal: Data Primer Puskesmas Soko 2025 | Data pembanding: Riskesdas 2018, Kemenkes RI
                         </div>
                     </div>
                 </motion.div>
