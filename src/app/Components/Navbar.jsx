@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const menuItems = [
     { id: "beranda", label: "Beranda" },
-    { id: "materi_kek", label: "Materi KEK" },
+    { id: "materi_kek", label: "Materi KEK/Resiko KEK" },
     { id: "menu_mingguan", label: "Menu Mingguan" },
     { id: "menu_antiboncos", label: "Menu Anti Boncos" },
     { id: "tabel_gizi", label: "Tabel Konversi" },

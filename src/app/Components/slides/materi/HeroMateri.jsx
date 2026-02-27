@@ -1,139 +1,136 @@
 "use client";
+
 import { motion } from "framer-motion";
-import { Ruler, AlertTriangle, Baby, ShieldCheck, ArrowRight } from "lucide-react"; 
+import { BookOpen, Ruler, Scale, AlertTriangle, CheckCircle2 } from "lucide-react";
 
 export default function HeroMateri() {
-    // 1. Variasi Container Induk (Mengatur urutan kemunculan anak-anaknya)
+    // --- KONFIGURASI ANIMASI ---
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: {
-                staggerChildren: 0.15, // Jeda waktu kemunculan tiap elemen
-                delayChildren: 0.1,    // Jeda sebelum animasi pertama dimulai
-            }
+            transition: { staggerChildren: 0.15, delayChildren: 0.1 }
         }
     };
 
-    // 2. Variasi Teks (Bergeser lembut dari bawah ke atas)
-    const itemFadeUp = {
+    const itemVariants = {
         hidden: { opacity: 0, y: 30 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } // Easing pengereman halus
+            transition: { duration: 0.6, ease: "easeOut" }
         }
     };
 
-    // 3. Variasi Kartu Bento (Sedikit membesar/scale-up dari bawah)
-    const cardPopUp = {
-        hidden: { opacity: 0, y: 30, scale: 0.95 },
+    const rightCardVariants = {
+        hidden: { opacity: 0, scale: 0.9, y: 40 },
         visible: {
             opacity: 1,
-            y: 0,
             scale: 1,
-            transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+            y: 0,
+            transition: { duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }
         }
     };
 
     return (
-        <section className="relative bg-[#1A202C] min-h-screen flex items-center pt-24 pb-16 px-6 lg:px-12 overflow-hidden">
-            
-            {/* Blobs Background */}
-            <div className="absolute top-0 left-0 w-125 h-125 bg-[#2A5C43]/15 rounded-full blur-3xl -translate-x-1/4 -translate-y-1/4 pointer-events-none"></div>
-            <div className="absolute bottom-0 right-10 w-100 h-100 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none"></div>
+        <section className="bg-[#1A2E22] pt-24 md:pt-32 pb-24 px-6 lg:px-16 relative overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+            {/* Dekorasi Background Atas */}
+            <div className="absolute -top-32 -right-32 w-125 h-125 rounded-full bg-[#2D6A4F]/20 blur-3xl pointer-events-none"></div>
 
-            {/* BUNGKUS UTAMA ANIMASI */}
-            <motion.div 
+            {/* ================= KIRI - TEKS (DIANIMASIKAN PER ITEM) ================= */}
+            <motion.div
                 variants={containerVariants}
                 initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10"
+                animate="visible"
+                className="relative z-10 pb-0 lg:pb-12"
             >
+                <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-[#2D6A4F]/30 border border-[#40916C]/40 text-[#B7E4C7] text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+                    <BookOpen size={14} /> Berdasarkan Pedoman Kemenkes RI
+                </motion.div>
 
-                {/* --- KOLOM KIRI: TEKS --- */}
-                <div className="flex flex-col items-start">
-                    <motion.div variants={itemFadeUp} className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-white/80 text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
-                        <span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full"></span> Edukasi Gizi Ibu Hamil
+                <motion.h1 variants={itemVariants} className="font-serif text-5xl md:text-6xl font-black text-[#E8F5F5] leading-tight mb-4 tracking-tight">
+                    Kekurangan<br /><em className="italic text-[#74C69D]">Energi Kronis</em>
+                </motion.h1>
+
+                <motion.p variants={itemVariants} className="text-sm md:text-base text-[#E8F5F5]/70 max-w-md mb-8 leading-relaxed">
+                    Panduan lengkap dan valid tentang KEK pada ibu hamil — definisi, cara diagnosis yang <strong className="text-white">benar</strong>, penyebab, dampak, serta penatalaksanaan berdasarkan <strong className="text-white">pedoman resmi Kemenkes RI</strong>.
+                </motion.p>
+
+                <motion.div variants={containerVariants} className="flex flex-wrap gap-3">
+                    <motion.div variants={itemVariants} className="flex items-center gap-2 bg-[#2D6A4F]/30 border border-[#2D6A4F]/50 text-[#95D5B2] px-4 py-2.5 rounded-xl text-xs font-bold">
+                        <Ruler size={16} /> LILA &lt; 23,5 cm → Risiko KEK
                     </motion.div>
-
-                    <motion.h1 variants={itemFadeUp} className="font-black text-5xl md:text-6xl text-white leading-tight mb-6 tracking-tight">
-                        Kenali <span className="text-[#D4AF37] font-serif italic font-normal">Risiko KEK</span><br />Pada Ibu Hamil
-                    </motion.h1>
-
-                    <motion.p variants={itemFadeUp} className="text-slate-400 text-base max-w-110 leading-relaxed mb-9 font-light">
-                        Risiko Kekurangan Energi Kronik (Risiko KEK) terdeteksi melalui pengukuran LILA. Kenali lebih awal, cegah lebih dini sebelum berkembang menjadi KEK.
-                    </motion.p>
-
-                    <motion.div variants={itemFadeUp} className="flex flex-wrap gap-4">
-                        <button
-                            onClick={() => document.getElementById('apa').scrollIntoView({ behavior: 'smooth' })}
-                            className="bg-[#2A5C43] hover:bg-[#347656] text-white px-7 py-3.5 rounded-xl font-semibold text-sm transition-all shadow-lg hover:shadow-[#2A5C43]/30 flex items-center gap-2 cursor-pointer"
-                        >
-                            Pelajari Sekarang
-                        </button>
-                        <button
-                            onClick={() => document.getElementById('perbedaan').scrollIntoView({ behavior: 'smooth' })}
-                            className="bg-transparent border border-white/20 hover:bg-white/10 text-white/90 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 group cursor-pointer"
-                        >
-                            Bedanya KEK & Risiko KEK
-                            <ArrowRight className="w-4 h-4 text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all" />
-                        </button>
+                    <motion.div variants={itemVariants} className="flex items-center gap-2 bg-[#2D6A4F]/30 border border-[#2D6A4F]/50 text-[#95D5B2] px-4 py-2.5 rounded-xl text-xs font-bold">
+                        <Scale size={16} /> IMT pra-hamil &lt; 18,5 → KEK
                     </motion.div>
-                </div>
-
-                {/* --- KOLOM KANAN: BENTO GRID LAYOUT --- */}
-                <div className="grid grid-cols-2 gap-4">
-
-                    {/* Kartu 1 (Kiri - Memanjang) */}
-                    <motion.div variants={cardPopUp} className="col-span-2 sm:col-span-1 row-span-2 bg-white/5 border border-white/5 p-6 rounded-2xl hover:bg-white/10 transition-colors flex flex-col justify-between">
-                        <div className="mb-8 text-white/50">
-                            <Ruler strokeWidth={1.5} size={36} />
-                        </div>
-                        <div>
-                            <div className="font-serif text-5xl leading-none text-[#D4AF37] mb-3">&lt;23,5</div>
-                            <div className="text-sm text-slate-400 leading-snug">cm LILA — batas skrining Risiko KEK pada bumil.</div>
-                        </div>
+                    <motion.div variants={itemVariants} className="flex items-center gap-2 bg-[#C84C31]/20 border border-[#C84C31]/40 text-[#F4A830] px-4 py-2.5 rounded-xl text-xs font-bold">
+                        <AlertTriangle size={16} /> Bukan pemeriksaan biokimia
                     </motion.div>
-
-                    {/* Kartu 2 (Kanan Atas) */}
-                    <motion.div variants={cardPopUp} className="col-span-2 sm:col-span-1 bg-white/5 border border-white/5 p-6 rounded-2xl hover:bg-white/10 transition-colors flex flex-col justify-between">
-                        <div className="mb-2 text-white/50 self-end">
-                            <AlertTriangle strokeWidth={1.5} size={24} />
-                        </div>
-                        <div>
-                            <div className="font-serif text-4xl leading-none text-[#D4AF37] mb-2">17,3%</div>
-                            <div className="text-sm text-slate-400 leading-snug">Prevalensi bumil berisiko KEK di Indonesia.</div>
-                        </div>
+                    <motion.div variants={itemVariants} className="flex items-center gap-2 bg-[#2D6A4F]/20 border border-[#2D6A4F]/40 text-[#74C69D] px-4 py-2.5 rounded-xl text-xs font-bold">
+                        <CheckCircle2 size={16} /> Permenkes 21/2021 · Juknis PMT 2025
                     </motion.div>
-
-                    {/* Kartu 3 (Kanan Bawah) */}
-                    <motion.div variants={cardPopUp} className="col-span-2 sm:col-span-1 bg-white/5 border border-white/5 p-6 rounded-2xl hover:bg-white/10 transition-colors flex flex-col justify-between">
-                        <div className="mb-2 text-white/50 self-end">
-                            <Baby strokeWidth={1.5} size={24} />
-                        </div>
-                        <div>
-                            <div className="font-serif text-4xl leading-none text-[#D4AF37] mb-2">3x</div>
-                            <div className="text-sm text-slate-400 leading-snug">Risiko melahirkan Bayi Berat Lahir Rendah (BBLR).</div>
-                        </div>
-                    </motion.div>
-
-                    {/* Kartu 4 (Bawah - Membentang) */}
-                    <motion.div variants={cardPopUp} className="col-span-2 bg-linear-to-br from-[#2A5C43] to-[#1a3a2a] border border-[#347656]/30 p-6 rounded-2xl shadow-xl shadow-[#2A5C43]/20 flex flex-col sm:flex-row items-start sm:items-center gap-5">
-                        <div className="text-[#D4AF37] shrink-0">
-                            <ShieldCheck strokeWidth={1.5} size={40} />
-                        </div>
-                        <div>
-                            <div className="font-serif text-3xl leading-tight text-white mb-2">Bisa Dicegah!</div>
-                            <div className="text-sm text-white/70 leading-relaxed max-w-sm">
-                                Risiko KEK dapat dicegah dengan asupan gizi cukup, pemantauan rutin LILA, dan edukasi sejak dini.
-                            </div>
-                        </div>
-                    </motion.div>
-
-                </div>
+                </motion.div>
             </motion.div>
+
+            {/* ================= KANAN - VISUAL LILA (ANIMASI MUNCUL BELAKANGAN) ================= */}
+            <div className="relative z-10 flex justify-center lg:justify-end items-end h-full">
+                <motion.div
+                    variants={rightCardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="bg-white/5 border border-white/10 rounded-t-[28px] p-8 pb-10 w-full max-w-sm text-center"
+                >
+                    <div className="text-[11px] font-bold text-white/40 tracking-widest uppercase mb-4">Cut-off LILA Ibu Hamil</div>
+
+                    {/* SVG LILA Arm dengan Teks Indikator */}
+                    <div className="relative w-full max-w-45 mx-auto mb-5">
+                        <svg viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+                            <defs>
+                                <marker id="arrowHead" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#F4A830" />
+                                </marker>
+                            </defs>
+
+                            <ellipse cx="80" cy="40" rx="72" ry="34" fill="#2D6A4F" opacity=".3" />
+                            <ellipse cx="80" cy="40" rx="60" ry="26" fill="#2D6A4F" opacity=".5" />
+                            <ellipse cx="80" cy="40" rx="46" ry="18" fill="#40916C" opacity=".8" />
+
+                            <ellipse cx="80" cy="40" rx="72" ry="34" stroke="#F4A830" strokeWidth="2.5" strokeDasharray="4 3" fill="none" />
+
+                            <line x1="8" y1="40" x2="8" y2="10" stroke="#F4A830" strokeWidth="1.5" markerEnd="url(#arrowHead)" />
+                            <text x="14" y="26" fill="#F4A830" fontSize="9" fontFamily="sans-serif" fontWeight="bold">Lingkar</text>
+                            <text x="14" y="37" fill="#F4A830" fontSize="9" fontFamily="sans-serif" fontWeight="bold">Lengan</text>
+                            <text x="14" y="48" fill="#F4A830" fontSize="9" fontFamily="sans-serif" fontWeight="bold">Atas</text>
+                        </svg>
+                    </div>
+
+                    <div className="font-serif text-[52px] font-black text-[#B7E4C7] leading-none">
+                        23,5<span className="text-lg text-[#B7E4C7]/50 ml-1 font-sans">cm</span>
+                    </div>
+                    <div className="text-[13px] text-[#E8F5F5]/60 mt-1 mb-4">Batas ambang normal ibu hamil</div>
+
+                    <div className="flex items-center justify-center gap-2 text-xs font-bold">
+                        <span className="text-[#C84C31] bg-[#C84C31]/15 px-3 py-1.5 rounded-lg">Di bawah → Risiko KEK</span>
+                        <span className="text-[#74C69D] bg-[#2D6A4F]/30 px-3 py-1.5 rounded-lg">Di atas → Normal</span>
+                    </div>
+                </motion.div>
+            </div>
+
+            {/* ================= SVG LENGKUNGAN BAWAH (CURVE BOTTOM) ================= */}
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 transform translate-y-px">
+                <svg
+                    className="relative block w-full h-15 md:h-20"
+                    data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M0,120 C400,0 800,0 1200,120 Z"
+                        fill="#FAFAFA"
+                    ></path>
+                </svg>
+            </div>
         </section>
     );
 }

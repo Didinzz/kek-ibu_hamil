@@ -182,8 +182,12 @@ export default function HeroSection({ setActiveSlide }) {
                         </motion.div>
 
                         {/* Ilustrasi dr. Sarah (Memanggil Komponen Terpisah) */}
-                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-72 z-10 drop-shadow-2xl">
-                            <DrSarahIllustration className="w-full h-auto" />
+                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-122.5 z-10 drop-shadow-2xl">
+                            <img
+                                src="/images/dokter.png"
+                                alt="Foto dr. Sarah"
+                                className="w-full h-auto object-contain pointer-events-none"
+                            />
                         </div>
 
                         {/* Name Card Kanan Bawah */}
