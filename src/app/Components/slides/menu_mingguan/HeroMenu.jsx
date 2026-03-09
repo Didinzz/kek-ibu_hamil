@@ -3,8 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
     Leaf, Sparkles, ShoppingCart,
     Drumstick, Fish, Milk, Carrot, Beef, Cherry,
-    Shrimp
+    Shrimp,
+    Icon,
+    LucideMilk,
 } from "lucide-react";
+import { PiAvocadoBold } from "react-icons/pi";
+import { GiBroccoli, GiRaspberry } from "react-icons/gi";
 
 export default function HeroMenu({ activeTier, setActiveTier, setActiveTab }) {
     const isPremium = activeTier === "premium";
@@ -191,13 +195,19 @@ export default function HeroMenu({ activeTier, setActiveTier, setActiveTab }) {
 
                         <div className="flex flex-wrap gap-2.5 md:ml-auto">
                             {(isPremium ? [
-                                { icon: <Drumstick size={14} />, text: "Ayam kampung 18–22rb" },
-                                { icon: <Fish size={14} />, text: "Ikan kembung 10–15rb" },
-                                { icon: <Milk size={14} />, text: "Susu sapi 8–12rb" }
+                                { icon: <Drumstick size={14} />, text: "Ayam kampung 18–22rb/porsi" },
+                                { icon: <Fish size={14} />, text: "Ikan Salmon 15–25rb/porsi" },
+                                { icon: <Milk size={14} />, text: "Susu Sapi Cair 8–12rb/250ml" },
+                                { icon: <PiAvocadoBold size={14} />, text: "Alpukat 6-10rb/buah" },
+                                { icon: <GiBroccoli size={14} />, text: "Brokoli 8-12rb/100gr" },
+
                             ] : [
-                                { icon: <Fish size={14} />, text: "Salmon fillet 35–50rb" },
-                                { icon: <Beef size={14} />, text: "Wagyu slice 60–90rb" },
-                                { icon: <Shrimp size={14} />, text: "Udang vaname 30–45rb" }
+                                { icon: <Fish size={14} />, text: "Salmon fillet 35–50rb/100g" },
+                                { icon: <Beef size={14} />, text: "Daging Wagyu slice 60–90rb/100g" },
+                                { icon: <Shrimp size={14} />, text: "Udang vaname 30–45rb/100g" },
+                                { icon: <GiRaspberry size={14} />, text: "Raspberry 20–35rb/100gr" },
+                                { icon: <LucideMilk size={14} />, text: "Yogurt Yunani 18–28rb/150g" },
+
                             ]).map((chip, i) => (
                                 <motion.span
                                     key={i}

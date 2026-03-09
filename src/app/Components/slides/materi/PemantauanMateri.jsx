@@ -233,7 +233,7 @@ export default function PemantauanMateri() {
                     <div className="w-full inline-flex items-center gap-3 bg-[#FAFAFA] border border-slate-100 rounded-xl px-5 py-4 text-[11.5px] text-slate-500">
                         <Info size={16} className="text-slate-400 shrink-0" />
                         <span className="leading-relaxed">Sumber: <strong className="text-[#1E293B]">Peraturan Menteri Kesehatan RI Nomor 28 Tahun 2019 tentang Angka Kecukupan Gizi yang Dianjurkan untuk Masyarakat Indonesia.</strong> </span>
-                    </div>
+                    </div> d
                 </motion.div>
 
             </div>
