@@ -157,7 +157,7 @@ export default function TatalaksanaMateri() {
 
                                 <div className="text-[11px] text-[#FFD1E8]/70 leading-relaxed border-t border-white/10 pt-4 flex gap-2 items-start">
                                     <Info size={14} className="shrink-0 mt-0.5" />
-                                    <span>Sumber: Juknis PMT Berbahan Pangan Lokal bagi Ibu Hamil dan Balita, Kemenkes RI 2025 (Kepdirjen Kesehatan Primer & Komunitas No. 576). PMT berbasis pangan lokal menggantikan PMT biskuit pabrikan.</span>
+                                    <span> Sumber: Juknis PMT Berbahan Pangan Lokal bagi Ibu Hamil dan Balita, Kemenkes RI 2025 (Kepdirjen Kesehatan Primer & Komunitas No. 576).</span>
                                 </div>
                             </div>
                         </motion.div>

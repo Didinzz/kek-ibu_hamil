@@ -130,14 +130,14 @@ export default function DampakMateri() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-50px" }}
-                        className="bg-gradient-to-br from-[#FFF5F9] to-white border border-[#e71d89]/20 rounded-2xl p-6 lg:p-8 flex gap-5 items-center"
+                        className="bg-linear-to-br from-[#FFF5F9] to-white border border-[#e71d89]/20 rounded-2xl p-6 lg:p-8 flex gap-5 items-center"
                     >
                         <div className="text-[#e71d89] shrink-0"><Flag size={40} strokeWidth={1.5} /></div>
                         <div>
-                            <div className="font-serif text-3xl lg:text-4xl font-black text-[#1E293B] leading-none mb-1.5">17,3%</div>
-                            <div className="text-[11.5px] font-bold text-[#e71d89] tracking-wide uppercase mb-2">Prevalensi Nasional — Riskesdas 2018</div>
+                            <div className="font-serif text-3xl lg:text-4xl font-black text-[#1E293B] leading-none mb-1.5">16,9%</div>
+                            <div className="text-[11.5px] font-bold text-[#e71d89] tracking-wide uppercase mb-2">Prevalensi nasional — SKI 2023, BKPK Kemenkes RI</div>
                             <div className="text-[13.5px] text-slate-600 leading-relaxed">
-                                Hampir <strong className="text-[#1E293B]">1 dari 5 ibu hamil</strong> di Indonesia terdeteksi risiko KEK. Angka Jawa Timur mencapai <strong className="text-[#1E293B]">~24,2%</strong>, lebih tinggi dari rata-rata nasional.
+                                Lebih dari <strong>1 dari 6 ibu hamil</strong> di Indonesia terdeteksi KEK/Risiko KEK, bahkan proporsi bumil risiko KEK <strong>meningkat dibanding 2022</strong>. Jawa Timur berdasarkan Profil Kesehatan Provinsi Jawa Timur 2023 mencapai <strong> ~24,2%.</strong>
                             </div>
                         </div>
                     </motion.div>
@@ -149,7 +149,7 @@ export default function DampakMateri() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, margin: "-50px" }}
-                        className="bg-gradient-to-br from-[#1E293B] to-[#0f172a] rounded-2xl p-6 lg:p-8 flex gap-5 items-center shadow-lg relative overflow-hidden"
+                        className="bg-linear-to-br from-[#1E293B] to-[#0f172a] rounded-2xl p-6 lg:p-8 flex gap-5 items-center shadow-lg relative overflow-hidden"
                     >
                         <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#e71d89]/20 rounded-full blur-2xl pointer-events-none"></div>
                         <div className="text-[#FFD1E8] shrink-0 relative z-10"><MapPin size={40} strokeWidth={1.5} /></div>
@@ -201,7 +201,7 @@ export default function DampakMateri() {
                         <div className="text-[10px] font-extrabold text-slate-400 mb-4 tracking-widest uppercase">Perbandingan Prevalensi</div>
                         <div className="space-y-4">
                             {[
-                                { label: "Nasional", val: "17,3%", percent: 17.3, color: "bg-slate-200", textColor: "text-slate-500" },
+                                { label: "Nasional", val: "16,9%", percent: 16.9, color: "bg-slate-200", textColor: "text-slate-500" },
                                 { label: "Jawa Timur", val: "24,2%", percent: 24.2, color: "bg-[#FFD1E8]", textColor: "text-[#c21470]" },
                                 { label: "Puskesmas Soko, Tuban", val: "32,97%", percent: 32.97, color: "bg-gradient-to-r from-[#e71d89] to-[#c21470]", textColor: "text-[#e71d89]" }
                             ].map((bar, i) => (
@@ -226,10 +226,10 @@ export default function DampakMateri() {
 
                     <div className="text-[14px] text-slate-600 leading-relaxed border-t border-slate-100 pt-5">
                         <p className="mb-3">
-                            Dari 549 ibu hamil yang melakukan ANC di 2025, sebanyak <strong className="text-[#1E293B]">181 orang (32,97%) teridentifikasi mengalami KEK/Risiko KEK</strong> berdasarkan pengukuran LILA (&lt; 23,5 cm). Angka ini <strong className="text-[#1E293B]">hampir dua kali lipat prevalensi nasional</strong> (Riskesdas 2018: 17,3%) dan melampaui rata-rata Provinsi Jawa Timur (24,2%), menunjukkan urgensi intervensi gizi terstruktur di wilayah ini.
+                            Dari 549 ibu hamil yang melakukan ANC di 2025, sebanyak <strong className="text-[#1E293B]">181 orang (32,97%) teridentifikasi mengalami KEK/Risiko KEK</strong> berdasarkan pengukuran LILA (&lt; 23,5 cm). Angka ini <strong className="text-[#1E293B]">hampir dua kali lipat prevalensi nasional</strong> (SKI 2023: 16,9%; BKPK Kemenkes RI) dan jauh melampaui rata-rata Provinsi Jawa Timur (24,2%; Profil Kesehatan Jawa Timur 2023, Dinkes Jatim), menunjukkan urgensi intervensi gizi terstruktur di wilayah ini. Secara nasional, proporsi ibu hamil risiko KEK bahkan dilaporkan <strong className="text-[#1E293B]">meningkat dibanding tahun 2022</strong>, menjadikan program seperti CERMAT semakin relevan dan mendesak.
                         </p>
                         <div className="text-[11px] font-bold text-slate-400">
-                            Sumber data lokal: Data Primer Puskesmas Soko 2025 | Data pembanding: Riskesdas 2018, Kemenkes RI
+                            Sumber data lokal: Data Primer KIA x Gizi Puskesmas Soko, 2025 | Nasional: SKI 2023, BKPK Kemenkes RI | Jawa Timur: Profil Kesehatan Provinsi Jawa Timur 2023, Dinkes Jatim
                         </div>
                     </div>
                 </motion.div>
@@ -253,9 +253,6 @@ export default function DampakMateri() {
                         <p className="text-[14px] text-slate-700 leading-relaxed mb-4">
                             Bayi dengan BBLR akibat KEK ibu berisiko tinggi mengalami <strong className="text-[#1E293B]">stunting</strong> di masa kecil. Anak perempuan yang stunting cenderung tumbuh menjadi wanita bertubuh kecil dengan cadangan nutrisi rendah — yang kemudian saat hamil berisiko melahirkan bayi BBLR lagi. Siklus ini hanya bisa diputus dengan <strong className="text-[#1E293B]">intervensi gizi dari sebelum dan selama kehamilan.</strong>
                         </p>
-
-                        [Image of intergenerational cycle of malnutrition]
-
                         <div className="text-[11px] font-bold text-slate-500 mt-4">
                             Sumber: UNICEF Conceptual Framework on Malnutrition; Kemenkes RI, Pedoman Gizi 1000 HPK
                         </div>

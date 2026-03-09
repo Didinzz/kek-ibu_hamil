@@ -230,9 +230,9 @@ export default function PemantauanMateri() {
                         </motion.div>
                     </div>
 
-                    <div className="inline-flex items-center gap-3 bg-[#FAFAFA] border border-slate-100 rounded-xl px-5 py-4 text-[11.5px] text-slate-500">
+                    <div className="w-full inline-flex items-center gap-3 bg-[#FAFAFA] border border-slate-100 rounded-xl px-5 py-4 text-[11.5px] text-slate-500">
                         <Info size={16} className="text-slate-400 shrink-0" />
-                        <span className="leading-relaxed">Sumber: <strong className="text-[#1E293B]">Peraturan Menteri Kesehatan Republik Indonesia Nomor 28 Tahun 2019 tentang Angka Kecukupan Gizi yang Dianjurkan untuk Masyarakat Indonesia.</strong> (Kebutuhan dasar wanita dewasa 19–49 tahun = ±1.750–1.900 kkal/hari)</span>
+                        <span className="leading-relaxed">Sumber: <strong className="text-[#1E293B]">Peraturan Menteri Kesehatan RI Nomor 28 Tahun 2019 tentang Angka Kecukupan Gizi yang Dianjurkan untuk Masyarakat Indonesia.</strong> </span>
                     </div>
                 </motion.div>
 
