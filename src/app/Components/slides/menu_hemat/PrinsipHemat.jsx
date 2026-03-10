@@ -39,7 +39,7 @@ export default function PrinsipHemat({ principles }) {
         // Background diganti menjadi Navy Gelap agar elegan
         <section className="bg-[#1E293B] py-16 px-6 relative overflow-hidden">
             {/* Dekorasi Glow Pink di belakang */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#e71d89]/10 blur-[100px] pointer-events-none"></div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-150 h-75 bg-[#e71d89]/10 blur-[100px] pointer-events-none"></div>
 
             <div className="max-w-6xl mx-auto relative z-10">
                 {/* Header Animasi: Fade Down */}

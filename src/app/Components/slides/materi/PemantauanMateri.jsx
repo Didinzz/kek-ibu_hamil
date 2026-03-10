@@ -1,150 +1,60 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { Stethoscope, TestTube, Scale, Droplet, Baby, ClipboardCheck, Info, FileText, Flame } from "lucide-react";
 
 export default function PemantauanMateri() {
-    // --- KONFIGURASI ANIMASI PIPELINE & ITEM ---
     const itemVariants = {
         hidden: { opacity: 0, y: 30, scale: 0.9, filter: "blur(4px)" },
         visible: (delay) => ({
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            filter: "blur(0px)",
-            transition: {
-                duration: 0.6,
-                delay: delay,
-                ease: [0.22, 1, 0.36, 1]
-            }
+            opacity: 1, y: 0, scale: 1, filter: "blur(0px)",
+            transition: { duration: 0.6, delay: delay, ease: [0.22, 1, 0.36, 1] }
         })
     };
-
-    // Animasi garis pipeline memanjang
     const lineVariants = {
         hidden: { width: "0%" },
-        visible: {
-            width: "100%",
-            transition: { duration: 1.5, ease: "easeInOut", delay: 0.2 }
-        }
+        visible: { width: "100%", transition: { duration: 1.5, ease: "easeInOut", delay: 0.2 } }
     };
-
     const lineVerticalVariants = {
         hidden: { height: "0%" },
-        visible: {
-            height: "100%",
-            transition: { duration: 1.5, ease: "easeInOut", delay: 0.2 }
-        }
+        visible: { height: "100%", transition: { duration: 1.5, ease: "easeInOut", delay: 0.2 } }
     };
 
-    // Data Jadwal ANC (Tema Pink to Magenta)
     const ancSchedule = [
-        {
-            icon: <Stethoscope size={22} strokeWidth={2} />,
-            tm: "TM I", k: "K1", time: "≤ 12 minggu",
-            desc: <><strong className="text-[#1E293B]">Wajib periksa dokter</strong><br />Skrining LILA + IMT + edukasi gizi</>,
-            color: "text-[#e71d89]", bg: "bg-[#FFF5F9]", border: "border-[#e71d89]",
-        },
-        {
-            icon: <TestTube size={22} strokeWidth={2} />,
-            tm: "TM I", k: "K2", time: "≤ 12 minggu",
-            desc: <>Evaluasi hasil lab<br />Mulai PMT jika KEK/Risiko KEK</>,
-            color: "text-[#e71d89]", bg: "bg-[#FFF5F9]", border: "border-[#e71d89]",
-        },
-        {
-            icon: <Scale size={22} strokeWidth={2} />,
-            tm: "TM II", k: "K3", time: "13–28 minggu",
-            desc: <>Pantau kenaikan BB<br />Evaluasi respons PMT</>,
-            color: "text-[#d11075]", bg: "bg-[#FDF2F8]", border: "border-[#d11075]",
-        },
-        {
-            icon: <Droplet size={22} strokeWidth={2} />,
-            tm: "TM III", k: "K4", time: "28–36 minggu",
-            desc: <>Cek Hb + evaluasi gizi</>,
-            color: "text-[#c21470]", bg: "bg-[#FCE7F3]", border: "border-[#c21470]",
-        },
-        {
-            icon: <Baby size={22} strokeWidth={2} />,
-            tm: "TM III", k: "K5", time: "28–36 minggu",
-            desc: <><strong className="text-[#1E293B]">Wajib periksa dokter</strong><br />Pantau tumbuh kembang janin</>,
-            color: "text-[#be185d]", bg: "bg-[#FBCFE8]", border: "border-[#be185d]",
-        },
-        {
-            icon: <ClipboardCheck size={22} strokeWidth={2} />,
-            tm: "TM III", k: "K6", time: "≥ 36 minggu",
-            desc: <>Persiapan persalinan<br />Evaluasi akhir status gizi</>,
-            color: "text-[#9d174d]", bg: "bg-[#F9A8D4]", border: "border-[#9d174d]",
-        },
+        { icon: <Stethoscope size={22} strokeWidth={2} />, tm: "TM I", k: "K1", time: "Kunjungan ke-1", desc: <>≤ 12 minggu<br /><strong className="text-[#1E293B]">Wajib periksa dokter</strong><br />Skrining LILA + IMT + edukasi gizi</>, color: "text-[#e71d89]", bg: "bg-[#FFF5F9]", border: "border-[#e71d89]" },
+        { icon: <TestTube size={22} strokeWidth={2} />, tm: "TM I", k: "K2", time: "Kunjungan ke-2", desc: <>≤ 12 minggu<br />Evaluasi hasil lab<br />Mulai PMT jika KEK/Risiko KEK</>, color: "text-[#e71d89]", bg: "bg-[#FFF5F9]", border: "border-[#e71d89]" },
+        { icon: <Scale size={22} strokeWidth={2} />, tm: "TM II", k: "K3", time: "Kunjungan ke-3", desc: <>13–28 minggu<br />Pantau kenaikan BB<br />Evaluasi respons PMT</>, color: "text-[#d11075]", bg: "bg-[#FDF2F8]", border: "border-[#d11075]" },
+        { icon: <Droplet size={22} strokeWidth={2} />, tm: "TM III", k: "K4", time: "Kunjungan ke-4", desc: <>28–36 minggu<br />Cek Hb + evaluasi gizi</>, color: "text-[#c21470]", bg: "bg-[#FCE7F3]", border: "border-[#c21470]" },
+        { icon: <Baby size={22} strokeWidth={2} />, tm: "TM III", k: "K5", time: "Kunjungan ke-5", desc: <>28–36 minggu<br /><strong className="text-[#1E293B]">Wajib periksa dokter</strong><br />Pantau tumbuh kembang janin</>, color: "text-[#be185d]", bg: "bg-[#FBCFE8]", border: "border-[#be185d]" },
+        { icon: <ClipboardCheck size={22} strokeWidth={2} />, tm: "TM III", k: "K6", time: "Kunjungan ke-6", desc: <>≥ 36 minggu<br />Persiapan persalinan<br />Evaluasi akhir status gizi</>, color: "text-[#9d174d]", bg: "bg-[#F9A8D4]", border: "border-[#9d174d]" }
     ];
 
     return (
         <section id="pemantauan" className="py-16 px-6 lg:px-16 max-w-7xl mx-auto scroll-mt-20">
             <div className="w-full">
-
-                {/* === HEADER SECTION === */}
-                <motion.div
-                    custom={0}
-                    variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    className="mb-12"
-                >
+                <motion.div custom={0} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="mb-12">
                     <div className="flex items-center gap-3 text-[11px] font-bold tracking-widest uppercase text-[#e71d89] mb-3">
-                        06 — Jadwal Pemantauan
-                        <div className="flex-1 h-px bg-[#e71d89]/20"></div>
+                        06 — Jadwal Pemantauan<div className="flex-1 h-px bg-[#e71d89]/20"></div>
                     </div>
-                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E293B] mb-3 tracking-tight">
-                        Kapan Harus Periksa?
-                    </h2>
+                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#1E293B] mb-3 tracking-tight">Kapan Harus Periksa?</h2>
                     <p className="text-[14px] text-slate-500 max-w-2xl leading-relaxed">
-                        ANC minimal <strong className="text-[#1E293B]">6 kali</strong> selama kehamilan — standar Permenkes No. 21 Tahun 2021, menyesuaikan rekomendasi WHO. Minimal 2× diperiksa langsung oleh dokter.
+                        ANC minimal <strong className="text-[#1E293B]">6 kali</strong> selama kehamilan — standar Permenkes No. 21 Tahun 2021. Minimal 2× diperiksa langsung oleh dokter.
                     </p>
                 </motion.div>
 
-                {/* === PIPELINE LAYOUT === */}
                 <div className="relative mb-16 pt-4">
-
-                    {/* GARIS PIPELINE DESKTOP (Horizontal) */}
                     <div className="hidden lg:block absolute top-7.5 left-[8%] right-[8%] h-2 bg-slate-100 rounded-full z-0 overflow-hidden">
-                        <motion.div
-                            variants={lineVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: "-50px" }}
-                            className="h-full bg-gradient-to-r from-[#FFD1E8] via-[#e71d89] to-[#9d174d] rounded-full"
-                        ></motion.div>
+                        <motion.div variants={lineVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="h-full bg-linear-to-r from-[#FFD1E8] via-[#e71d89] to-[#9d174d] rounded-full"></motion.div>
                     </div>
-
-                    {/* GARIS PIPELINE MOBILE (Vertical) */}
                     <div className="block lg:hidden absolute top-4 bottom-4 left-8.75 w-1.5 bg-slate-100 rounded-full z-0 overflow-hidden">
-                        <motion.div
-                            variants={lineVerticalVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: "-50px" }}
-                            className="w-full bg-gradient-to-b from-[#FFD1E8] via-[#e71d89] to-[#9d174d] rounded-full"
-                        ></motion.div>
+                        <motion.div variants={lineVerticalVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="w-full bg-linear-to-b from-[#FFD1E8] via-[#e71d89] to-[#9d174d] rounded-full"></motion.div>
                     </div>
 
-                    {/* ITEM-ITEM PIPELINE */}
                     <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 justify-between relative z-10">
                         {ancSchedule.map((item, index) => (
-                            <motion.div
-                                key={index}
-                                custom={0.2 + (index * 0.2)}
-                                variants={itemVariants}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true, margin: "-50px" }}
-                                className="flex flex-row lg:flex-col items-start lg:items-center flex-1 relative group"
-                            >
-                                {/* Titik Node (Bulatan Ikon) */}
+                            <motion.div key={index} custom={0.2 + (index * 0.2)} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="flex flex-row lg:flex-col items-start lg:items-center flex-1 relative group">
                                 <div className={`w-16 h-16 shrink-0 lg:mx-auto rounded-full bg-white border-4 ${item.border} flex items-center justify-center ${item.color} shadow-md group-hover:scale-110 transition-transform duration-300 relative z-10`}>
                                     {item.icon}
                                 </div>
-
-                                {/* Konten Teks */}
                                 <div className="ml-5 lg:ml-0 lg:mt-6 lg:text-center flex-1">
                                     <div className="inline-flex items-center justify-center gap-1.5 bg-white border border-slate-200 text-[10px] font-extrabold tracking-widest uppercase px-2.5 py-1 rounded-md mb-2 shadow-sm">
                                         <span className={item.color}>{item.tm}</span> <span className="text-slate-300">|</span> <span className="text-slate-500">{item.k}</span>
@@ -157,85 +67,51 @@ export default function PemantauanMateri() {
                     </div>
                 </div>
 
-                {/* === INFO DISTRIBUSI ANC (BOX) === */}
-                <motion.div
-                    custom={0.5}
-                    variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    className="flex items-start gap-4 bg-[#FFF5F9] border border-[#e71d89]/15 rounded-2xl p-6 mb-10 shadow-sm"
-                >
+                <motion.div custom={0.5} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="flex items-start gap-4 bg-[#FFF5F9] border border-[#e71d89]/15 rounded-2xl p-6 mb-10 shadow-sm">
                     <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-[#e71d89]/10 shrink-0 shadow-sm">
                         <FileText size={20} className="text-[#e71d89]" strokeWidth={2.5} />
                     </div>
                     <div>
-                        <h4 className="text-[14px] font-bold text-[#1E293B] mb-1.5">
-                            Distribusi ANC: 2× TM I — 1× TM II — 3× TM III
-                        </h4>
+                        <h4 className="text-[14px] font-bold text-[#1E293B] mb-1.5">Distribusi ANC: 2× TM I — 1× TM II — 3× TM III</h4>
                         <p className="text-[13.5px] text-slate-600 leading-relaxed">
-                            Berdasarkan Permenkes No. 21 Tahun 2021. Minimal 2× diperiksa dokter: pada K1 (TM I) dan K5 (TM III). Untuk ibu hamil KEK/Risiko KEK disarankan frekuensi pemantauan lebih sering dari minimal.
+                            Berdasarkan Permenkes No. 21 Tahun 2021. Minimal 2× diperiksa dokter: pada K1 (TM I) dan K5 (TM III). Untuk ibu hamil KEK/Risiko KEK disarankan frekuensi lebih sering dari minimal.
                         </p>
                     </div>
                 </motion.div>
 
-                {/* === KEBUTUHAN ENERGI PER TRIMESTER === */}
-                <motion.div
-                    custom={0.6}
-                    variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    className="bg-white border border-slate-200 shadow-sm rounded-3xl p-6 lg:p-8"
-                >
+                <motion.div custom={0.6} variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="bg-white border border-slate-200 shadow-sm rounded-3xl p-6 lg:p-8">
                     <h3 className="font-serif text-xl font-bold text-[#1E293B] mb-6 flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-[#FFF5F9] flex items-center justify-center border border-[#e71d89]/10 shadow-sm">
-                            <Flame size={20} className="text-[#e71d89]" strokeWidth={2.5} />
-                        </div>
+                        <div className="w-10 h-10 rounded-xl bg-[#FFF5F9] flex items-center justify-center border border-[#e71d89]/10 shadow-sm"><Flame size={20} className="text-[#e71d89]" strokeWidth={2.5} /></div>
                         Kebutuhan Energi per Trimester (AKG 2019)
                     </h3>
-
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
-                        {/* KARTU TM I */}
                         <motion.div custom={0.7} variants={itemVariants} className="bg-white border border-[#e71d89]/20 rounded-2xl p-6 text-center shadow-sm relative overflow-hidden group hover:border-[#e71d89]/50 transition-colors">
                             <div className="absolute top-0 left-0 w-full h-1 bg-[#FFD1E8]"></div>
                             <div className="text-[11px] font-extrabold text-slate-400 tracking-widest uppercase mb-3 mt-2">Trimester 1</div>
                             <div className="font-serif text-4xl font-black text-[#1E293B] leading-none mb-1">+180</div>
                             <div className="text-[12px] text-slate-500 font-medium mb-4">kkal/hari dari kebutuhan dasar</div>
-                            <div className="inline-block bg-[#FFF5F9] border border-[#e71d89]/10 text-[11px] text-[#e71d89] font-bold px-4 py-1.5 rounded-full">
-                                ~2.030 kkal total
-                            </div>
+                            <div className="inline-block bg-[#FFF5F9] border border-[#e71d89]/10 text-[11px] text-[#e71d89] font-bold px-4 py-1.5 rounded-full">~2.030 kkal total</div>
                         </motion.div>
-
-                        {/* KARTU TM II */}
                         <motion.div custom={0.8} variants={itemVariants} className="bg-white border border-[#c21470]/20 rounded-2xl p-6 text-center shadow-sm relative overflow-hidden group hover:border-[#c21470]/50 transition-colors">
                             <div className="absolute top-0 left-0 w-full h-1 bg-[#e71d89]"></div>
                             <div className="text-[11px] font-extrabold text-slate-400 tracking-widest uppercase mb-3 mt-2">Trimester 2</div>
                             <div className="font-serif text-4xl font-black text-[#1E293B] leading-none mb-1">+300</div>
                             <div className="text-[12px] text-slate-500 font-medium mb-4">kkal/hari dari kebutuhan dasar</div>
-                            <div className="inline-block bg-[#FDF2F8] border border-[#c21470]/10 text-[11px] text-[#c21470] font-bold px-4 py-1.5 rounded-full">
-                                ~2.350 kkal total
-                            </div>
+                            <div className="inline-block bg-[#FDF2F8] border border-[#c21470]/10 text-[11px] text-[#c21470] font-bold px-4 py-1.5 rounded-full">~2.350 kkal total</div>
                         </motion.div>
-
-                        {/* KARTU TM III */}
                         <motion.div custom={0.9} variants={itemVariants} className="bg-white border border-[#9d174d]/20 rounded-2xl p-6 text-center shadow-sm relative overflow-hidden group hover:border-[#9d174d]/50 transition-colors">
                             <div className="absolute top-0 left-0 w-full h-1 bg-[#9d174d]"></div>
                             <div className="text-[11px] font-extrabold text-slate-400 tracking-widest uppercase mb-3 mt-2">Trimester 3</div>
                             <div className="font-serif text-4xl font-black text-[#1E293B] leading-none mb-1">+300</div>
                             <div className="text-[12px] text-slate-500 font-medium mb-4">kkal/hari dari kebutuhan dasar</div>
-                            <div className="inline-block bg-[#FCE7F3] border border-[#9d174d]/10 text-[11px] text-[#9d174d] font-bold px-4 py-1.5 rounded-full">
-                                ~2.350 kkal total
-                            </div>
+                            <div className="inline-block bg-[#FCE7F3] border border-[#9d174d]/10 text-[11px] text-[#9d174d] font-bold px-4 py-1.5 rounded-full">~2.350 kkal total</div>
                         </motion.div>
                     </div>
-
                     <div className="w-full inline-flex items-center gap-3 bg-[#FAFAFA] border border-slate-100 rounded-xl px-5 py-4 text-[11.5px] text-slate-500">
                         <Info size={16} className="text-slate-400 shrink-0" />
                         <span className="leading-relaxed">Sumber: <strong className="text-[#1E293B]">Peraturan Menteri Kesehatan RI Nomor 28 Tahun 2019 tentang Angka Kecukupan Gizi yang Dianjurkan untuk Masyarakat Indonesia.</strong> </span>
-                    </div> d
+                    </div>
                 </motion.div>
-
             </div>
         </section>
     );

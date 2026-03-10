@@ -1,6 +1,5 @@
 // menuPageData.js
 // Data Khusus untuk Halaman Menu Mingguan (Tampilan Premium & Mewah)
-// Menggunakan string icon untuk Lucide (tanpa emoji)
 
 export const menuPageData = {
     // ==========================================
@@ -57,7 +56,7 @@ export const menuPageData = {
                     meals: [
                         { time: "07.00 Sarapan", icon: "rice", name: "Nasi goreng sayur + Telur mata sapi + Susu sapi 250ml", price: "Rp 23.000", tags: [{ cls: "tag-e", label: "±500 kkal" }, { cls: "tag-p", label: "Prot ✓" }] },
                         { time: "10.00 Selingan", icon: "milk", name: "Smoothie bayam + pisang + susu (green smoothie)", price: "Rp 14.000", tags: [{ cls: "tag-e", label: "±280 kkal" }, { cls: "tag-fe", label: "Fe ✓" }] },
-                        { time: "12.00 Siang", icon: "chicken", name: "Nasi merah + Ayam bumbu opor + Tumis brokoli bawang", price: "Rp 28.000", tags: [{ cls: "tag-e", label: "±560 kkal" }, { cls: "tag-fe", label: "Fe tinggi ✓" }, { cls: "tag-p", label: "Prot ✓" }] },
+                        { time: "12.00 Siang", icon: "chicken", name: "Nasi merah + Ayam Bumbu Opor + Tumis brokoli bawang", price: "Rp 28.000", tags: [{ cls: "tag-e", label: "±560 kkal" }, { cls: "tag-fe", label: "Fe tinggi ✓" }, { cls: "tag-p", label: "Prot ✓" }] },
                         { time: "15.00 Selingan", icon: "fruit", name: "Pepaya Calina potong + jeruk", price: "Rp 8.000", tags: [{ cls: "tag-e", label: "±100 kkal" }] },
                         { time: "18.00 Malam", icon: "fish", name: "Nasi + Ikan kakap goreng tepung + Sayur asem + Tahu goreng", price: "Rp 32.000", tags: [{ cls: "tag-e", label: "±540 kkal" }, { cls: "tag-p", label: "Prot ✓" }] }
                     ],
@@ -71,8 +70,8 @@ export const menuPageData = {
                     meals: [
                         { time: "07.00 Sarapan", icon: "cake", name: "Pancake oat + Telur + Madu + Stroberi segar", price: "Rp 26.000", tags: [{ cls: "tag-e", label: "±510 kkal" }, { cls: "tag-p", label: "Prot ✓" }] },
                         { time: "10.00 Selingan", icon: "milk", name: "Susu sapi cair hangat + Dark chocolate 2 kotak", price: "Rp 16.000", tags: [{ cls: "tag-e", label: "±280 kkal" }, { cls: "tag-ca", label: "Ca ✓" }] },
-                        { time: "12.00 Siang", icon: "meat", name: "Nasi + Opor ayam kampung + Tempe goreng + Lalapan + Sambal", price: "Rp 32.000", tags: [{ cls: "tag-e", label: "±590 kkal" }, { cls: "tag-p", label: "Prot ✓" }] },
-                        { time: "15.00 Selingan", icon: "fruit", name: "Alpukat kocok susu + madu", price: "Rp 12.000", tags: [{ cls: "tag-e", label: "±220 kkal" }] },
+                        { time: "12.00 Siang", icon: "chicken", name: "Nasi + Ayam Kremes + Tempe goreng + Lalapan + Sambal", price: "Rp 32.000", tags: [{ cls: "tag-e", label: "±590 kkal" }, { cls: "tag-p", label: "Prot ✓" }] },
+                        { time: "15.00 Selingan", icon: "avocado", name: "Alpukat kocok susu + madu", price: "Rp 12.000", tags: [{ cls: "tag-e", label: "±220 kkal" }] },
                         { time: "18.00 Malam", icon: "fish", name: "Nasi + Ikan salmon pan-seared + Tumis asparagus + Sup tofu", price: "Rp 36.000", tags: [{ cls: "tag-e", label: "±560 kkal" }, { cls: "tag-om", label: "Omega-3 ✓" }, { cls: "tag-p", label: "Prot ✓" }] }
                     ],
                     total: {
@@ -84,9 +83,9 @@ export const menuPageData = {
                     dayName: "Sabtu", budgetRp: "Rp 90.000", budgetLbl: "Total Hari",
                     meals: [
                         { time: "07.00 Sarapan", icon: "bento", name: "Granola yogurt bowl + Potongan buah segar + Madu", price: "Rp 26.000", tags: [{ cls: "tag-e", label: "±480 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-ca", label: "Ca ✓" }] },
-                        { time: "10.00 Selingan", icon: "milk", name: "Jus tomat + wortel peras segar", price: "Rp 12.000", tags: [{ cls: "tag-e", label: "±110 kkal" }] },
-                        { time: "12.00 Siang", icon: "meat", name: "Nasi + Rendang daging sapi (100g) + Gulai nangka + Tempe", price: "Rp 36.000", tags: [{ cls: "tag-e", label: "±620 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-fe", label: "Fe ✓" }] },
-                        { time: "15.00 Selingan", icon: "fruit", name: "Anggur + Kacang kenari 10 biji", price: "Rp 14.000", tags: [{ cls: "tag-e", label: "±210 kkal" }] },
+                        { time: "10.00 Selingan", icon: "carrot", name: "Jus tomat + wortel peras segar", price: "Rp 12.000", tags: [{ cls: "tag-e", label: "±110 kkal" }] },
+                        { time: "12.00 Siang", icon: "meat", name: "Nasi + Rendang daging sapi (80g) + Gulai nangka + Tempe", price: "Rp 36.000", tags: [{ cls: "tag-e", label: "±620 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-fe", label: "Fe ✓" }] },
+                        { time: "15.00 Selingan", icon: "grape", name: "Anggur + Kacang kenari 10 biji", price: "Rp 14.000", tags: [{ cls: "tag-e", label: "±210 kkal" }] },
                         { time: "18.00 Malam", icon: "soup", name: "Sup krim jagung + Roti gandum 2 lbr + Telur rebus", price: "Rp 22.000", tags: [{ cls: "tag-e", label: "±480 kkal" }, { cls: "tag-ca", label: "Ca ✓" }] }
                     ],
                     total: {
@@ -97,11 +96,11 @@ export const menuPageData = {
                 {
                     dayName: "Minggu", budgetRp: "Rp 96.000", budgetLbl: "Total Hari",
                     meals: [
-                        { time: "07.00 Sarapan", icon: "egg", name: "Nasi uduk + Ayam goreng + Tempe orek + Acar + Susu sapi", price: "Rp 30.000", tags: [{ cls: "tag-e", label: "±580 kkal" }, { cls: "tag-p", label: "Prot ✓" }] },
-                        { time: "10.00 Selingan", icon: "milk", name: "Smoothie manga + susu + kurma 2 biji", price: "Rp 14.000", tags: [{ cls: "tag-e", label: "±270 kkal" }, { cls: "tag-fe", label: "Fe ✓" }] },
-                        { time: "12.00 Siang", icon: "fish", name: "Nasi + Ikan gurame bakar + Sayur lodeh + Tahu goreng", price: "Rp 34.000", tags: [{ cls: "tag-e", label: "±570 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-om", label: "Omega ✓" }] },
-                        { time: "15.00 Selingan", icon: "fruit", name: "Stroberi + blueberry segar", price: "Rp 14.000", tags: [{ cls: "tag-e", label: "±110 kkal" }] },
-                        { time: "18.00 Malam", icon: "soup", name: "Nasi + Ayam kecap kampung + Tumis kangkung bawang putih + Sup", price: "Rp 28.000", tags: [{ cls: "tag-e", label: "±530 kkal" }, { cls: "tag-p", label: "Prot ✓" }] }
+                        { time: "07.00 Sarapan", icon: "rice", name: "Nasi uduk + Ayam goreng + Tempe dan Kacang Tanah Orek + Jeruk", price: "Rp 30.000", tags: [{ cls: "tag-e", label: "±580 kkal" }, { cls: "tag-p", label: "Prot ✓" }] },
+                        { time: "10.00 Selingan", icon: "milk", name: "Smoothie mangga + kurma 2 biji", price: "Rp 14.000", tags: [{ cls: "tag-e", label: "±270 kkal" }, { cls: "tag-fe", label: "Fe ✓" }] },
+                        { time: "12.00 Siang", icon: "fish", name: "Nasi + Gurame Saus Padang + Urap Sayur (Bayam dan Tauge) + Tahu goreng", price: "Rp 34.000", tags: [{ cls: "tag-e", label: "±570 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-om", label: "Omega ✓" }] },
+                        { time: "15.00 Selingan", icon: "carrot", name: "Jus jambu merah, strawberry, wortel", price: "Rp 14.000", tags: [{ cls: "tag-e", label: "±110 kkal" }] },
+                        { time: "18.00 Malam", icon: "soup", name: "Nasi + Ayam kecap kampung + Cah kangkung", detail: "Nasi 260 kkal · Ayam kecap 215 kkal · Cah kangkung 85 kkal", price: "Rp 25.000", tags: [{ cls: "tag-e", label: "±560 kkal" }] }
                     ],
                     total: {
                         stats: [{ pre: "Energi", strong: "±2.060", post: "kkal" }, { pre: "Protein", strong: "±76g", post: "" }, { pre: "Zat Besi", strong: "±28mg", post: "" }],
@@ -132,8 +131,8 @@ export const menuPageData = {
                     meals: [
                         { time: "Sarapan", icon: "soup", name: "Overnight oats + Yogurt Yunani + Buah beri + Madu", price: "Rp 28.000", tags: [{ cls: "tag-e", label: "±520 kkal" }, { cls: "tag-ca", label: "Ca ✓" }, { cls: "tag-p", label: "Prot ✓" }] },
                         { time: "Selingan", icon: "milk", name: "Susu full cream hangat + Kurma 3 biji", price: "Rp 14.000", tags: [{ cls: "tag-e", label: "±280 kkal" }, { cls: "tag-fe", label: "Fe ✓" }] },
-                        { time: "Siang", icon: "meat", name: "Nasi + Ayam kampung bakar bumbu rempah + Gado-gado sayur + Lontong", price: "Rp 34.000", tags: [{ cls: "tag-e", label: "±640 kkal" }, { cls: "tag-p", label: "Prot ✓" }] },
-                        { time: "Selingan", icon: "fruit", name: "Guacamole alpukat + Roti gandum 2 lbr", price: "Rp 16.000", tags: [{ cls: "tag-e", label: "±290 kkal" }] },
+                        { time: "Siang", icon: "rice", name: "Nasi + Ayam kampung goreng lengkuas + Sup brokoli, wortel, tofu", price: "Rp 34.000", tags: [{ cls: "tag-e", label: "±640 kkal" }, { cls: "tag-p", label: "Prot ✓" }] },
+                        { time: "Selingan", icon: "avocado", name: "Guacamole alpukat + Roti gandum 2 lbr", price: "Rp 16.000", tags: [{ cls: "tag-e", label: "±290 kkal" }] },
                         { time: "Malam", icon: "meat", name: "Nasi + Hati sapi masak kecap + Tumis kangkung bawang putih + Tahu", price: "Rp 30.000", tags: [{ cls: "tag-e", label: "±560 kkal" }, { cls: "tag-fe", label: "Fe tinggi ✓" }] }
                     ],
                     total: {
@@ -216,11 +215,11 @@ export const menuPageData = {
                 {
                     dayName: "Selasa", budgetRp: "Rp 192.000", budgetLbl: "Total Hari",
                     meals: [
-                        { time: "Sarapan", icon: "egg", name: "Eggs Florentine (telur poached + bayam + roti sourdough) + Jus cold-press jeruk beet", price: "Rp 52.000", tags: [{ cls: "tag-e", label: "±520 kkal" }, { cls: "tag-fe", label: "Fe ✓" }, { cls: "tag-p", label: "Prot ✓" }] },
-                        { time: "Selingan", icon: "milk", name: "Green smoothie premium: kale + alpukat + susu almond + spirulina + madu", price: "Rp 32.000", tags: [{ cls: "tag-e", label: "±290 kkal" }, { cls: "tag-fe", label: "Fe ✓" }] },
-                        { time: "Siang", icon: "meat", name: "Nasi + Wagyu beef (100g) saus mushroom + Sautéed buncis bawang + Sup bayam", price: "Rp 80.000", tags: [{ cls: "tag-e", label: "±680 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-fe", label: "Fe tinggi ✓" }] },
-                        { time: "Selingan", icon: "fruit", name: "Mixed berry bowl (blueberry + stroberi + raspberry) + Granola", price: "Rp 30.000", tags: [{ cls: "tag-e", label: "±180 kkal" }] },
-                        { time: "Malam", icon: "fish", name: "Nasi + Tuna steak panggang + Tumis asparagus + Edamame + Miso soup", price: "Rp 58.000", tags: [{ cls: "tag-e", label: "±540 kkal" }, { cls: "tag-om", label: "Omega-3 ✓" }, { cls: "tag-p", label: "Prot ✓" }] }
+                        { time: "07.00 Sarapan", icon: "egg", name: "Eggs Florentine (telur poached + bayam + roti sourdough) + Jus cold-press jeruk beet", price: "Rp 52.000", tags: [{ cls: "tag-e", label: "±520 kkal" }, { cls: "tag-fe", label: "Fe ✓" }, { cls: "tag-p", label: "Prot ✓" }] },
+                        { time: "10.00 Selingan", icon: "milk", name: "Green smoothie premium: kale + alpukat + susu almond + spirulina + madu", price: "Rp 32.000", tags: [{ cls: "tag-e", label: "±290 kkal" }, { cls: "tag-fe", label: "Fe ✓" }] },
+                        { time: "12.00 Siang", icon: "meat", name: "Nasi + Wagyu beef (100g) saus mushroom + Sautéed buncis bawang + Sup bayam", price: "Rp 80.000", tags: [{ cls: "tag-e", label: "±680 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-fe", label: "Fe tinggi ✓" }] },
+                        { time: "15.00 Selingan", icon: "fruit", name: "Mixed berry bowl (blueberry + stroberi + raspberry) + Granola", price: "Rp 30.000", tags: [{ cls: "tag-e", label: "±180 kkal" }] },
+                        { time: "18.00 Malam", icon: "fish", name: "Nasi + Tuna steak panggang + Tumis asparagus + Edamame + Miso soup", price: "Rp 58.000", tags: [{ cls: "tag-e", label: "±540 kkal" }, { cls: "tag-om", label: "Omega-3 ✓" }, { cls: "tag-p", label: "Prot ✓" }] }
                     ],
                     total: {
                         stats: [{ pre: "Energi", strong: "±2.210", post: "kkal" }, { pre: "Protein", strong: "±94g", post: "" }, { pre: "Zat Besi", strong: "±38mg", post: "" }],
@@ -230,11 +229,11 @@ export const menuPageData = {
                 {
                     dayName: "Rabu", budgetRp: "Rp 180.000", budgetLbl: "Total Hari",
                     meals: [
-                        { time: "Sarapan", icon: "bread", name: "Protein pancake + Greek yogurt + Madu manuka + Blueberry segar + Susu almond", price: "Rp 48.000", tags: [{ cls: "tag-e", label: "±510 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-ca", label: "Ca ✓" }] },
-                        { time: "Selingan", icon: "snack", name: "Almond butter + Roti sourdough + Kurma medjool 2 biji", price: "Rp 26.000", tags: [{ cls: "tag-e", label: "±340 kkal" }, { cls: "tag-fe", label: "Fe ✓" }] },
-                        { time: "Siang", icon: "meat", name: "Nasi + Ayam kampung roast lemon herb + Puree ubi + Salad bayam keju feta", price: "Rp 58.000", tags: [{ cls: "tag-e", label: "±620 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-ca", label: "Ca ✓" }] },
-                        { time: "Selingan", icon: "fruit", name: "Chia pudding susu almond + Stroberi + Granola artisan", price: "Rp 28.000", tags: [{ cls: "tag-e", label: "±260 kkal" }, { cls: "tag-om", label: "Omega-3 ✓" }] },
-                        { time: "Malam", icon: "fish", name: "Pasta gandum + Udang saus aglio olio + Tumis brokoli + Caesar salad mini", price: "Rp 52.000", tags: [{ cls: "tag-e", label: "±560 kkal" }, { cls: "tag-p", label: "Prot ✓" }] }
+                        { time: "07.00 Sarapan", icon: "bread", name: "Protein pancake + Greek yogurt + Madu manuka + Blueberry segar + Susu almond", price: "Rp 48.000", tags: [{ cls: "tag-e", label: "±510 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-ca", label: "Ca ✓" }] },
+                        { time: "10.00 Selingan", icon: "snack", name: "Almond butter + Roti sourdough + Kurma medjool 2 biji", price: "Rp 26.000", tags: [{ cls: "tag-e", label: "±340 kkal" }, { cls: "tag-fe", label: "Fe ✓" }] },
+                        { time: "12.00 Siang", icon: "meat", name: "Nasi + Ayam kampung roast lemon herb + Puree ubi + Salad bayam keju feta", price: "Rp 58.000", tags: [{ cls: "tag-e", label: "±620 kkal" }, { cls: "tag-p", label: "Prot ✓" }, { cls: "tag-ca", label: "Ca ✓" }] },
+                        { time: "15.00 Selingan", icon: "fruit", name: "Chia pudding susu almond + Stroberi + Granola artisan", price: "Rp 28.000", tags: [{ cls: "tag-e", label: "±260 kkal" }, { cls: "tag-om", label: "Omega-3 ✓" }] },
+                        { time: "18.00 Malam", icon: "fish", name: "Pasta gandum + Udang saus aglio olio + Tumis brokoli + Caesar salad mini", price: "Rp 52.000", tags: [{ cls: "tag-e", label: "±560 kkal" }, { cls: "tag-p", label: "Prot ✓" }] }
                     ],
                     total: {
                         stats: [{ pre: "Energi", strong: "±2.290", post: "kkal" }, { pre: "Protein", strong: "±89g", post: "" }, { pre: "Omega-3/DHA", strong: "✓", post: "" }],
@@ -244,11 +243,11 @@ export const menuPageData = {
                 {
                     dayName: "Kamis – Minggu", budgetRp: "~Rp 195rb", budgetLbl: "Rata-rata",
                     meals: [
-                        { time: "Sarapan Artisan", icon: "bento", name: "Rotasi: smoothie bowl acai, avocado toast sourdough, shakshuka telur, overnight oats premium", price: "Rp 45–55rb", tags: [{ cls: "tag-p", label: "Prot ✓" }] },
-                        { time: "Selingan Pagi", icon: "milk", name: "Cold-press juice atau latte hangat + Snack premium: date bites, chia pudding, yogurt parfait", price: "Rp 25–35rb", tags: [{ cls: "tag-fe", label: "Fe ✓" }, { cls: "tag-ca", label: "Ca ✓" }] },
-                        { time: "Makan Siang", icon: "utensils", name: "Protein premium: salmon, wagyu, udang, scallop, ayam kampung organik + 2 sayuran premium", price: "Rp 65–90rb", tags: [{ cls: "tag-om", label: "DHA ✓" }, { cls: "tag-p", label: "Prot ✓" }] },
-                        { time: "Selingan Sore", icon: "fruit", name: "Mixed berry + yogurt Yunani / chia pudding / buah tropis premium", price: "Rp 25–35rb", tags: [{ cls: "tag-ca", label: "Ca ✓" }] },
-                        { time: "Makan Malam", icon: "soup", name: "Protein hewani pilihan + pasta/nasi merah + sup krim atau salad premium", price: "Rp 50–65rb", tags: [{ cls: "tag-p", label: "Prot ✓" }, { cls: "tag-e", label: "±550 kkal" }] }
+                        { time: "07.00 Sarapan Artisan", icon: "bento", name: "Rotasi: smoothie bowl acai, avocado toast sourdough, shakshuka telur, overnight oats premium", price: "Rp 45–55rb", tags: [{ cls: "tag-p", label: "Prot ✓" }] },
+                        { time: "10.00 Selingan Pagi", icon: "milk", name: "Cold-press juice atau latte hangat + Snack premium: date bites, chia pudding, yogurt parfait", price: "Rp 25–35rb", tags: [{ cls: "tag-fe", label: "Fe ✓" }, { cls: "tag-ca", label: "Ca ✓" }] },
+                        { time: "12.00 Makan Siang", icon: "utensils", name: "Protein premium: salmon, wagyu, udang, scallop, ayam kampung organik + 2 sayuran premium", price: "Rp 65–90rb", tags: [{ cls: "tag-om", label: "DHA ✓" }, { cls: "tag-p", label: "Prot ✓" }] },
+                        { time: "15.00 Selingan Sore", icon: "fruit", name: "Mixed berry + yogurt Yunani / chia pudding / buah tropis premium", price: "Rp 25–35rb", tags: [{ cls: "tag-ca", label: "Ca ✓" }] },
+                        { time: "18.00 Makan Malam", icon: "soup", name: "Protein hewani pilihan + pasta/nasi merah + sup krim atau salad premium", price: "Rp 50–65rb", tags: [{ cls: "tag-p", label: "Prot ✓" }, { cls: "tag-e", label: "±550 kkal" }] }
                     ],
                     total: {
                         stats: [{ pre: "Target Energi", strong: "±2.050–2.100", post: "kkal" }, { pre: "Protein", strong: "≥85g", post: "" }, { pre: "Budget / Hari", strong: "Rp 150–250rb", post: "" }],

@@ -1,68 +1,29 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { Ruler, Scale, Info, PersonStanding, Crosshair, Target, Eye, ClipboardList, ArrowRight } from "lucide-react";
 
 export default function DiagnosisMateri() {
-    // --- KONFIGURASI ANIMASI UNTUK PERINTILAN/ITEM ---
     const containerVariants = {
         hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.3
-            }
-        }
+        visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.3 } }
     };
-
     const itemVariants = {
-        hidden: {
-            opacity: 0,
-            y: 30,
-            filter: "blur(4px)"
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            filter: "blur(0px)",
-            transition: {
-                duration: 0.7,
-                ease: [0.16, 1, 0.3, 1]
-            }
-        }
+        hidden: { opacity: 0, y: 30, filter: "blur(4px)" },
+        visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } }
     };
-
-    // --- ANIMASI KHUSUS UNTUK BAR LILA (PENGISIAN) ---
     const barFillVariants = {
         hidden: { width: "0%" },
-        visible: {
-            width: "100%",
-            transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 1 }
-        }
+        visible: { width: "100%", transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 1 } }
     };
-
     const sliderVariants = {
         hidden: { left: "0%", opacity: 0 },
-        visible: {
-            left: "67.14%",
-            opacity: 1,
-            transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 1 }
-        }
+        visible: { left: "67.14%", opacity: 1, transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 1 } }
     };
 
     return (
         <section id="diagnosis" className="py-16 px-6 lg:px-16 max-w-7xl mx-auto scroll-mt-20">
             <div className="w-full">
-
-                {/* === HEADER SECTION === */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    variants={containerVariants}
-                    className="mb-8"
-                >
+                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="mb-8">
                     <motion.div variants={itemVariants} className="flex items-center gap-3 text-[11px] font-bold tracking-widest uppercase text-[#e71d89] mb-3">
                         02 — Diagnosis & Skrining
                         <div className="flex-1 h-px bg-[#e71d89]/20"></div>
@@ -75,48 +36,30 @@ export default function DiagnosisMateri() {
                     </motion.p>
                 </motion.div>
 
-                {/* === DIAGNOSIS BOX (Kotak ini diam/statis, isinya yang gerak) === */}
                 <div className="bg-[#1E293B] rounded-3xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative overflow-hidden mb-6 shadow-xl">
-                    {/* Glow effect tetap statis */}
                     <div className="absolute -top-16 -right-16 w-64 h-64 bg-[#e71d89]/30 rounded-full blur-3xl pointer-events-none"></div>
                     <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#c21470]/20 rounded-full blur-3xl pointer-events-none"></div>
 
-                    {/* Pembungkus Animasi untuk isi di dalam kotak */}
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="relative z-10 space-y-6"
-                    >
-                        <motion.div variants={itemVariants} className="text-[10px] font-extrabold tracking-widest uppercase text-[#FFD1E8] mb-3">
-                            Metode Standar Kemenkes RI
-                        </motion.div>
+                    <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="relative z-10 space-y-6">
+                        <motion.div variants={itemVariants} className="text-[10px] font-extrabold tracking-widest uppercase text-[#FFD1E8] mb-3">Metode Standar Kemenkes RI</motion.div>
                         <motion.h3 variants={itemVariants} className="font-serif text-2xl lg:text-3xl font-bold text-white mb-6 leading-tight">
                             LILA & <em className="italic text-[#e71d89] font-medium">IMT</em> Pra-Hamil
                         </motion.h3>
-
                         <div className="text-[14px] text-white/85 leading-[1.7] space-y-5">
                             <motion.div variants={itemVariants} className="flex items-start gap-3">
                                 <div className="w-6 h-6 rounded-full bg-[#e71d89] text-white flex items-center justify-center text-[11px] font-black shrink-0 mt-0.5">1</div>
                                 <div>
-                                    <strong className="text-white mb-1 flex items-center gap-2">
-                                        <Ruler size={16} className="text-[#e71d89]" /> LILA &lt; 23,5 cm
-                                    </strong>
+                                    <strong className="text-white mb-1 flex items-center gap-2"><Ruler size={16} className="text-[#e71d89]" /> LILA &lt; 23,5 cm</strong>
                                     Ibu hamil dinyatakan <em className="not-italic text-[#FFD1E8] font-bold">Risiko KEK</em>. Diukur kapan saja selama kehamilan oleh bidan/kader menggunakan pita LILA. Mudah, murah, bisa dilakukan di Posyandu.
                                 </div>
                             </motion.div>
-
                             <motion.div variants={itemVariants} className="flex items-start gap-3">
                                 <div className="w-6 h-6 rounded-full bg-white/20 text-white flex items-center justify-center text-[11px] font-black shrink-0 mt-0.5">2</div>
                                 <div>
-                                    <strong className="text-white mb-1 flex items-center gap-2">
-                                        <Scale size={16} className="text-white/80" /> IMT &lt; 18,5 kg/m²
-                                    </strong>
+                                    <strong className="text-white mb-1 flex items-center gap-2"><Scale size={16} className="text-white/80" /> IMT &lt; 18,5 kg/m²</strong>
                                     Ibu dinyatakan <em className="not-italic text-white font-bold">KEK</em>. Dinilai dari IMT pra-hamil atau saat TM I (usia kehamilan ≤ 12 minggu). IMT = BB(kg) ÷ TB(m)². Lebih definitif namun butuh data BB pra-hamil.
                                 </div>
                             </motion.div>
-
                             <motion.div variants={itemVariants} className="pt-5 border-t border-white/10">
                                 <p className="mb-2">Dalam alur tatalaksana, Kemenkes menyatukan keduanya sebagai <strong className="text-[#FFD1E8]">"KEK/Risiko KEK"</strong> — intervensi yang diberikan sama.</p>
                                 <div className="text-[11.5px] text-white/50 flex items-start gap-2">
@@ -127,38 +70,17 @@ export default function DiagnosisMateri() {
                         </div>
                     </motion.div>
 
-                    {/* Right: Meter Visual (Isinya juga gerak satu-satu) */}
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="relative z-10 bg-white/5 border border-white/10 rounded-[20px] p-6 lg:p-7 backdrop-blur-md"
-                    >
-                        <motion.div variants={itemVariants} className="text-[11px] font-bold tracking-widest uppercase text-[#FFD1E8] mb-5">
-                            Interpretasi LILA Ibu Hamil
-                        </motion.div>
-
-                        {/* LILA Gradient Bar dengan Animasi Geser */}
+                    <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="relative z-10 bg-white/5 border border-white/10 rounded-[20px] p-6 lg:p-7 backdrop-blur-md">
+                        <motion.div variants={itemVariants} className="text-[11px] font-bold tracking-widest uppercase text-[#FFD1E8] mb-5">Interpretasi LILA Ibu Hamil</motion.div>
                         <motion.div variants={itemVariants} className="mb-6 relative">
                             <div className="h-3.5 rounded-full w-full bg-white/10 relative overflow-hidden shadow-inner">
-                                <motion.div
-                                    variants={barFillVariants}
-                                    className="absolute top-0 left-0 h-full bg-linear-to-r from-[#e71d89] via-white/50 to-white/10 rounded-full"
-                                />
+                                <motion.div variants={barFillVariants} className="absolute top-0 left-0 h-full bg-linear-to-r from-[#e71d89] via-white/50 to-white/10 rounded-full" />
                             </div>
-                            {/* Slider indikator */}
-                            <motion.div
-                                variants={sliderVariants}
-                                className="absolute -top-1.5 w-1.5 h-6 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.8)] z-20"
-                            />
+                            <motion.div variants={sliderVariants} className="absolute -top-1.5 w-1.5 h-6 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.8)] z-20" />
                             <div className="flex justify-between text-[10.5px] text-white/50 font-semibold mt-3 px-1">
-                                <span>20 cm</span>
-                                <span className="text-white font-bold">23,5</span>
-                                <span>30 cm</span>
+                                <span>20 cm</span><span className="text-white font-bold">23,5</span><span>30 cm</span>
                             </div>
                         </motion.div>
-
                         <div className="space-y-3 mb-5">
                             <motion.div variants={itemVariants} className="flex items-center gap-3 bg-[#e71d89]/20 border border-[#e71d89]/30 p-3 rounded-xl">
                                 <div className="w-2.5 h-2.5 rounded-full bg-[#e71d89] shrink-0"></div>
@@ -179,40 +101,27 @@ export default function DiagnosisMateri() {
                                 </div>
                             </motion.div>
                         </div>
-
                         <motion.div variants={itemVariants} className="bg-white/5 border border-white/10 rounded-xl p-3.5 text-[12px] text-white/70 leading-relaxed text-center">
                             + Jika IMT pra-hamil / TM I &lt; 18,5 kg/m² → dikategorikan <strong className="text-white">KEK</strong>
                         </motion.div>
                     </motion.div>
                 </div>
 
-                {/* === PROSEDUR PENGUKURAN LILA === */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    variants={containerVariants}
-                    className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 lg:p-8"
-                >
+                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={containerVariants} className="bg-white border border-slate-200 shadow-sm rounded-2xl p-6 lg:p-8">
                     <motion.h3 variants={itemVariants} className="font-serif text-xl font-bold text-[#1E293B] mb-6 flex items-center gap-2">
                         <div className="w-8 h-8 rounded-lg bg-[#FFF5F9] flex items-center justify-center text-[#e71d89]">
                             <ClipboardList size={18} strokeWidth={2.5} />
                         </div>
                         Prosedur Pengukuran LILA yang Benar
                     </motion.h3>
-
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
                         {[
-                            { icon: <PersonStanding size={24} />, title: "Posisi", desc: "Lengan kiri rileks, menggantung natural" },
-                            { icon: <Crosshair size={24} />, title: "Titik Ukur", desc: "Pertengahan antara akromion & olekranon" },
-                            { icon: <Target size={24} />, title: "Cara Melingkar", desc: "Pita pas — tidak longgar, tidak menekan" },
-                            { icon: <Eye size={24} />, title: "Baca Hasil", desc: "Baca skala angka tepat dalam satuan cm" }
+                            { icon: <PersonStanding size={24} />, title: "Posisi", desc: "Lengan kiri rileks, menggantung natural di sisi tubuh" },
+                            { icon: <Crosshair size={24} />, title: "Titik Ukur", desc: "Pertengahan antara akromion dan olekranon" },
+                            { icon: <Target size={24} />, title: "Cara Melingkar", desc: "Pita melingkari lengan pas — tidak longgar, tidak menekan" },
+                            { icon: <Eye size={24} />, title: "Baca Hasil", desc: "Baca skala pada angka yang tepat, catat dalam cm" }
                         ].map((step, index) => (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                className="bg-[#FAFAFA] border border-slate-100 rounded-xl p-5 text-center hover:border-[#e71d89]/30 transition-colors"
-                            >
+                            <motion.div key={index} variants={itemVariants} className="bg-[#FAFAFA] border border-slate-100 rounded-xl p-5 text-center hover:border-[#e71d89]/30 transition-colors">
                                 <div className="w-10 h-10 mx-auto bg-white rounded-full flex items-center justify-center text-[#e71d89] shadow-sm border border-slate-100 mb-3">
                                     {step.icon}
                                 </div>
@@ -221,13 +130,11 @@ export default function DiagnosisMateri() {
                             </motion.div>
                         ))}
                     </div>
-
                     <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-[#FFF5F9] border border-[#e71d89]/20 rounded-lg px-4 py-2.5 text-[11.5px] text-slate-600">
                         <Info size={14} className="text-[#e71d89] shrink-0" />
-                        <span>Sumber: <strong className="text-[#1E293B]">Pedoman Pelayanan Gizi Ibu Hamil KEK, 2018 | Buku Saku PSG 2017</strong></span>
+                        <span>Sumber: <strong className="text-[#1E293B]">Pedoman Pelayanan Gizi Ibu Hamil KEK, Kemenkes RI 2018 | Buku Saku Pemantauan Status Gizi (PSG) Kemenkes RI 2017</strong></span>
                     </motion.div>
                 </motion.div>
-
             </div>
         </section>
     );

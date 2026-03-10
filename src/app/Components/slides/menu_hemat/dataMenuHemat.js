@@ -1,261 +1,191 @@
 export const dataHemat = {
     stats: {
-        daily: "Rp 22rb",
-        total: "Rp 154rb",
+        daily: "Rp 42rb",
+        total: "Rp 296rb",
         meals: "5x",
         cal: "≥2.000"
     },
     principles: [
-        { title: "Protein Nabati Dulu", desc: "Tempe & tahu jauh lebih murah dari daging tapi sama bergizi.", icon: "bean" },
-        { title: "Ikan Lokal Pilihan", desc: "Ikan kembung & lele lebih murah dari salmon tapi tinggi omega-3.", icon: "fish" },
-        { title: "Sayuran Musiman", desc: "Bayam & daun kelor murah, mudah didapat, kaya zat besi.", icon: "leaf" },
-        { title: "Belanja di Pasar", desc: "Harga pasar tradisional bisa 30-50% lebih hemat dari supermarket.", icon: "shop" }
+        { title: "Protein Nabati Dulu", desc: "Tempe & tahu jauh lebih murah dari ayam/daging tapi sama bergizi. Jadikan andalan tiap hari!", icon: "bean" },
+        { title: "Ikan Lokal Pilihan", desc: "Ikan kembung & pindang lebih murah dari salmon tapi tinggi omega-3 & zat besi. Cocok banget!", icon: "fish" },
+        { title: "Sayuran Musiman", desc: "Bayam, kangkung, daun kelor — murah, mudah dapat, dan kaya zat besi serta folat untuk bumil.", icon: "leaf" },
+        { title: "Belanja di Pasar Tradisional", desc: "Harga di pasar bisa 30-50% lebih murah dari supermarket. Beli pagi hari untuk kesegaran terbaik!", icon: "shop" }
     ],
     days: [
         {
-            day: "Senin", title: "Semangat Penuh!", budget: "Rp 21.500", totalKkal: "±2.150 kkal",
+            day: "Senin",
+            tagline: "Hari pertama, semangat penuh!",
+            budget: "Rp 47.000",
             meals: [
-                {
-                    time: "07.00 · Sarapan", menu: "Nasi + Tempe Goreng + Oseng Kangkung + Penyet Ikan Togek Asap", detail: "Ikan Togek Asap (Leatherjacket Fish) — ikan asap khas pesisir Tuban, kaya protein & omega-3", price: "Rp 5.500", type: "fish",
-                    tags: [{ type: "kal", label: "±620 kkal" }, { type: "prot", label: "Protein ~35g" }, { type: "fe", label: "Fe ~6mg" }, { type: "om", label: "Omega-3 ✓" }, { type: "ca", label: "Ca ~80mg" }, { type: "serat", label: "Serat ~3g" }]
-                },
-                {
-                    time: "10.00 · Selingan Pagi", menu: "Pisang Ambon + Susu Bumil 1 Gelas", detail: "Sumber kalium, folat, kalsium, dan vitamin D", price: "Rp 1.500", type: "fruit",
-                    tags: [{ type: "kal", label: "±280 kkal" }, { type: "prot", label: "Protein ~8g" }, { type: "ca", label: "Ca ~300mg" }, { type: "vit", label: "Folat ✓" }]
-                },
-                {
-                    time: "12.00 · Makan Siang", menu: "Nasi + Sayur Asam + Tempe Goreng + Pepes Ikan Indo/Teri", detail: "Teri sangat kaya kalsium & zat besi — pilihan terbaik untuk tulang bayi", price: "Rp 5.000", type: "fish",
-                    tags: [{ type: "kal", label: "±580 kkal" }, { type: "prot", label: "Protein ~30g" }, { type: "fe", label: "Fe ~8mg" }, { type: "ca", label: "Ca ~280mg" }, { type: "serat", label: "Serat ~4g" }]
-                },
-                {
-                    time: "15.00 · Selingan Sore", menu: "Pepaya Potong + Air Putih", detail: "Vitamin C meningkatkan penyerapan zat besi, serat melancarkan pencernaan", price: "Rp 1.500", type: "fruit",
-                    tags: [{ type: "kal", label: "±90 kkal" }, { type: "vit", label: "Vit C ~60mg" }, { type: "serat", label: "Serat ~2g" }]
-                },
-                {
-                    time: "18.00 · Makan Malam", menu: "Nasi + Tumis Bayam + Tahu Goreng + Sambal Tomat", detail: "Bayam kaya zat besi & folat; tahu sumber kalsium nabati", price: "Rp 8.000", type: "bean",
-                    tags: [{ type: "kal", label: "±480 kkal" }, { type: "prot", label: "Protein ~18g" }, { type: "fe", label: "Fe ~5mg" }, { type: "ca", label: "Ca ~180mg" }]
-                }
+                { time: "07.00", typeMeal: "Sarapan", type: "egg", menu: "Nasi + Tempe Goreng + Oseng Kangkung + Penyet Ikan Togek Asap", detail: "Nasi 150g · Tempe goreng 2 ptg · Oseng kangkung · Ikan togek asap (leatherjacket fish) dipenyetkan — khas & lezat!", price: "Rp 15.000", giziMini: "~480 kkal · 18g P" },
+                { time: "10.00", typeMeal: "Selingan", type: "fruit", menu: "Pisang Ambon + Air Putih", detail: "1 buah pisang ambon ukuran sedang", price: "Rp 1.500", giziMini: "~100 kkal" },
+                { time: "12.00", typeMeal: "Siang", type: "bean", menu: "Nasi + Sayur Asam + Tempe Goreng + Pepes Ikan Indo/Teri", detail: "Nasi 150g · Sayur asam segar · Tempe goreng 2 ptg · Pepes ikan indo/teri — kaya zat besi!", price: "Rp 15.000", giziMini: "~530 kkal · 20g P" },
+                { time: "15.00", typeMeal: "Selingan", type: "snack", menu: "Ubi Rebus + Air Putih", detail: "Ubi jalar merah 1 buah kecil (~100g)", price: "Rp 1.500", giziMini: "~90 kkal" },
+                { time: "18.00", typeMeal: "Malam", type: "fish", menu: "Nasi + Ikan Kembung Goreng + Tumis Bayam", detail: "Nasi 150g · Ikan kembung 1 ekor · Bayam · Bumbu goreng", price: "Rp 13.000", giziMini: "~560 kkal · 22g P · 2mg Fe" }
             ],
-            summary: [
-                { val: "2.050", unit: "kkal", lbl: "Energi Total", pct: "95% AKG ✓" },
-                { val: "91", unit: "g", lbl: "Protein", pct: "128% AKG ✓✓" },
-                { val: "19", unit: "mg", lbl: "Zat Besi", pct: "70% AKG — +TTD" },
-                { val: "840", unit: "mg", lbl: "Kalsium", pct: "70% AKG ✓" },
-                { val: "9", unit: "g", lbl: "Serat", pct: "Baik ✓" },
-                { val: "✓", unit: "", lbl: "Omega-3", pct: "dari Ikan Togek" }
-            ],
-            note: "Konsumsi 1 tablet Tambah Darah (TTD) malam hari bersama air/jus jeruk (bukan teh/kopi) untuk memenuhi target Fe harian.",
-            noteType: "alert"
+            totalRow: {
+                left: "Total Senin + Beras (3 porsi)",
+                chips: [
+                    { type: "kal", label: "~2.100 kkal" },
+                    { type: "prot", label: "~65g Protein" },
+                    { type: "fe", label: "~9mg Fe" }
+                ],
+                right: "= Rp 47.000"
+            }
         },
         {
-            day: "Selasa", title: "Protein Nabati Juara!", budget: "Rp 20.000", totalKkal: "±2.100 kkal",
+            day: "Selasa",
+            tagline: "Hari protein nabati! Tempe & tahu juara",
+            budget: "Rp 33.000",
             meals: [
-                {
-                    time: "07.00 · Sarapan", menu: "Nasi + Tahu Goreng + Oseng Kacang Panjang", detail: "Kacang panjang kaya folat, vitamin K, dan serat; tahu sumber protein nabati lengkap", price: "Rp 4.500", type: "bean",
-                    tags: [{ type: "kal", label: "±520 kkal" }, { type: "prot", label: "Protein ~22g" }, { type: "ca", label: "Ca ~150mg" }, { type: "vit", label: "Folat ✓" }, { type: "serat", label: "Serat ~5g" }]
-                },
-                {
-                    time: "10.00 · Selingan Pagi", menu: "Jeruk Manis + Susu Bumil 1 Gelas", detail: "Vitamin C dari jeruk meningkatkan penyerapan zat besi dari makanan", price: "Rp 2.000", type: "fruit",
-                    tags: [{ type: "kal", label: "±250 kkal" }, { type: "prot", label: "Protein ~8g" }, { type: "vit", label: "Vit C ~50mg" }, { type: "ca", label: "Ca ~300mg" }]
-                },
-                {
-                    time: "12.00 · Makan Siang", menu: "Nasi + Asem-Asem Pindang + Wortel", detail: "Kuah asam-manis dari asam jawa; pindang ikan kaya protein, DHA, dan vitamin B12", price: "Rp 6.000", type: "fish",
-                    tags: [{ type: "kal", label: "±540 kkal" }, { type: "prot", label: "Protein ~28g" }, { type: "fe", label: "Fe ~5mg" }, { type: "om", label: "DHA ✓" }, { type: "vit", label: "Vit A ✓ (Wortel)" }]
-                },
-                {
-                    time: "15.00 · Selingan Sore", menu: "Pisang Raja + Air Putih", detail: "Kalium tinggi, mencegah kram kaki pada ibu hamil", price: "Rp 1.000", type: "fruit",
-                    tags: [{ type: "kal", label: "±90 kkal" }, { type: "vit", label: "Kalium ✓" }, { type: "serat", label: "Serat ~2g" }]
-                },
-                {
-                    time: "18.00 · Makan Malam", menu: "Nasi + Tumis Tauge Tempe + Telor Dadar", detail: "Tauge kaya vitamin C & folat; tempe mengandung isoflavon; telur sumber kolin untuk otak bayi", price: "Rp 6.500", type: "egg",
-                    tags: [{ type: "kal", label: "±540 kkal" }, { type: "prot", label: "Protein ~24g" }, { type: "fe", label: "Fe ~5mg" }, { type: "vit", label: "Kolin ✓" }]
-                }
+                { time: "07.00", typeMeal: "Sarapan", type: "bean", menu: "Nasi + Tahu Goreng + Oseng Kacang Panjang", detail: "Nasi 150g · Tahu 2 ptg besar · Oseng kacang panjang · Minyak & bawang", price: "Rp 8.000", giziMini: "~470 kkal · 14g P" },
+                { time: "10.00", typeMeal: "Selingan", type: "fruit", menu: "Pepaya Potong + Air Putih", detail: "Pepaya 1 potong sedang (~150g) — kaya folat & vitamin C!", price: "Rp 2.000", giziMini: "~65 kkal · vit C tinggi" },
+                { time: "12.00", typeMeal: "Siang", type: "fish", menu: "Nasi + Asem-Asem Pindang + Wortel", detail: "Nasi 150g · Asem-asem pindang kuah segar · Wortel 1 btg — asam segar menyehatkan!", price: "Rp 12.000", giziMini: "~530 kkal · 20g P · 2mg Fe" },
+                { time: "15.00", typeMeal: "Selingan", type: "fruit", menu: "Pisang Rebus + Air Putih", detail: "1 buah pisang kepok direbus — lebih mengenyangkan!", price: "Rp 1.000", giziMini: "~90 kkal" },
+                { time: "18.00", typeMeal: "Malam", type: "egg", menu: "Nasi + Tumis Tauge Tempe + Telor Dadar", detail: "Nasi 150g · Tumis tauge + tempe · Telor dadar 1 btr — simpel, bergizi, mengenyangkan!", price: "Rp 10.000", giziMini: "~580 kkal · 24g P" }
             ],
-            summary: [
-                { val: "1.940", unit: "kkal", lbl: "Energi Total", pct: "90% AKG ✓" },
-                { val: "82", unit: "g", lbl: "Protein", pct: "115% AKG ✓✓" },
-                { val: "18", unit: "mg", lbl: "Zat Besi", pct: "67% AKG — +TTD" },
-                { val: "780", unit: "mg", lbl: "Kalsium", pct: "65% AKG ✓" },
-                { val: "DHA", unit: "", lbl: "Omega-3", pct: "dari Pindang ✓" },
-                { val: "Folat", unit: "", lbl: "Vit B9", pct: "dari Kacang Panjang ✓" }
-            ],
-            note: "Asem-asem pindang mengandung asam organik yang membantu menyerap zat besi. Konsumsi bersama sayur hijau untuk hasil optimal.",
-            noteType: "tip"
+            totalRow: {
+                left: "Total Selasa + Beras (3 porsi)",
+                chips: [
+                    { type: "kal", label: "~2.050 kkal" },
+                    { type: "prot", label: "~63g Protein" },
+                    { type: "fe", label: "~8mg Fe" }
+                ],
+                right: "= Rp 33.000"
+            }
         },
         {
-            day: "Rabu", title: "Hari Ikan Omega-3", budget: "Rp 22.000", totalKkal: "±2.080 kkal",
+            day: "Rabu",
+            tagline: "Hari ikan — omega-3 untuk si kecil!",
+            budget: "Rp 36.500",
             meals: [
-                {
-                    time: "07.00 · Sarapan", menu: "Nasi + Telur Rebus + Oseng Kangkung Bawang Putih", detail: "Telur sumber kolin, protein lengkap; kangkung kaya zat besi & vitamin A", price: "Rp 4.500", type: "egg",
-                    tags: [{ type: "kal", label: "±540 kkal" }, { type: "prot", label: "Protein ~24g" }, { type: "fe", label: "Fe ~6mg" }, { type: "vit", label: "Kolin ✓" }]
-                },
-                {
-                    time: "10.00 · Selingan Pagi", menu: "Kurma 3 Biji + Susu Bumil 1 Gelas", detail: "Kurma kaya zat besi alami, serat, dan gula alami untuk energi stabil", price: "Rp 2.000", type: "snack",
-                    tags: [{ type: "kal", label: "±290 kkal" }, { type: "fe", label: "Fe ~2mg" }, { type: "ca", label: "Ca ~300mg" }, { type: "serat", label: "Serat ~3g" }]
-                },
-                {
-                    time: "12.00 · Makan Siang", menu: "Nasi + Ikan Kembung Goreng + Sayur Bening Bayam + Tempe Goreng", detail: "Ikan kembung kaya DHA; bayam sumber zat besi & folat terbaik", price: "Rp 7.000", type: "fish",
-                    tags: [{ type: "kal", label: "±570 kkal" }, { type: "prot", label: "Protein ~30g" }, { type: "fe", label: "Fe ~7mg" }, { type: "om", label: "DHA ✓" }]
-                },
-                {
-                    time: "15.00 · Selingan Sore", menu: "Pepaya Potong + Air Putih", detail: "Enzim papain membantu pencernaan; vitamin C tinggi", price: "Rp 1.500", type: "fruit",
-                    tags: [{ type: "kal", label: "±80 kkal" }, { type: "vit", label: "Vit C ~60mg" }, { type: "serat", label: "Serat ~2g" }]
-                },
-                {
-                    time: "18.00 · Makan Malam", menu: "Nasi + Sup Tahu, Puyuh, dan Oyong", detail: "Puyuh kaya protein & kalsium cangkang; oyong (gambas) rendah kalori kaya air & vitamin; tahu protein nabati", price: "Rp 7.000", type: "soup",
-                    tags: [{ type: "kal", label: "±480 kkal" }, { type: "prot", label: "Protein ~28g" }, { type: "ca", label: "Ca ~180mg" }, { type: "vit", label: "Vit B12 ✓" }]
-                }
+                { time: "07.00", typeMeal: "Sarapan", type: "soup", menu: "Bubur Nasi + Telur + Pisang", detail: "Bubur dari beras 75g · Telur rebus 1 btr · Pisang 1 bh · Garam & kaldu", price: "Rp 6.000", giziMini: "~400 kkal · 14g P" },
+                { time: "10.00", typeMeal: "Selingan", type: "snack", menu: "Kacang Tanah Rebus + Air Putih", detail: "Kacang tanah rebus segenggam (~30g) — protein & folat tinggi!", price: "Rp 2.000", giziMini: "~108 kkal · 5g P" },
+                { time: "12.00", typeMeal: "Siang", type: "fish", menu: "Nasi + Ikan Lele Goreng + Sayur Bening Bayam", detail: "Nasi 150g · Ikan lele 1 ekor kecil · Bayam & jagung manis", price: "Rp 7.000", giziMini: "~560 kkal · 22g P · 3mg Fe" },
+                { time: "15.00", typeMeal: "Selingan", type: "snack", menu: "Singkong Rebus + Gula Aren Sedikit", detail: "Singkong 1 potong sedang (~100g) · Sumber energi alami", price: "Rp 1.500", giziMini: "~130 kkal" },
+                { time: "18.00", typeMeal: "Malam", type: "soup", menu: "Nasi + Sup Tahu dan Puyuh dan Oyong", detail: "Nasi 150g · Tahu 2 ptg · Telur puyuh · Oyong · Wortel · Daun bawang — hangat dan bergizi!", price: "Rp 14.000", giziMini: "~540 kkal · 20g P" }
             ],
-            summary: [
-                { val: "1.960", unit: "kkal", lbl: "Energi Total", pct: "91% AKG ✓" },
-                { val: "82", unit: "g", lbl: "Protein", pct: "115% AKG ✓✓" },
-                { val: "15", unit: "mg", lbl: "Zat Besi", pct: "56% AKG — +TTD" },
-                { val: "820", unit: "mg", lbl: "Kalsium", pct: "68% AKG ✓" },
-                { val: "DHA", unit: "", lbl: "Omega-3", pct: "dari Kembung ✓" },
-                { val: "B12", unit: "", lbl: "Vitamin", pct: "dari Telur Puyuh ✓" }
-            ],
-            note: "Telur puyuh mengandung vitamin B12 dan selenium lebih tinggi per gram dibanding telur ayam — baik untuk perkembangan sistem saraf janin.",
-            noteType: "tip"
+            totalRow: {
+                left: "Total Rabu + Beras (3 porsi)",
+                chips: [
+                    { type: "kal", label: "~2.050 kkal" },
+                    { type: "prot", label: "~63g Protein" },
+                    { type: "fe", label: "~9mg Fe" }
+                ],
+                right: "= Rp 36.500"
+            }
         },
         {
-            day: "Kamis", title: "Zat Besi Melimpah", budget: "Rp 22.500", totalKkal: "±2.200 kkal",
+            day: "Kamis",
+            tagline: "Hari sayuran hijau — zat besi melimpah!",
+            budget: "Rp 47.500",
             meals: [
-                {
-                    time: "07.00 · Sarapan", menu: "Nasi + Telur Bumbu Bali + Bening Kelor", detail: "Daun kelor — superfood lokal dengan zat besi, kalsium & protein tertinggi di antara sayuran Indonesia", price: "Rp 6.000", type: "egg",
-                    tags: [{ type: "kal", label: "±580 kkal" }, { type: "prot", label: "Protein ~26g" }, { type: "fe", label: "Fe ~9mg" }, { type: "ca", label: "Ca ~200mg" }, { type: "vit", label: "Vit A ✓" }]
-                },
-                {
-                    time: "10.00 · Selingan Pagi", menu: "Pisang + Susu Bumil 1 Gelas", detail: "Kalium pisang + kalsium susu = kombinasi mencegah kram otot", price: "Rp 2.000", type: "fruit",
-                    tags: [{ type: "kal", label: "±270 kkal" }, { type: "prot", label: "Protein ~8g" }, { type: "ca", label: "Ca ~300mg" }]
-                },
-                {
-                    time: "12.00 · Makan Siang", menu: "Nasi + Tempe Bacem + Sayur Asem + Pepes Ikan Ekor Kuning", detail: "Ikan ekor kuning (yellowtail) kaya DHA & protein; sayur asem kaya vitamin C & antioksidan", price: "Rp 6.000", type: "fish",
-                    tags: [{ type: "kal", label: "±620 kkal" }, { type: "prot", label: "Protein ~34g" }, { type: "fe", label: "Fe ~6mg" }, { type: "om", label: "DHA ✓" }, { type: "serat", label: "Serat ~5g" }]
-                },
-                {
-                    time: "15.00 · Selingan Sore", menu: "Jeruk + Air Putih", detail: "Vitamin C memaksimalkan penyerapan zat besi dari sayur kelor pagi", price: "Rp 2.500", type: "fruit",
-                    tags: [{ type: "kal", label: "±60 kkal" }, { type: "vit", label: "Vit C ~50mg" }]
-                },
-                {
-                    time: "18.00 · Makan Malam", menu: "Nasi + Puyuh Kecap + Kangkung Tumis", detail: "Puyuh kecap kaya protein, zinc, dan vitamin B; kangkung sumber zat besi & folat", price: "Rp 6.000", type: "egg",
-                    tags: [{ type: "kal", label: "±520 kkal" }, { type: "prot", label: "Protein ~28g" }, { type: "fe", label: "Fe ~6mg" }, { type: "vit", label: "Zinc ✓" }]
-                }
+                { time: "07.00", typeMeal: "Sarapan", type: "egg", menu: "Nasi + Telur Bumbu Bali + Bening Kelor", detail: "Nasi 150g · Telur 2 btr bumbu bali pedas manis · Sayur bening kelor segar — super food bumil!", price: "Rp 10.000", giziMini: "~480 kkal · 18g P · 4mg Fe" },
+                { time: "10.00", typeMeal: "Selingan", type: "fruit", menu: "Jeruk Manis + Air Putih", detail: "1 buah jeruk manis — vitamin C tinggi bantu serap zat besi!", price: "Rp 2.000", giziMini: "~45 kkal · vit C 75mg" },
+                { time: "12.00", typeMeal: "Siang", type: "fish", menu: "Nasi + Tempe Bacem + Sayur Asem + Pepes Ikan Ekor Kuning", detail: "Nasi 150g · Tempe bacem 2 ptg · Sayur asem · Pepes ikan ekor kuning bumbu rempah", price: "Rp 20.000", giziMini: "~530 kkal · 18g P" },
+                { time: "15.00", typeMeal: "Selingan", type: "snack", menu: "Pisang + Kacang Rebus", detail: "Pisang 1 bh + kacang rebus segenggam — kombinasi sempurna!", price: "Rp 2.500", giziMini: "~207 kkal · 6g P" },
+                { time: "18.00", typeMeal: "Malam", type: "egg", menu: "Nasi + Puyuh Kecap + Kangkung", detail: "Nasi 150g · Telur puyuh kecap manis · Tumis kangkung bawang putih — gurih dan lezat!", price: "Rp 13.000", giziMini: "~540 kkal · 22g P · 3mg Fe" }
             ],
-            summary: [
-                { val: "2.050", unit: "kkal", lbl: "Energi Total", pct: "95% AKG ✓" },
-                { val: "96", unit: "g", lbl: "Protein", pct: "135% AKG ✓✓" },
-                { val: "21", unit: "mg", lbl: "Zat Besi", pct: "78% AKG ✓ +TTD" },
-                { val: "880", unit: "mg", lbl: "Kalsium", pct: "73% AKG ✓" },
-                { val: "DHA", unit: "", lbl: "Omega-3", pct: "Ikan Ekor Kuning ✓" },
-                { val: "⭐", unit: "", lbl: "Kelor = Superfood", pct: "Fe + Ca + Prot Tertinggi" }
-            ],
-            note: "Hari ini menu terbaik dalam seminggu! Bening kelor + pepes ikan ekor kuning = kombinasi Fe + DHA optimal untuk perkembangan otak janin.",
-            noteType: "star"
+            totalRow: {
+                left: "Total Kamis + Beras (3 porsi)",
+                chips: [
+                    { type: "kal", label: "~2.150 kkal" },
+                    { type: "prot", label: "~68g Protein" },
+                    { type: "fe", label: "~11mg Fe" }
+                ],
+                right: "= Rp 47.500"
+            }
         },
         {
-            day: "Jumat", title: "Hemat Pangkal Sehat", budget: "Rp 19.500", totalKkal: "±2.120 kkal",
+            day: "Jumat",
+            tagline: "Hari paling hemat! Budget ketat tapi gizi tetap top",
+            budget: "Rp 39.000",
             meals: [
-                {
-                    time: "07.00 · Sarapan", menu: "Nasi + Tempe Goreng + Oseng Wortel Bawang", detail: "Wortel kaya betakaroten (provitamin A) untuk perkembangan mata dan kulit janin", price: "Rp 4.500", type: "bean",
-                    tags: [{ type: "kal", label: "±530 kkal" }, { type: "prot", label: "Protein ~20g" }, { type: "vit", label: "Vit A ✓" }, { type: "serat", label: "Serat ~4g" }]
-                },
-                {
-                    time: "10.00 · Selingan Pagi", menu: "Kurma 3 Biji + Susu Bumil 1 Gelas", detail: "Zat besi alami dari kurma + kalsium susu = pilihan selingan terbaik bumil", price: "Rp 1.500", type: "snack",
-                    tags: [{ type: "kal", label: "±270 kkal" }, { type: "fe", label: "Fe ~2mg" }, { type: "ca", label: "Ca ~300mg" }]
-                },
-                {
-                    time: "12.00 · Makan Siang", menu: "Nasi + Semur Tahu, Wortel, dan Puyuh", detail: "Semur gurih manis; puyuh + tahu = sumber protein ganda; wortel tambah vitamin A", price: "Rp 5.500", type: "soup",
-                    tags: [{ type: "kal", label: "±560 kkal" }, { type: "prot", label: "Protein ~30g" }, { type: "ca", label: "Ca ~220mg" }, { type: "vit", label: "Vit A ✓" }]
-                },
-                {
-                    time: "15.00 · Selingan Sore", menu: "Semangka Potong + Air Putih", detail: "Semangka kaya likopen (antioksidan), membantu hidrasi, mencegah preeklampsia", price: "Rp 1.500", type: "fruit",
-                    tags: [{ type: "kal", label: "±80 kkal" }, { type: "vit", label: "Likopen ✓" }]
-                },
-                {
-                    time: "18.00 · Makan Malam", menu: "Nasi + Acar Kuning + Ikan Mujair", detail: "Ikan mujair kaya protein & fosfor; kunyit dalam acar kuning bersifat antiinflamasi alami", price: "Rp 6.500", type: "fish",
-                    tags: [{ type: "kal", label: "±530 kkal" }, { type: "prot", label: "Protein ~28g" }, { type: "fe", label: "Fe ~4mg" }, { type: "vit", label: "Kurkumin ✓" }]
-                }
+                { time: "07.00", typeMeal: "Sarapan", type: "egg", menu: "Nasi Goreng Sederhana + Tempe + Telur", detail: "Nasi sisa 150g · Tempe goreng · Telur orak-arik · Kecap & bumbu", price: "Rp 9.000", giziMini: "~490 kkal · 16g P" },
+                { time: "10.00", typeMeal: "Selingan", type: "snack", menu: "Ubi Rebus + Air Putih", detail: "Ubi jalar kuning rebus 1 bh — manis alami, tidak perlu gula!", price: "Rp 1.500", giziMini: "~90 kkal" },
+                { time: "12.00", typeMeal: "Siang", type: "soup", menu: "Nasi + Semur Tahu, Wortel dan Puyuh", detail: "Nasi 150g · Semur tahu + wortel + telur puyuh kecap — kuah cokelat manis gurih!", price: "Rp 12.000", giziMini: "~540 kkal · 20g P · 3mg Fe" },
+                { time: "15.00", typeMeal: "Selingan", type: "fruit", menu: "Pisang + Air Putih", detail: "1 buah pisang ambon atau pisang raja", price: "Rp 1.500", giziMini: "~100 kkal" },
+                { time: "18.00", typeMeal: "Malam", type: "fish", menu: "Nasi + Acar Kuning + Ikan Mujair", detail: "Nasi 150g · Acar kuning wortel timun · Ikan mujair bumbu kuning — segar dan menggugah selera!", price: "Rp 15.000", giziMini: "~510 kkal · 20g P · 2mg Fe" }
             ],
-            summary: [
-                { val: "1.970", unit: "kkal", lbl: "Energi Total", pct: "92% AKG ✓" },
-                { val: "78", unit: "g", lbl: "Protein", pct: "110% AKG ✓✓" },
-                { val: "13", unit: "mg", lbl: "Zat Besi", pct: "48% AKG — +TTD wajib" },
-                { val: "890", unit: "mg", lbl: "Kalsium", pct: "74% AKG ✓" },
-                { val: "Vit A", unit: "", lbl: "Beta-karoten", pct: "Wortel + Puyuh ✓" },
-                { val: "✓", unit: "", lbl: "Antiinflamasi", pct: "Kunyit (Acar Kuning)" }
-            ],
-            note: "Fe makanan hari ini lebih rendah — pastikan konsumsi TTD malam hari. Mujair adalah ikan air tawar lokal yang ekonomis dan bergizi tinggi.",
-            noteType: "alert"
+            totalRow: {
+                left: "Total Jumat + Beras (3 porsi)",
+                chips: [
+                    { type: "kal", label: "~2.050 kkal" },
+                    { type: "prot", label: "~62g Protein" },
+                    { type: "fe", label: "~9mg Fe" }
+                ],
+                right: "= Rp 39.000"
+            }
         },
         {
-            day: "Sabtu", title: "Belanja Pasar", budget: "Rp 23.500", totalKkal: "±2.180 kkal",
+            day: "Sabtu",
+            tagline: "Hari belanja pasar! Stok mingguan dimulai",
+            budget: "Rp 47.000",
             meals: [
-                {
-                    time: "07.00 · Sarapan", menu: "Mi Kuning Godok + Sawi + Telur + Tauge", detail: "Mi kuning kaya karbohidrat energi; sawi kaya folat & vitamin K; telur sumber protein lengkap; tauge kaya vitamin C", price: "Rp 5.500", type: "soup",
-                    tags: [{ type: "kal", label: "±490 kkal" }, { type: "prot", label: "Protein ~22g" }, { type: "fe", label: "Fe ~4mg" }, { type: "vit", label: "Folat ✓" }, { type: "serat", label: "Serat ~4g" }]
-                },
-                {
-                    time: "10.00 · Selingan Pagi", menu: "Pisang + Susu Bumil 1 Gelas", detail: "Kalsium susu + kalium pisang untuk tulang dan otot ibu & bayi", price: "Rp 3.500", type: "fruit",
-                    tags: [{ type: "kal", label: "±270 kkal" }, { type: "prot", label: "Protein ~8g" }, { type: "ca", label: "Ca ~300mg" }]
-                },
-                {
-                    time: "12.00 · Makan Siang", menu: "Nasi + Tempe Tahu + Lodeh + Pindang Goreng", detail: "Lodeh sayur (labu, terong, buncis) kaya vitamin; pindang goreng tambah protein & DHA; tempe-tahu protein nabati ganda", price: "Rp 6.500", type: "fish",
-                    tags: [{ type: "kal", label: "±600 kkal" }, { type: "prot", label: "Protein ~32g" }, { type: "fe", label: "Fe ~5mg" }, { type: "om", label: "DHA ✓" }, { type: "ca", label: "Ca ~200mg" }]
-                },
-                {
-                    time: "15.00 · Selingan Sore", menu: "Jeruk + Air Putih", detail: "Vitamin C membantu penyerapan zat besi dari lodeh dan sayuran", price: "Rp 1.500", type: "fruit",
-                    tags: [{ type: "kal", label: "±60 kkal" }, { type: "vit", label: "Vit C ~50mg" }]
-                },
-                {
-                    time: "18.00 · Makan Malam", menu: "Nasi + Bayam Rebus + Penyetan Ikan Lele", detail: "Lele kaya protein, omega-3, dan vitamin D; bayam sumber zat besi non-heme terbaik; sambal penyetan tambah appetite", price: "Rp 6.500", type: "fish",
-                    tags: [{ type: "kal", label: "±540 kkal" }, { type: "prot", label: "Protein ~30g" }, { type: "fe", label: "Fe ~7mg" }, { type: "om", label: "Omega-3 ✓" }]
-                }
+                { time: "07.00", typeMeal: "Sarapan", type: "soup", menu: "Mi Kuning Godok, Sawi, Telur, Tauge", detail: "Mi kuning 1 bungkus · Sawi hijau · Telur 1 btr · Tauge · Bumbu bawang — sarapan mengenyangkan!", price: "Rp 10.000", giziMini: "~420 kkal · 16g P" },
+                { time: "10.00", typeMeal: "Selingan", type: "fruit", menu: "Jeruk + Kacang Rebus", detail: "Jeruk 1 bh + kacang rebus sedikit — vitamin C bantu serap zat besi!", price: "Rp 3.500", giziMini: "~153 kkal · 5g P" },
+                { time: "12.00", typeMeal: "Siang", type: "bean", menu: "Nasi + Tempe Tahu + Lodeh + Pindang Goreng", detail: "Nasi 150g · Tempe 2 ptg · Tahu 1 ptg · Sayur lodeh (labu siam, kacang panjang, santan encer) · Pindang goreng", price: "Rp 17.000", giziMini: "~560 kkal · 20g P" },
+                { time: "15.00", typeMeal: "Selingan", type: "fruit", menu: "Pisang Rebus + Air Putih", detail: "Pisang kepok rebus 1-2 bh — lebih mengenyangkan dari pisang biasa", price: "Rp 1.500", giziMini: "~120 kkal" },
+                { time: "18.00", typeMeal: "Malam", type: "fish", menu: "Nasi + Bayam + Penyetan Ikan Lele", detail: "Nasi 150g · Sayur bayam bening · Ikan lele digoreng & dipenyetkan sambal — mantap!", price: "Rp 15.000", giziMini: "~560 kkal · 22g P · 4mg Fe" }
             ],
-            summary: [
-                { val: "1.960", unit: "kkal", lbl: "Energi Total", pct: "91% AKG ✓" },
-                { val: "92", unit: "g", lbl: "Protein", pct: "130% AKG ✓✓" },
-                { val: "16", unit: "mg", lbl: "Zat Besi", pct: "59% AKG — +TTD" },
-                { val: "860", unit: "mg", lbl: "Kalsium", pct: "72% AKG ✓" },
-                { val: "DHA", unit: "", lbl: "Omega-3", pct: "Lele + Pindang ✓" },
-                { val: "Folat", unit: "", lbl: "Vitamin B9", pct: "dari Sawi + Bayam ✓" }
-            ],
-            note: "Mi kuning godok bisa diganti mi jagung atau bihun untuk variasi. Penyetan lele — ikan lokal Tuban yang sangat ekonomis dan kaya protein.",
-            noteType: "tip"
+            totalRow: {
+                left: "Total Sabtu + Beras (3 porsi)",
+                chips: [
+                    { type: "kal", label: "~2.100 kkal" },
+                    { type: "prot", label: "~65g Protein" },
+                    { type: "fe", label: "~10mg Fe" }
+                ],
+                right: "= Rp 47.000"
+            }
         },
         {
-            day: "Minggu", title: "Menu Spesial", budget: "Rp 25.000", totalKkal: "±2.150 kkal",
+            day: "Minggu",
+            tagline: "Hari spesial! Menu paling variatif akhir pekan",
+            budget: "Rp 47.500",
             meals: [
-                {
-                    time: "07.00 · Sarapan", menu: "Nasi Goreng Jawa", detail: "Nasi goreng bumbu kencur + kecap manis + telur + sayur — sarapan bergizi khas Jawa yang menghangatkan", price: "Rp 5.500", type: "egg",
-                    tags: [{ type: "kal", label: "±530 kkal" }, { type: "prot", label: "Protein ~18g" }, { type: "fe", label: "Fe ~3mg" }, { type: "vit", label: "Kencur (anti-mual) ✓" }]
-                },
-                {
-                    time: "10.00 · Selingan Pagi", menu: "Buah Pepaya + Susu Bumil 1 Gelas", detail: "Pepaya kaya vitamin C yang membantu penyerapan zat besi dari makanan", price: "Rp 3.500", type: "fruit",
-                    tags: [{ type: "kal", label: "±280 kkal" }, { type: "prot", label: "Protein ~8g" }, { type: "vit", label: "Vit C ✓" }, { type: "ca", label: "Ca ~300mg" }]
-                },
-                {
-                    time: "12.00 · Makan Siang", menu: "Nasi + Bening Kelor + Rica Lele", detail: "Kelor = superfood lokal Fe & Ca tertinggi; Rica lele pedas merangsang nafsu makan; protein lele sangat tinggi", price: "Rp 8.000", type: "fish",
-                    tags: [{ type: "kal", label: "±570 kkal" }, { type: "prot", label: "Protein ~34g" }, { type: "fe", label: "Fe ~10mg" }, { type: "ca", label: "Ca ~240mg" }, { type: "om", label: "Omega-3 ✓" }]
-                },
-                {
-                    time: "15.00 · Selingan Sore", menu: "Jeruk + Air Putih", detail: "Vitamin C dari jeruk memaksimalkan penyerapan zat besi dari kelor", price: "Rp 4.000", type: "fruit",
-                    tags: [{ type: "kal", label: "±60 kkal" }, { type: "vit", label: "Vit C ~50mg" }]
-                },
-                {
-                    time: "18.00 · Makan Malam", menu: "Nasi + Oseng Tempe Puyuh + Buncis", detail: "Oseng tempe-puyuh kaya protein ganda; buncis kaya folat, vitamin K, dan serat; penutup minggu bergizi", price: "Rp 4.000", type: "bean",
-                    tags: [{ type: "kal", label: "±530 kkal" }, { type: "prot", label: "Protein ~28g" }, { type: "fe", label: "Fe ~5mg" }, { type: "vit", label: "Folat ✓" }, { type: "serat", label: "Serat ~5g" }]
-                }
+                { time: "07.00", typeMeal: "Sarapan", type: "egg", menu: "Nasi Goreng Jawa", detail: "Nasi 150g · Bumbu nasi goreng Jawa (kecap, bawang, cabe) · Telur · Kol — weekend spesial!", price: "Rp 10.000", giziMini: "~490 kkal · 15g P · 3mg Fe" },
+                { time: "10.00", typeMeal: "Selingan", type: "fruit", menu: "Buah Campuran (Pepaya + Pisang)", detail: "Pepaya 1 potong + pisang 1 bh — vitamin C & kalium untuk bumil!", price: "Rp 3.500", giziMini: "~160 kkal · vit C tinggi" },
+                { time: "12.00", typeMeal: "Siang", type: "fish", menu: "Nasi + Bening Kelor + Rica Lele", detail: "Nasi 150g · Sayur bening kelor segar · Rica-rica ikan lele pedas gurih — kombinasi juara!", price: "Rp 17.000", giziMini: "~570 kkal · 24g P · 2mg Fe" },
+                { time: "15.00", typeMeal: "Selingan", type: "snack", menu: "Kacang Rebus + Air Kelapa Muda", detail: "Kacang rebus segenggam + air kelapa muda — menyegarkan & bergizi!", price: "Rp 4.000", giziMini: "~150 kkal · 5g P" },
+                { time: "18.00", typeMeal: "Malam", type: "bean", menu: "Nasi + Oseng Tempe Puyuh, Buncis", detail: "Nasi 150g · Oseng tempe + telur puyuh + buncis bumbu kecap — penutup minggu bergizi!", price: "Rp 13.000", giziMini: "~530 kkal · 22g P · 4mg Fe" }
             ],
-            summary: [
-                { val: "1.970", unit: "kkal", lbl: "Energi Total", pct: "92% AKG ✓" },
-                { val: "88", unit: "g", lbl: "Protein", pct: "124% AKG ✓✓" },
-                { val: "18", unit: "mg", lbl: "Zat Besi", pct: "67% AKG — +TTD" },
-                { val: "880", unit: "mg", lbl: "Kalsium", pct: "73% AKG ✓" },
-                { val: "DHA", unit: "", lbl: "Omega-3", pct: "Rica Lele ✓" },
-                { val: "⭐", unit: "", lbl: "Bening Kelor", pct: "Fe + Ca Tertinggi ✓✓" }
-            ],
-            note: "Bening kelor + rica lele = kombinasi andalan CERMAT! Kelor lokal Tuban mengandung zat besi 25× lebih tinggi dari bayam per gram kering.",
-            noteType: "star"
+            totalRow: {
+                left: "Total Minggu + Beras (3 porsi)",
+                chips: [
+                    { type: "kal", label: "~2.200 kkal" },
+                    { type: "prot", label: "~68g Protein" },
+                    { type: "fe", label: "~11mg Fe" }
+                ],
+                right: "= Rp 47.500"
+            }
         }
+    ],
+    weeklySummary: {
+        cards: [
+            { label: "Total pengeluaran 7 hari", value: "Rp 296.500" },
+            { label: "Rata-rata per hari", value: "Rp 42.357" },
+            { label: "Rata-rata per waktu makan", value: "Rp 8.471" },
+            { label: "Rata-rata kkal/hari", value: "~2.100" }
+        ],
+        breakdown: [
+            { day: "Senin", menu: "Penyet togek asap + pepes ikan teri", gizi: "~2.020 kkal · 60g P", budget: "Rp 47.000" },
+            { day: "Selasa", menu: "Asem-asem pindang + tauge tempe", gizi: "~2.035 kkal · 62g P", budget: "Rp 33.000" },
+            { day: "Rabu", menu: "Ikan lele + sup tahu puyuh oyong", gizi: "~2.038 kkal · 62g P", budget: "Rp 36.500" },
+            { day: "Kamis", menu: "Telur bumbu bali + pepes ikan ekor kuning", gizi: "~2.102 kkal · 65g P", budget: "Rp 47.500" },
+            { day: "Jumat", menu: "Semur tahu puyuh + acar kuning mujair", gizi: "~2.030 kkal · 58g P", budget: "Rp 39.000" },
+            { day: "Sabtu", menu: "Mi kuning godok + lodeh pindang goreng", gizi: "~2.013 kkal · 63g P", budget: "Rp 46.000" },
+            { day: "Minggu", menu: "Nasi goreng Jawa + rica lele + bening kelor", gizi: "~2.200 kkal · 66g P", budget: "Rp 47.500" }
+        ],
+        total: {
+            dayText: "7 hari penuh", gizi: "~2.100 kkal/hr", budget: "Rp 296.500"
+        }
+    },
+    tips: [
+        { title: "Pilih Ikan Lokal", text: "Ikan kembung Rp 3.000–5.000/ekor, ikan lele Rp 4.000–6.000/ekor, ikan pindang Rp 2.000–3.000/ptg — lebih murah dari ayam tapi protein & omega-3 tinggi!", icon: "fish" },
+        { title: "Tempe & Tahu = Raja Protein Murah", text: "Tempe Rp 1.000–1.500/ptg, tahu Rp 500–1.000/ptg. Beli di pasar pagi hari untuk harga terbaik. 100g tempe setara protein dengan 1 butir telur!", icon: "bean" },
+        { title: "Daun Kelor — Super Food Gratis!", text: "Daun kelor sering bisa dipetik di sekitar rumah atau dibeli Rp 500–1.000/ikat. Kandungan zat besi 25x lebih tinggi dari bayam!", icon: "leaf" },
+        { title: "Belanja Sekali Seminggu", text: "Belanja semua bahan di pasar tradisional tiap Sabtu pagi. Beli beras 5kg, sayuran seminggu, dan lauk beku — lebih hemat 20-30% dari beli harian.", icon: "cart" },
+        { title: "Buah Musiman Lebih Murah", text: "Pisang kepok Rp 1.000/bh, pepaya Rp 2.000–3.000/potong, jambu biji Rp 2.000/bh — lebih murah dari jeruk tapi kandungan vitaminnya tidak kalah!", icon: "fruit" },
+        { title: "Tablet Fe Gratis di Puskesmas!", text: "Ibu hamil berhak mendapatkan tablet tambah darah (Fe) GRATIS dari Puskesmas atau Bidan Desa. Minta saat ANC — tidak perlu beli di apotek!", icon: "pill" }
     ]
 };

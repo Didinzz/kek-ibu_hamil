@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { Utensils, Milk, Sandwich, Apple, Fish, Beef, Coffee, Egg, Carrot, Soup, Croissant, LucideBanana } from "lucide-react";
+import { Utensils, Milk, Sandwich, Apple, Fish, Beef, Coffee, Egg, Carrot, Soup, Croissant, LucideBanana, Grape } from "lucide-react";
 import { GiAvocado, GiBowlOfRice, GiChickenOven } from "react-icons/gi";
+import { FaCarrot } from "react-icons/fa6";
 import { TbBrandCakephp } from "react-icons/tb";
 // Helper Ikon
 const renderIcon = (iconName, isPremium) => {
@@ -17,6 +18,8 @@ const renderIcon = (iconName, isPremium) => {
         case 'rice': return <GiBowlOfRice {...props } />;
         case 'avocado': return <GiAvocado {...props} />;
         case 'banana': return <LucideBanana {...props} />;
+        case 'carrot': return <FaCarrot {...props} />;
+        case 'grape': return <Grape {...props} />;
         case 'chicken': return <GiChickenOven  {...props} />;
         case 'cake': return <TbBrandCakephp  {...props} />;
         case 'meat': return <Beef {...props} />;
@@ -105,7 +108,7 @@ export default function DayCardMenu({ day, activeTier, activeTab }) {
                         }`}
                     style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                    {day.dayName}
+                    {day.dayName} 
                 </div>
 
                 <div className={`rounded-xl px-4 py-2 text-center ${isPremium
@@ -154,6 +157,12 @@ export default function DayCardMenu({ day, activeTier, activeTab }) {
                         <div className={`text-[11px] font-bold leading-normal min-h-3 mb-2 ${isPremium ? "text-[#1E293B]" : "text-slate-200"
                             }`}>
                             {meal.name}
+
+                            {meal.detail && (
+                                <div className="text-[9.5px] font-medium leading-relaxed mb-2 text-slate-500">
+                                    {meal.detail}
+                                </div>
+                            )}
                         </div>
 
                         {/* Harga & Tag Nutrisi */}

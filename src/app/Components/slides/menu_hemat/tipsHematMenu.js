@@ -1,4 +1,4 @@
-export const tipsHemat = [
+export const tipsHematMenu = [
     { title: "Pilih Ikan Lokal", text: "Ikan kembung & lele (Rp 4rb-6rb/ekor) lebih murah dari ayam tapi protein tinggi.", icon: "fish" },
     { title: "Tempe Tahu", text: "Raja protein murah. 100g tempe setara protein 1 butir telur.", icon: "bean" },
     { title: "Daun Kelor", text: "Superfood gratis/murah (Rp 1rb/ikat). Zat besi 25x lebih tinggi dari bayam.", icon: "leaf" },
