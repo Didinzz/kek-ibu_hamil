@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { Utensils, Milk, Sandwich, Apple, Fish, Beef, Coffee, Egg, Carrot, Soup, Croissant } from "lucide-react";
-
+import { Utensils, Milk, Sandwich, Apple, Fish, Beef, Coffee, Egg, Carrot, Soup, Croissant, LucideBanana } from "lucide-react";
+import { GiAvocado, GiBowlOfRice, GiChickenOven } from "react-icons/gi";
+import { TbBrandCakephp } from "react-icons/tb";
 // Helper Ikon
 const renderIcon = (iconName, isPremium) => {
     const color = isPremium ? "text-[#c21470]" : "text-[#FFD1E8]";
@@ -13,6 +14,11 @@ const renderIcon = (iconName, isPremium) => {
         case 'bento': return <Sandwich {...props} />;
         case 'fruit': return <Apple {...props} />;
         case 'fish': return <Fish {...props} />;
+        case 'rice': return <GiBowlOfRice {...props } />;
+        case 'avocado': return <GiAvocado {...props} />;
+        case 'banana': return <LucideBanana {...props} />;
+        case 'chicken': return <GiChickenOven  {...props} />;
+        case 'cake': return <TbBrandCakephp  {...props} />;
         case 'meat': return <Beef {...props} />;
         case 'soup': return <Soup {...props} />;
         case 'snack': return <Carrot {...props} />;
@@ -87,8 +93,8 @@ export default function DayCardMenu({ day, activeTier, activeTab }) {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             className={`rounded-3xl overflow-hidden mb-6 transition-all duration-300 hover:-translate-y-1 ${isPremium
-                    ? "bg-white shadow-[0_4px_24px_rgba(231,29,137,0.06)] border border-[#e71d89]/10"
-                    : "bg-[#111827] border border-[#e71d89]/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgba(231,29,137,0.15)]"
+                ? "bg-white shadow-[0_4px_24px_rgba(231,29,137,0.06)] border border-[#e71d89]/10"
+                : "bg-[#111827] border border-[#e71d89]/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgba(231,29,137,0.15)]"
                 }`}
         >
 
@@ -103,8 +109,8 @@ export default function DayCardMenu({ day, activeTier, activeTab }) {
                 </div>
 
                 <div className={`rounded-xl px-4 py-2 text-center ${isPremium
-                        ? (activeTab === "t3" ? "bg-white/20" : "bg-white/40 border border-white/50")
-                        : "bg-[#e71d89]/15 border border-[#e71d89]/30"
+                    ? (activeTab === "t3" ? "bg-white/20" : "bg-white/40 border border-white/50")
+                    : "bg-[#e71d89]/15 border border-[#e71d89]/30"
                     }`}>
                     <div
                         className={`text-[20px] leading-none font-bold ${isPremium && activeTab !== "t3" ? "text-[#c21470]" : "text-white"
@@ -127,8 +133,8 @@ export default function DayCardMenu({ day, activeTier, activeTab }) {
                         key={idx}
                         variants={itemVariants} // Menggunakan varian untuk memunculkan item satu per satu
                         className={`p-[16px_14px] flex flex-col transition-colors duration-300 group ${isPremium
-                                ? "border-b lg:border-b-0 lg:border-r border-slate-100 hover:bg-[#FFF5F9]"
-                                : "border-b lg:border-b-0 lg:border-r border-white/5 hover:bg-white/5"
+                            ? "border-b lg:border-b-0 lg:border-r border-slate-100 hover:bg-[#FFF5F9]"
+                            : "border-b lg:border-b-0 lg:border-r border-white/5 hover:bg-white/5"
                             } ${idx === day.meals.length - 1 ? "lg:border-r-0" : ""}`}
                         style={{ fontFamily: "'Outfit', sans-serif" }}
                     >
@@ -153,8 +159,8 @@ export default function DayCardMenu({ day, activeTier, activeTab }) {
                         {/* Harga & Tag Nutrisi */}
                         <div className="mt-auto">
                             <div className={`inline-block text-[11px] font-extrabold px-2.5 py-1 rounded-lg mb-1.5 transition-colors ${isPremium
-                                    ? "bg-[#FFF5F9] text-[#e71d89] group-hover:bg-[#FFD1E8]"
-                                    : "bg-white/10 text-white group-hover:bg-[#e71d89]/20"
+                                ? "bg-[#FFF5F9] text-[#e71d89] group-hover:bg-[#FFD1E8]"
+                                : "bg-white/10 text-white group-hover:bg-[#e71d89]/20"
                                 }`}>
                                 {meal.price}
                             </div>
